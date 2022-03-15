@@ -1,5 +1,5 @@
 <template>
-  <footer class="fixed bottom-0">
+  <footer class="m-0">
     <img :src="require('~/assets/img/yugadar-logo-footer.png')" alt=""/>
   </footer>
 </template>

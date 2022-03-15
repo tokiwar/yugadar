@@ -4,7 +4,6 @@
       <title>Югадар</title>
     </head>
     <TopMenu :menu="menu"/>
-    <img :src="require('~/assets/img/yugadar-logo.png')" alt=""/>
   </header>
 </template>
 

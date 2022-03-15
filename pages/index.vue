@@ -1,5 +1,6 @@
 <template>
   <div>
+    <img :src="require('~/assets/img/yugadar-logo.png')" alt=""/>
     <div>
       Югадар
     </div>
@@ -8,6 +9,11 @@
 
 <script>
 export default {
-  name: 'IndexPage'
+  name: 'IndexPage',
+  head(){
+    return {
+      title: '«Югадар» - Главная страница'
+    }
+  }
 }
 </script>

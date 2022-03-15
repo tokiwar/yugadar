@@ -8,6 +8,11 @@
 
 <script>
 export default {
-  name: 'OutletsPage'
+  name: 'OutletsPage',
+  head(){
+    return {
+      title: '«Югадар» - Точки продажи'
+    }
+  }
 }
 </script>
