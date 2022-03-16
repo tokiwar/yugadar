@@ -1,8 +1,9 @@
 <template>
-  <div class="h-screen">
+  <div class="h-screen text-base not-italic font-gotham">
     <Header/>
-    <main class="h-screen max-w-screen-xl m-auto">
-      <Nuxt/>
+    <hr>
+    <main class="max-w-screen-xl m-auto">
+      <Nuxt class="my-14"/>
     </main>
     <Footer/>
   </div>

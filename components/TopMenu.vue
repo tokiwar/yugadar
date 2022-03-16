@@ -4,6 +4,7 @@
       <img class="w-32" :src="require('~/assets/img/logo-2.png')" alt=""/>
     </div>
     <NuxtLink class="px-8 py-4 hover:text-yellow-500 hover:underline" v-for="menuItem in menu" :key="menuItem.link" :to="menuItem.link">{{ menuItem.name }}</NuxtLink>
+    <hr>
   </div>
 </template>
 

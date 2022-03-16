@@ -17,8 +17,16 @@ export default {
         link: '/'
       },
       {
+        name: 'Продукция',
+        link: '/catalog'
+      },
+      {
         name: 'О нас',
         link: '/about'
+      },
+      {
+        name: 'Контакты',
+        link: '/contacts'
       },
       {
         name: 'Точки продажи',
