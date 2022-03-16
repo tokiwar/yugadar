@@ -80,6 +80,9 @@ export default {
         img: require('~/assets/img/catalog/ananas.png')
       }
     ]
-  })
+  }),
+  async asyncData({params}) {
+
+  }
 }
 </script>

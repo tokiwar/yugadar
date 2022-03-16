@@ -36,6 +36,7 @@ export default {
         extend: {
           fontFamily: {
             'gotham': ['Gotham Pro'],
+            'nunito': ['Nunito'],
           }
         }
       }

@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen text-base not-italic font-gotham">
+  <div class="h-screen text-lg not-italic font-nunito">
     <Header/>
     <hr>
     <main class="max-w-screen-xl m-auto">
