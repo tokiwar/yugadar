@@ -1,7 +1,16 @@
 <template>
-  <div>
-    <img :src="require('~/assets/img/yugadar-logo.png')" alt=""/>
-    <div class="mt-14">
+  <div class="mx-2">
+    <div class="flex flex-col">
+      <VueSlickCarousel class="" :settings="sliderSettings">
+        <img class="rounded-lg border-8" :src="require('~/assets/img/outlets/outlet1.png')" alt=""/>
+        <img class="rounded-lg border-8" :src="require('~/assets/img/outlets/outlet1.png')" alt=""/>
+      </VueSlickCarousel>
+      <div class="flex flex-row mt-4">
+        <img class="rounded-lg border-2 w-3/6" :src="require('~/assets/img/outlets/outlet1.png')" alt=""/>
+        <img class="rounded-lg border-2 w-3/6" :src="require('~/assets/img/outlets/outlet1.png')" alt=""/>
+      </div>
+    </div>
+    <div class="" :class="{'mt-14':$device.isDesktop , 'mt-4': !$device.isDesktop}">
       <p>
         Значимость этих проблем настолько очевидна, что консультация с широким активом требуют от нас анализа системы
         обучения кадров, соответствует насущным потребностям. Таким образом новая модель организационной деятельности
@@ -42,12 +51,23 @@
 </template>
 
 <script>
+import VueSlickCarousel from 'vue-slick-carousel'
+import 'vue-slick-carousel/dist/vue-slick-carousel.css'
+import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
+
 export default {
   name: 'IndexPage',
   head() {
     return {
       title: '«Югадар» - Главная страница'
     }
-  }
+  },
+  components: {VueSlickCarousel},
+  data: () => ({
+    sliderSettings: {
+      infinite: true,
+      autoplay: true,
+    },
+  }),
 }
 </script>
