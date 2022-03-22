@@ -37,6 +37,14 @@ export default {
           fontFamily: {
             'gotham': ['Gotham Pro'],
             'nunito': ['Nunito'],
+          },
+          height: {
+            '120': '32rem',
+            '160': '40rem',
+            '192': '48rem',
+          },
+          maxHeight: {
+            '160': '40rem',
           }
         }
       }
