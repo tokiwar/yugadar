@@ -1,6 +1,6 @@
 <template>
-  <footer class="">
-    <img class="w-screen" :src="require('~/assets/img/yugadar-logo-footer.png')" alt=""/>
+  <footer class="bg-black h-80">
+    <BottomMenu/>
   </footer>
 </template>
 

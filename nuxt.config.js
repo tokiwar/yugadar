@@ -34,6 +34,9 @@ export default {
     config: {
       theme: {
         extend: {
+          colors:{
+            'blue-green-100': '#b5e8d5'
+          },
           fontFamily: {
             'gotham': ['Gotham Pro'],
             'nunito': ['Nunito'],
