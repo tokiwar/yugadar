@@ -6,27 +6,12 @@
         <span class="text-9xl">ЮГАДАР</span>
       </div>
     </section>
-    <section class="h-104 flex flex-row justify-center items-center select-none">
-      <div class="w-3/6 flex flex-col justify-center items-center font-black text-center">
-        <div class="text-6xl w-3/6">Заголовок</div>
-        <div class="text-2xl w-3/6">Подзаголовок</div>
-        <div class="w-3/6 pt-8">Это текст. Нажмите один раз и выберите «Редактировать текст» или просто дважды кликните,
-          чтобы добавить свой текст и настроить шрифт.
-        </div>
-      </div>
-    </section>
+    <TextSection :section-data="sectionData1"/>
     <section class="h-160 flex flex-row justify-center items-center select-none">
-      <img class="h-full w-full object-cover object-center" :src="require('~/assets/img/about-page-block-1.png')" alt=""/>
+      <img class="h-full w-full object-cover object-center" :src="require('~/assets/img/about-page-block-1.png')"
+           alt=""/>
     </section>
-    <section class="h-104 flex flex-row justify-center items-center select-none">
-      <div class="w-3/6 flex flex-col justify-center items-center font-black text-center">
-        <div class="text-6xl w-3/6">Заголовок</div>
-        <div class="text-2xl w-3/6">Подзаголовок</div>
-        <div class="w-3/6 pt-8">Это текст. Нажмите один раз и выберите «Редактировать текст» или просто дважды кликните,
-          чтобы добавить свой текст и настроить шрифт.
-        </div>
-      </div>
-    </section>
+    <TextSection :section-data="sectionData2"/>
   </div>
 </template>
 
@@ -37,6 +22,20 @@ export default {
     return {
       title: '«Югадар» - О нас'
     }
-  }
+  },
+  data: () => ({
+    sectionData1: {
+      title: 'Заголовок1',
+      subtitle: 'Подзаголовок1',
+      text: 'Это текст. Нажмите один раз и выберите «Редактировать текст» или просто дважды кликните, чтобы добавить свой текст и настроить шрифт1.',
+      name: 'КОНТАКТЫ',
+      link: '/contacts'
+    },
+    sectionData2: {
+      title: 'Заголовок2',
+      subtitle: 'Подзаголовок2',
+      text: 'Это текст. Нажмите один раз и выберите «Редактировать текст» или просто дважды кликните, чтобы добавить свой текст и настроить шрифт2.'
+    }
+  })
 }
 </script>

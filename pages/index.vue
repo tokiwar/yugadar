@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="h-192 bg-yellow-200 flex flex-row justify-center items-center select-none">
+    <section class="h-192 bg-light-yellow-100 flex flex-row justify-center items-center select-none">
       <div class="relative max-h-160">
         <img class="" :src="require('~/assets/img/logo/main-logo.png')" alt=""/>
       </div>
