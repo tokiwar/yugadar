@@ -35,16 +35,18 @@ export default {
       theme: {
         extend: {
           colors:{
-            'blue-green-100': '#b5e8d5'
+            'blue-green-100': '#b5e8d5',
+            'light-plum-100' : '#c3a9d4'
           },
           fontFamily: {
             'gotham': ['Gotham Pro'],
             'nunito': ['Nunito'],
           },
           height: {
-            '120': '32rem',
+            '104': '26rem',
+            '128': '32rem',
             '160': '40rem',
-            '192': '48rem',
+            '192': '48rem'
           },
           maxHeight: {
             '160': '40rem',

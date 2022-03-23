@@ -1,5 +1,5 @@
 <template>
-  <header class="">
+  <header class="h-21">
     <head>
       <title>Югадар</title>
     </head>
@@ -17,7 +17,7 @@ export default {
         link: '/'
       },
       {
-        name: 'Продукция',
+        name: 'Мороженое',
         link: '/catalog'
       },
       {
