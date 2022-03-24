@@ -38,7 +38,7 @@ export default {
             'blue-green-100': '#b5e8d5',
             'light-plum-100': '#c3a9d4',
             'light-yellow-100': '#f9db79',
-            'light-pink-100': '#ffbfb3'
+            'light-pink-100': '#ffbfb3',
           },
           fontFamily: {
             'gotham': ['Gotham Pro'],
@@ -46,6 +46,8 @@ export default {
           },
           height: {
             '104': '26rem',
+            '112': '28rem',
+            '120': '30rem',
             '128': '32rem',
             '160': '40rem',
             '192': '48rem'

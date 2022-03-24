@@ -1,20 +1,7 @@
 <template>
   <div>
-    <section class="h-104 bg-blue-green-100 flex flex-row justify-center items-center select-none">
-      <div class="absolute text-white flex flex-col justify-center items-center font-black">
-        <span class="text-6xl">Наше</span>
-        <span class="text-9xl">МОРОЖЕНОЕ</span>
-      </div>
-    </section>
-    <section class="flex flex-col justify-center items-center select-none my-28 space-y-20 font-bold text-center">
-      <div v-for="line in catalog" class="flex flex-row justify-center items-center space-x-20 w-3/6">
-        <div v-for="item in line" class="flex flex-col justify-center items-center space-y-5 w-4/12">
-          <img :src="item.image" alt=""/>
-          <span class="text-4xl">{{ item.name }}</span>
-          <span>{{ item.description }}</span>
-        </div>
-      </div>
-    </section>
+    <TopTextSection :section-data="topSectionData"/>
+    <Catalog :catalog="catalog"/>
   </div>
 </template>
 
@@ -27,6 +14,11 @@ export default {
     }
   },
   data: () => ({
+    topSectionData: {
+      title: 'Наше',
+      subtitle: 'МОРОЖЕНОЕ',
+      color: 'bg-blue-green-100',
+    },
     catalog: [
       [
         {

@@ -1,11 +1,6 @@
 <template>
   <div>
-    <section class="h-104 bg-light-yellow-100 flex flex-row justify-center items-center select-none">
-      <div class="absolute text-white flex flex-col justify-center items-center font-black">
-        <span class="text-6xl">Наши</span>
-        <span class="text-9xl">ТОЧКИ ПРОДАЖИ</span>
-      </div>
-    </section>
+    <TopTextSection :section-data="topSectionData"/>
     <TextSection :section-data="sectionData"/>
   </div>
 </template>
@@ -40,6 +35,11 @@ export default {
       title: 'Заголовок',
       subtitle: 'Подзаголовок',
       text: 'Это текст. Нажмите один раз и выберите «Редактировать текст» или просто дважды кликните, чтобы добавить свой текст и настроить шрифт.'
+    },
+    topSectionData: {
+      title: 'Наши',
+      subtitle: 'ТОЧКИ ПРОДАЖ',
+      color: 'bg-light-yellow-100'
     }
   }),
   head() {

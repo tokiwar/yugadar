@@ -5,3 +5,11 @@ img {
   -o-user-drag: none;
   user-drag: none;
 }
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.5s;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
