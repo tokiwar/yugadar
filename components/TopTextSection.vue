@@ -21,7 +21,7 @@ export default {
       if (this.$device.isDesktop) {
         return 'h-104' + ' ' + this.SectionData.color + ' ' + this.classNameStatic;
       } else {
-        return 'h-96' + ' ' + this.SectionData.color + ' ' + this.classNameStatic;
+        return 'h-72' + ' ' + this.SectionData.color + ' ' + this.classNameStatic;
       }
     }
   }

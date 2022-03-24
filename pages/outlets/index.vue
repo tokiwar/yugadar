@@ -9,6 +9,8 @@
         :marker-id="marker.id"
         :hint-content="marker.hint"
         :key="marker.id"
+        :icon="markerIcon"
+        :balloon-template="getBalloonTemplate(marker)"
       />
     </yandex-map>
   </div>
@@ -27,9 +29,22 @@ export default {
       } else {
         return 13;
       }
+    },
+    balloonImageSize(){
+      if (this.$device.isDesktop) {
+        return 'w-80';
+      } else {
+        return 'w-64';
+      }
     }
   },
   data: () => ({
+    markerIcon: {
+      layout: 'default#imageWithContent',
+      imageHref: require('~/assets/img/logo-3.png'),
+      imageSize: [30, 30],
+      imageOffset: [0, -15],
+    },
     initCoords: [
       45.617003, 38.942364
     ],
@@ -37,45 +52,51 @@ export default {
       {
         id: 0,
         hint: 'ЮгаДар на Красной',
-        coords: [45.613798, 38.934283]
+        balloonText: 'ЮгаДар на Красной',
+        name: 'ЮгаДар на Красной',
+        coords: [45.613798, 38.934283],
+        img: require('~/assets/img/outlets/krasnaya.png'),
       },
       {
         id: 1,
         hint: 'ЮгаДар на Советском переулке',
-        coords: [45.615675, 38.935239]
+        balloonText: 'ЮгаДар на Советском переулке',
+        name: 'ЮгаДар на Советском переулке',
+        coords: [45.615675, 38.935239],
+        img: require('~/assets/img/outlets/sovet.png'),
       },
       {
         id: 2,
         hint: 'ЮгаДар на Братской',
-        coords: [45.611578, 38.934333]
+        balloonText: 'ЮгаДар на Братской',
+        name: 'ЮгаДар на Братской',
+        coords: [45.611578, 38.934333],
+        img: require('~/assets/img/outlets/bratskaya.png'),
       },
       {
         id: 3,
         hint: 'ЮгаДар на Сахарном',
-        coords: [45.613520, 38.960925]
+        balloonText: 'ЮгаДар на Сахарном',
+        name: 'ЮгаДар на Сахарном',
+        coords: [45.613520, 38.960925],
+        img: require('~/assets/img/outlets/saharnii.png'),
       },
       {
         id: 4,
         hint: 'ЮгаДар у музея',
-        coords: [45.612467, 38.937221]
+        balloonText: 'ЮгаДар у музея',
+        name: 'ЮгаДар у музея',
+        coords: [45.612467, 38.937221],
+        img: require('~/assets/img/outlets/stepan.png'),
       },
       {
         id: 5,
         hint: 'ЮгаДар в парке',
-        coords: [45.623914, 38.941423]
+        balloonText: 'ЮгаДар в парке',
+        name: 'ЮгаДар в парке',
+        coords: [45.623914, 38.941423],
+        img: require('~/assets/img/outlets/bratskaya.png'),
       }
-    ],
-    outlets: [
-      {
-        name: 'Точка 1',
-        link: '/outlets/outlet1',
-        img: require('~/assets/img/outlets/outlet1.png')
-      },
-      {
-        name: 'Точка 2',
-        link: '/outlets/outlet2',
-        img: require('~/assets/img/outlets/outlet2.png')
-      },
     ],
     sectionData: {
       title: 'Заголовок',
@@ -93,5 +114,15 @@ export default {
       title: '«Югадар» - Точки продажи'
     }
   },
+  methods: {
+    getBalloonTemplate(coordsData) {
+      return `
+        <div class="pl-4">
+          <span class="text-xl not-italic font-nunito font-bold">${coordsData.name}</span>
+          <img class="my-2 ${this.balloonImageSize}"  src="${coordsData.img}" alt="${coordsData.name}}"/>
+        </div>
+      `
+    }
+  }
 }
 </script>
