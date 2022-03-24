@@ -2,22 +2,68 @@
   <div>
     <TopTextSection :section-data="topSectionData"/>
     <TextSection :section-data="sectionData"/>
+    <yandex-map :class="{'h-192': $device.isDesktop, 'h-120': !$device.isDesktop}" :coords="initCoords" :zoom="zoom">
+      <ymap-marker
+        v-for="marker in markers"
+        :coords="marker.coords"
+        :marker-id="marker.id"
+        :hint-content="marker.hint"
+        :key="marker.id"
+      />
+    </yandex-map>
   </div>
 </template>
 
 <script>
+import {yandexMap, ymapMarker} from 'vue-yandex-maps'
+
 export default {
   name: 'OutletsPage',
+  components: {yandexMap, ymapMarker},
+  computed: {
+    zoom() {
+      if (this.$device.isDesktop) {
+        return 15;
+      } else {
+        return 13;
+      }
+    }
+  },
   data: () => ({
-    breadcrumb: [
+    initCoords: [
+      45.617003, 38.942364
+    ],
+    markers: [
       {
-        name: 'Главная',
-        link: '/'
+        id: 0,
+        hint: 'ЮгаДар на Красной',
+        coords: [45.613798, 38.934283]
       },
       {
-        name: 'Точки продажи',
-        link: '/outlets'
+        id: 1,
+        hint: 'ЮгаДар на Советском переулке',
+        coords: [45.615675, 38.935239]
       },
+      {
+        id: 2,
+        hint: 'ЮгаДар на Братской',
+        coords: [45.611578, 38.934333]
+      },
+      {
+        id: 3,
+        hint: 'ЮгаДар на Сахарном',
+        coords: [45.613520, 38.960925]
+      },
+      {
+        id: 4,
+        hint: 'ЮгаДар у музея',
+        coords: [45.612467, 38.937221]
+      },
+      {
+        id: 5,
+        hint: 'ЮгаДар в парке',
+        coords: [45.623914, 38.941423]
+      }
     ],
     outlets: [
       {
