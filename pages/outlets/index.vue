@@ -1,18 +1,21 @@
 <template>
   <div>
     <TopTextSection :section-data="topSectionData"/>
+    <Outlets :outlets="outlets"/>
+    <no-ssr>
+      <yandex-map :class="{'h-192': $device.isDesktop, 'h-120': !$device.isDesktop}" :coords="initCoords" :zoom="zoom">
+        <ymap-marker
+          v-for="marker in markers"
+          :coords="marker.coords"
+          :marker-id="marker.id"
+          :hint-content="marker.hint"
+          :key="marker.id"
+          :icon="markerIcon"
+          :balloon-template="getBalloonTemplate(marker)"
+        />
+      </yandex-map>
+    </no-ssr>
     <TextSection :section-data="sectionData"/>
-    <yandex-map :class="{'h-192': $device.isDesktop, 'h-120': !$device.isDesktop}" :coords="initCoords" :zoom="zoom">
-      <ymap-marker
-        v-for="marker in markers"
-        :coords="marker.coords"
-        :marker-id="marker.id"
-        :hint-content="marker.hint"
-        :key="marker.id"
-        :icon="markerIcon"
-        :balloon-template="getBalloonTemplate(marker)"
-      />
-    </yandex-map>
   </div>
 </template>
 
@@ -30,11 +33,11 @@ export default {
         return 13;
       }
     },
-    balloonImageSize(){
+    balloonImageSize() {
       if (this.$device.isDesktop) {
         return 'w-80';
       } else {
-        return 'w-64';
+        return 'w-60';
       }
     }
   },
@@ -48,6 +51,45 @@ export default {
     initCoords: [
       45.617003, 38.942364
     ],
+    outlets: {
+      title: 'г. Тимашевск',
+      items: [
+        [
+          {
+            name: 'ЮгаДар на Красной',
+            'description': 'г. Тимашевск, ул. Красная 105',
+            'image': require('~/assets/img/outlets/krasnaya.png'),
+          },
+          {
+            name: 'ЮгаДар на Советском переулке',
+            'description': 'Описание 2',
+            'image': require('~/assets/img/outlets/sovet.png'),
+          },
+          {
+            name: 'ЮгаДар на Братской',
+            'description': 'г. Тимашевск, ул. Красная 154',
+            'image': require('~/assets/img/outlets/bratskaya.png'),
+          }
+        ],
+        [
+          {
+            name: 'ЮгаДар на Сахарном',
+            'description': 'Описание 4',
+            'image': require('~/assets/img/outlets/saharnii.png'),
+          },
+          {
+            name: 'ЮгаДар у музея',
+            'description': 'Описание 5',
+            'image': require('~/assets/img/outlets/stepan.png'),
+          },
+          {
+            name: 'ЮгаДар в парке',
+            'description': 'Описание 6',
+            'image': require('~/assets/img/outlets/bratskaya.png'),
+          }
+        ]
+      ]
+    },
     markers: [
       {
         id: 0,

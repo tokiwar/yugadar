@@ -1,7 +1,7 @@
 <template>
   <div class="h-screen text-lg not-italic font-nunito">
     <Header class="fixed top-0 left-0 z-50 w-full bg-white"/>
-    <main class="mx-auto mt-22" :class="{'mx-2 max-w-screen-xl': !$device.isDesktop}">
+    <main class="mx-auto mt-20" :class="{'mx-2 max-w-screen-xl': !$device.isDesktop}">
       <Nuxt class="mt-20"/>
     </main>
     <Footer/>

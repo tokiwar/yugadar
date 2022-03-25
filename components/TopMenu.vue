@@ -9,15 +9,20 @@
     </NuxtLink>
     <hr>
   </div>
-  <div class="flex flex-row font-bold items-center place-content-between mx-4 my-2" v-else>
+  <div class="flex flex-row h-20 font-bold items-center place-content-between" v-else>
     <div class="m-auto">
       <img class="w-32" :src="require('~/assets/img/logo-2.png')" alt=""/>
     </div>
-    <div class="absolute right-4 text-l font-black uppercase">
-      <img class="w-9" :src="icon" @click.prevent="close" alt=""/>
+    <div class="absolute text-l font-black uppercase right-0">
+      <button class="hamburger hamburger--spin" :class="{'is-active': opened}" type="button" @click.prevent="close">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
       <transition name="fade">
-        <div class="flex w-full flex-col fixed bg-white items-left justify-items py-2 mt-4 right-0" v-if="opened">
-          <NuxtLink class="px-4" @click.native="close" v-for="menuItem in menu" :key="menuItem.link" :to="menuItem.link">
+        <div class="flex w-full flex-col fixed bg-white items-left justify-items py-2 mt-2 right-0" v-if="opened">
+          <NuxtLink class="px-4" @click.native="close" v-for="menuItem in menu" :key="menuItem.link"
+                    :to="menuItem.link">
             {{ menuItem.name }}
           </NuxtLink>
         </div>

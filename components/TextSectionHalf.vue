@@ -2,7 +2,8 @@
   <section v-if="SectionData.title || SectionData.subtitle || SectionData.text"
            :class="{'h-160 flex-row' : $device.isDesktop, 'h-auto flex-col-reverse' : !$device.isDesktop}"
            class="flex justify-center items-center select-none">
-    <img v-if="SectionData.img" :class="{'w-3/6 h-full ' : $device.isDesktop, 'h-96' : !$device.isDesktop}"
+    <img v-if="SectionData.img"
+         :class="{'w-3/6 h-full ' : $device.isDesktop, 'h-112' : $device.isTablet, 'h-96' : $device.isMobile}"
          class="object-cover object-center"
          :src="SectionData.img" alt=""/>
     <div :class="{'w-3/6' : $device.isDesktop, 'h-112 w-4/5' : !$device.isDesktop}"

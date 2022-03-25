@@ -2,7 +2,8 @@
   <div>
     <TopTextSection :section-data="topSectionData"/>
     <TextSection :section-data="sectionData1"/>
-    <section class="flex flex-row justify-center items-center select-none"
+    <ParallaxSection v-if="$device.isDesktop" :section-data="sectionDataParallax"/>
+    <section v-else class="flex flex-row justify-center items-center select-none"
              :class="{'h-160' : $device.isDesktop, 'h-auto': !$device.isDesktop}">
       <img class="w-full object-cover object-center"
            :class="{'h-full' : $device.isDesktop, 'h-96': !$device.isDesktop}"
@@ -22,6 +23,9 @@ export default {
     }
   },
   data: () => ({
+    sectionDataParallax: {
+      bg: 'bg-about-page-pattern'
+    },
     sectionData1: {
       title: 'Заголовок1',
       subtitle: 'Подзаголовок1',

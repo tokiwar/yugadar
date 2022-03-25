@@ -16,7 +16,8 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     '@/assets/css/fonts.css',
-    '@/assets/css/style.css'
+    '@/assets/css/style.css',
+    '@/assets/css/hamburgers.css'
   ],
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
@@ -36,6 +37,13 @@ export default {
     config: {
       theme: {
         extend: {
+          backgroundImage: {
+            'main-page-pattern': "url('@/assets/img/main-page-block-2.png')",
+            'about-page-pattern': "url('@/assets/img/about-page-block-1.png')",
+          },
+          backgroundSize: {
+            '104': '26rem',
+          },
           colors: {
             'blue-green-100': '#b5e8d5',
             'light-plum-100': '#c3a9d4',
