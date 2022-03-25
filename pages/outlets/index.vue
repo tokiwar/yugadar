@@ -3,7 +3,7 @@
     <TopTextSection :section-data="topSectionData"/>
     <Outlets :outlets="outlets"/>
     <no-ssr>
-      <yandex-map :class="{'h-192': $device.isDesktop, 'h-120': !$device.isDesktop}" :coords="initCoords" :zoom="zoom">
+      <yandex-map :class="{'h-192': $device.isDesktop, 'h-120': !$device.isDesktop}" :coords="initCoords" :zoom="zoom" :scroll-zoom="false">
         <ymap-marker
           v-for="marker in markers"
           :coords="marker.coords"
