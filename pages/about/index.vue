@@ -24,7 +24,7 @@ export default {
   },
   data: () => ({
     sectionDataParallax: {
-      bg: 'bg-about-page-pattern'
+      bg: 'bg-about-page-pattern',
     },
     sectionData1: {
       title: 'Заголовок1',
