@@ -17,7 +17,7 @@
   </section>
   <section class="my-20" v-else>
     <no-ssr>
-      <swiper ref="mySwiper" :options="swiperOptions" v-if="items">
+      <swiper :options="swiperOptions" v-if="items">
         <swiper-slide v-for="item in items" :key="item.name">
           <div class="flex flex-col justify-start items-center space-y-2">
             <img class="h-160 rounded-3xl" :src="item.image" alt=""/>
