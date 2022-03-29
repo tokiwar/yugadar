@@ -1,6 +1,6 @@
 <template>
   <section v-if="!$device.isDesktop" class="flex flex-col justify-center items-center select-none font-bold text-center"
-           :class="{'my-28  space-y-20': $device.isDesktop, 'my-10' : !$device.isDesktop}">
+           :class="{'my-28 space-y-20': $device.isDesktop, 'my-10' : !$device.isDesktop}">
     <div v-if="outlets.title" class="font-bold"
          :class="{'text-7xl' : $device.isDesktop, 'text-4xl mb-10' : !$device.isDesktop}">
       {{ outlets.title }}
@@ -15,12 +15,12 @@
       </div>
     </div>
   </section>
-  <section class="my-28" v-else>
+  <section class="my-20" v-else>
     <no-ssr>
       <swiper ref="mySwiper" :options="swiperOptions" v-if="items">
         <swiper-slide v-for="item in items" :key="item.name">
           <div class="flex flex-col justify-start items-center space-y-2">
-            <img class="h-128 rounded-3xl" :src="item.image" alt=""/>
+            <img class="h-160 rounded-3xl" :src="item.image" alt=""/>
             <span class="text-xl font-black">{{ item.name }}</span>
             <span class="text-lg">{{ item.description }}</span>
           </div>

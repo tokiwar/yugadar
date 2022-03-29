@@ -1,6 +1,6 @@
 <template>
-  <section class="flex flex-col justify-center items-center select-none font-bold text-center"
-           :class="{'my-28 space-y-20': $device.isDesktop, 'my-20' : !$device.isDesktop}">
+  <section class="flex flex-col justify-center items-center select-none font-bold text-center my-20"
+           :class="{'space-y-20': $device.isDesktop,}">
     <div v-for="line in catalog" class="flex justify-center w-3/6"
          :class="{'flex-row space-x-20 place-items-start' : $device.isDesktop, 'flex-col items-center' : !$device.isDesktop}">
       <div v-for="item in line" class="flex flex-col justify-center items-center space-y-5"

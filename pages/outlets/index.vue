@@ -161,7 +161,7 @@ export default {
       return `
         <div class="pl-4">
           <span class="text-xl not-italic font-nunito font-bold">${coordsData.name}</span>
-          <img class="my-2 ${this.balloonImageSize}"  src="${coordsData.img}" alt="${coordsData.name}}"/>
+          <img class="my-2 ${this.balloonImageSize} rounded-2xl"  src="${coordsData.img}" alt="${coordsData.name}}"/>
         </div>
       `
     }

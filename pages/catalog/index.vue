@@ -2,6 +2,7 @@
   <div>
     <TopTextSection :section-data="topSectionData"/>
     <Catalog :catalog="catalog"/>
+    <CatalogPrice class="mt-20" :catalog="catalogPrice"/>
   </div>
 </template>
 
@@ -18,6 +19,56 @@ export default {
       title: 'Наше',
       subtitle: 'МОРОЖЕНОЕ',
       color: 'bg-blue-green-100',
+    },
+    catalogPrice: {
+      iceCream: {
+        title: 'МОРОЖЕНОЕ В АССОРТИМЕНТЕ (жир 15%)',
+        rows: ['', 'Цена (1 кг)', 'Цена (тара 2,5 кг)',],
+        items: [
+          {
+            name: 'Пломбир',
+            prices: ['280 руб.', '700 руб.'],
+          },
+          {
+            name: 'Клубника',
+            prices: ['280 руб.', '700 руб.'],
+          },
+          {
+            name: 'Вишня',
+            prices: ['280 руб.', '700 руб.'],
+          },
+          {
+            name: 'Черная смородина',
+            prices: ['280 руб.', '700 руб.'],
+          },
+          {
+            name: 'Киви',
+            prices: ['280 руб.', '700 руб.'],
+          },
+          {
+            name: 'Малина',
+            prices: ['280 руб.', '700 руб.'],
+          },
+        ]
+      },
+      waffleCone: {
+        title: 'РОЖОК ВАФЕЛЬНЫЙ',
+        rows: ['', 'Цена (за Шт.)', 'Цена (коробка)',],
+        items: [
+          {
+            name: 'Рожок 110',
+            prices: ['2,66 руб.', '600 руб. / 225 шт.'],
+          },
+          {
+            name: 'Рожок 150',
+            prices: ['2,33 руб.', '1000 руб. / 300 шт.'],
+          },
+          {
+            name: 'Рожок 185',
+            prices: ['4 руб.', '1200 руб. / 300 шт.'],
+          },
+        ]
+      }
     },
     catalog: [
       [
