@@ -5,7 +5,7 @@ export default {
     meta: [
       {charset: 'utf-8'},
       {name: 'viewport', content: 'width=device-width, initial-scale=1'},
-      {hid: 'description', name: 'description', content: ''},
+      {hid: 'description', name: 'description', content: 'Мороженое от кубанского производителя «ЮгаДар»'},
       {name: 'format-detection', content: 'telephone=no'}
     ],
     link: [
@@ -21,7 +21,7 @@ export default {
   ],
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    { src: '@/plugins/ymapPlugin.js',  mode: 'client' }
+    {src: '@/plugins/ymapPlugin.js', mode: 'client'}
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -59,8 +59,12 @@ export default {
             '112': '28rem',
             '120': '30rem',
             '128': '32rem',
+            '152': '38rem',
             '160': '40rem',
-            '192': '48rem'
+            '168': '42rem',
+            '176': '44rem',
+            '184': '46rem',
+            '192': '48rem',
           },
           maxHeight: {
             '160': '40rem',

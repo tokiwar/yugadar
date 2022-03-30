@@ -6,11 +6,11 @@
         <img :class="{'h-112 my-14' : !$device.isDesktop}" :src="require('~/assets/img/logo/main-logo.png')" alt=""/>
       </div>
       <div class="absolute text-white flex flex-col justify-center items-center mt-36 font-black">
-        <span :class="{'text-6xl': $device.isDesktop, 'text-2xl': !$device.isDesktop}">Югадар</span>
+        <span :class="{'text-6xl': $device.isDesktop, 'text-2xl': !$device.isDesktop}">ЮгаДар</span>
         <span :class="{'text-9xl': $device.isDesktop, 'text-5xl': !$device.isDesktop}">МОРОЖЕНОЕ</span>
-        <NuxtLink to="/catalog"
+        <NuxtLink to="/about"
                   class="mt-10 text-xl border-2 px-4 py-2 text-white border-white hover:bg-black hover:border-black ease-in-out duration-300">
-          ПРОДУКЦИЯ
+          О НАС
         </NuxtLink>
       </div>
     </section>
@@ -25,8 +25,10 @@
       <div class="text-white flex flex-col justify-center items-center font-black"
            :class="{'absolute mt-36' : $device.isDesktop, 'mt-10' : !$device.isDesktop}"
       >
-        <span :class="{'text-6xl': $device.isDesktop, 'text-3xl': !$device.isDesktop}">Подзаголовок</span>
-        <span :class="{'text-9xl': $device.isDesktop, 'text-6xl': !$device.isDesktop}">Заголовок</span>
+        <span
+          :class="{'text-6xl': $device.isDesktop, 'text-2xl': !$device.isDesktop}">{{ sectionDataParallax.subtitle }}</span>
+        <span
+          :class="{'text-9xl': $device.isDesktop, 'text-5xl': !$device.isDesktop}">{{ sectionDataParallax.title }}</span>
       </div>
     </section>
     <TextSection :section-data="sectionData2"/>
@@ -39,7 +41,14 @@ export default {
   name: 'IndexPage',
   head() {
     return {
-      title: '«Югадар» - Главная страница'
+      title: '«ЮгаДар» - Главная страница',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Мороженое от кубанского производителя «ЮгаДар»'
+        }
+      ]
     }
   },
   data: () => ({
@@ -51,13 +60,13 @@ export default {
       title: 'Заголовок',
       subtitle: 'Подзаголовок',
       text: 'Это текст. Нажмите один раз и выберите «Редактировать текст» или просто дважды кликните, чтобы добавить свой текст и настроить шрифт.',
-      name: 'ССЫЛКА',
-      link: '/',
+      name: 'МОРОЖЕНОЕ',
+      link: '/catalog',
       img: require('~/assets/img/main-page-block-1.png')
     },
     sectionDataParallax: {
-      title: 'Заголовок',
-      subtitle: 'Подзаголовок',
+      title: 'Мороженое',
+      subtitle: 'Только натуральное',
       bg: 'bg-main-page-pattern'
     },
     sectionData2: {

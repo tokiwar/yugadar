@@ -1,7 +1,7 @@
 <template>
   <header class="h-21 select-none">
     <head>
-      <title>Югадар</title>
+      <title>ЮгаДар</title>
     </head>
     <TopMenu :menu="menu"/>
   </header>
