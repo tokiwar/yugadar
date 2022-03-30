@@ -7,7 +7,7 @@
       <div v-if="SectionData.title" :class="{'text-6xl w-4/6':$device.isDesktop, 'text-4xl' : !$device.isDesktop}">
         {{ SectionData.title }}
       </div>
-      <div v-if="SectionData.subtitle" :class="{'text-2xl w-3/6':$device.isDesktop, 'text-3xl' : !$device.isDesktop}">
+      <div v-if="SectionData.subtitle" class="font-marck" :class="{'text-2xl w-3/6 pt-2':$device.isDesktop, 'text-3xl' : !$device.isDesktop}">
         {{ SectionData.subtitle }}
       </div>
       <div v-if="SectionData.text" v-html="SectionData.text" class="text-justify space-y-4" :class="{'w-5/6 pt-8':$device.isDesktop, 'pt-12' : !$device.isDesktop}"></div>

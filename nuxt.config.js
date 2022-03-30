@@ -53,6 +53,8 @@ export default {
           fontFamily: {
             'gotham': ['Gotham Pro'],
             'nunito': ['Nunito'],
+            'roboto': ['Roboto'],
+            'marck' : ['Marck Script'],
           },
           height: {
             '104': '26rem',

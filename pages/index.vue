@@ -26,9 +26,13 @@
            :class="{'absolute mt-36' : $device.isDesktop, 'mt-10' : !$device.isDesktop}"
       >
         <span
-          :class="{'text-6xl': $device.isDesktop, 'text-2xl': !$device.isDesktop}">{{ sectionDataParallax.subtitle }}</span>
+          class="font-marck text-3xl">{{
+            sectionDataParallax.subtitle
+          }}</span>
         <span
-          :class="{'text-9xl': $device.isDesktop, 'text-5xl': !$device.isDesktop}">{{ sectionDataParallax.title }}</span>
+          class="text-5xl">{{
+            sectionDataParallax.title
+          }}</span>
       </div>
     </section>
     <TextSection :section-data="sectionData2"/>
@@ -62,7 +66,8 @@ export default {
       text: 'Это текст. Нажмите один раз и выберите «Редактировать текст» или просто дважды кликните, чтобы добавить свой текст и настроить шрифт.',
       name: 'МОРОЖЕНОЕ',
       link: '/catalog',
-      img: require('~/assets/img/main-page-block-1.png')
+      img: require('~/assets/img/main-page-block-1.png'),
+      imageRight: true
     },
     sectionDataParallax: {
       title: 'Мороженое',
