@@ -1,0 +1,32 @@
+<template>
+  <section v-if="outlets.title || outlets.subtitle || outlets.text"
+           class="flex flex-row justify-center items-center select-none h-auto"
+           :class="{'my-16' :$device.isDesktop}">
+    <div class="flex flex-col justify-center items-center font-black text-center"
+         :class="{'w-3/6' : $device.isDesktop, 'w-4/5 my-14': !$device.isDesktop}">
+      <div v-if="outlets.title" :class="{'text-5xl w-4/6':$device.isDesktop, 'text-3xl' : !$device.isDesktop}">
+        {{ outlets.title }}
+      </div>
+      <div v-if="outlets.subtitle" class="font-marck"
+           :class="{'text-2xl w-3/6 pt-2':$device.isDesktop, 'text-3xl' : !$device.isDesktop}">
+        {{ outlets.subtitle }}
+      </div>
+      <div v-if="outlets.items" class="flex flex-col space-y-4 text-justify text-xl font-bold"
+           :class="{'pt-8':$device.isDesktop, 'pt-12' : !$device.isDesktop}">
+        <div v-for="item in outlets.items" :key="item.key" v-html="item.value"/>
+      </div>
+      <div v-if="outlets.text" v-html="outlets.text" class="text-justify space-y-4"
+           :class="{'w-5/6 pt-8':$device.isDesktop, 'pt-12' : !$device.isDesktop}"></div>
+      <NuxtLink v-if="outlets.link && outlets.name" :to="outlets.link"
+                class="mt-10 text-xl border-2 px-4 py-2 border-black hover:bg-black hover:text-white ease-in-out duration-300">
+        {{ outlets.name }}
+      </NuxtLink>
+    </div>
+  </section>
+</template>
+<script>
+export default {
+  name: 'OutletsContacts',
+  props: ['outlets']
+}
+</script>

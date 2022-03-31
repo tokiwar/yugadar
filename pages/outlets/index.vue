@@ -1,11 +1,12 @@
 <template>
   <div>
     <TopTextSection :section-data="topSectionData"/>
-    <Outlets :outlets="outlets"/>
+    <Outlets :outlets="items"/>
     <no-ssr>
-      <yandex-map :class="{'h-192': $device.isDesktop, 'h-120': !$device.isDesktop}" :coords="initCoords" :zoom="zoom" :scroll-zoom="false">
+      <yandex-map :class="{'h-192': $device.isDesktop, 'h-120': !$device.isDesktop}" :coords="initCoords" :zoom="zoom"
+                  :scroll-zoom="false">
         <ymap-marker
-          v-for="marker in markers"
+          v-for="marker in items"
           :coords="marker.coords"
           :marker-id="marker.id"
           :hint-content="marker.hint"
@@ -51,49 +52,12 @@ export default {
     initCoords: [
       45.617003, 38.942364
     ],
-    outlets: {
-      title: 'г. Тимашевск',
-      items: [
-        [
-          {
-            name: 'ЮгаДар на Красной',
-            'description': 'г. Тимашевск, ул. Красная 105',
-            'image': require('~/assets/img/outlets/krasnaya.png'),
-          },
-          {
-            name: 'ЮгаДар на Советском переулке',
-            'description': 'Описание 2',
-            'image': require('~/assets/img/outlets/sovet.png'),
-          },
-          {
-            name: 'ЮгаДар на Братской',
-            'description': 'г. Тимашевск, ул. Красная 154',
-            'image': require('~/assets/img/outlets/bratskaya.png'),
-          }
-        ],
-        [
-          {
-            name: 'ЮгаДар на Сахарном',
-            'description': 'Описание 4',
-            'image': require('~/assets/img/outlets/saharnii.png'),
-          },
-          {
-            name: 'ЮгаДар у музея',
-            'description': 'Описание 5',
-            'image': require('~/assets/img/outlets/stepan.png'),
-          },
-          {
-            name: 'ЮгаДар в парке',
-            'description': 'Описание 6',
-            'image': require('~/assets/img/outlets/bratskaya.png'),
-          }
-        ]
-      ]
-    },
-    markers: [
+    items: [
       {
         id: 0,
         hint: 'ЮгаДар на Красной',
+        description: 'г. Тимашевск,</br>ул. Красная, 101А (у кинотеатра «Заря»)',
+        time: 'с 9.00 до 21.00 (без выходных)',
         balloonText: 'ЮгаДар на Красной',
         name: 'ЮгаДар на Красной',
         coords: [45.613798, 38.934283],
@@ -102,6 +66,8 @@ export default {
       {
         id: 1,
         hint: 'ЮгаДар на Советском переулке',
+        description: 'г. Тимашевск,</br>ул. Красная, 101Б',
+        time: 'с 9.00 до 19.00 (без выходных)',
         balloonText: 'ЮгаДар на Советском переулке',
         name: 'ЮгаДар на Советском переулке',
         coords: [45.615675, 38.935239],
@@ -110,6 +76,8 @@ export default {
       {
         id: 2,
         hint: 'ЮгаДар на Братской',
+        description: 'г. Тимашевск,</br>ул. Ленина, 154-А',
+        time: 'с 9.00 до 18.00 (без выходных)',
         balloonText: 'ЮгаДар на Братской',
         name: 'ЮгаДар на Братской',
         coords: [45.611578, 38.934333],
@@ -118,6 +86,8 @@ export default {
       {
         id: 3,
         hint: 'ЮгаДар на Сахарном',
+        description: 'г. Тимашевск,</br>поселок сахарного завода, 11/1 </br>(рядом школа № 4)',
+        time: 'с 11.00 до 19.00 (без выходных)',
         balloonText: 'ЮгаДар на Сахарном',
         name: 'ЮгаДар на Сахарном',
         coords: [45.613520, 38.960925],
@@ -126,6 +96,8 @@ export default {
       {
         id: 4,
         hint: 'ЮгаДар у музея',
+        description: 'г. Тимашевск,</br>ул. Пионерская, 172',
+        time: 'с 10.00 до 18.00 (без выходных)',
         balloonText: 'ЮгаДар у музея',
         name: 'ЮгаДар у музея',
         coords: [45.612467, 38.937221],
@@ -134,6 +106,8 @@ export default {
       {
         id: 5,
         hint: 'ЮгаДар в парке',
+        description: 'г. Тимашевск,</br>ул. Красная, городской парк Изюминка',
+        time: 'с 9.00 до 21.00 (без выходных)',
         balloonText: 'ЮгаДар в парке',
         name: 'ЮгаДар в парке',
         coords: [45.623914, 38.941423],
@@ -153,7 +127,7 @@ export default {
   }),
   head() {
     return {
-      title: '«Югадар» - Точки продажи'
+      title: '«ЮгаДар» - Точки продажи'
     }
   },
   methods: {

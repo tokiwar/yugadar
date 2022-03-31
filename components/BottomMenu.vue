@@ -3,9 +3,10 @@
     <div class="flex flex-col space-y-4">
       <span class="text-3xl">Адрес</span>
       <div class="flex flex-col">
-        <span>ул. Весовая, 5,</span>
+        <span>пос. Индустриальный,</span>
+        <span>Центральная усадьба,</span>
         <span>Краснодарский край,</span>
-        <span>г. Тимашевск, 352700,</span>
+        <span>г. Тимашевск, 350056,</span>
         <span>Россия</span>
       </div>
     </div>
@@ -19,8 +20,8 @@
     <div class="flex flex-col space-y-4">
       <span class="text-3xl">Часы работы</span>
       <div class="flex flex-col">
-        <span>ЕЖЕДНЕВНО</span>
-        <span>10:00–22:00</span>
+        <span>Понедельник - Суббота</span>
+        <span>9:00–19:00</span>
       </div>
     </div>
   </div>

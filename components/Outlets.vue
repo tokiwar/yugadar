@@ -1,12 +1,12 @@
 <template>
-  <section>
-    <swiper :options="swiperOptions" v-if="items">
-      <swiper-slide v-for="item in items" :key="item.name">
-        <div class="flex flex-col justify-start items-center bg-light-yellow-100">
-          <img :class="{'h-160': $device.isDesktop}" :src="item.image" alt=""/>
-          <div class=" flex flex-col items-center justify-center py-4">
-            <span class="text-xl font-bold">{{ item.name }}</span>
-            <span class="text-lg">{{ item.description }}</span>
+  <section class="bg-light-yellow-100">
+    <swiper :options="swiperOptions" v-if="outlets">
+      <swiper-slide v-for="item in outlets" :key="item.name">
+        <div class="flex flex-col justify-start items-center">
+          <img :class="{'h-136 rounded-2xl': $device.isDesktop}" :src="item.img" alt=""/>
+          <div class=" flex flex-col items-center justify-center py-4 w-4/6 h-32 text-center">
+            <span class="text-xl font-bold leading-6" v-html="item.description"></span>
+            <span class="text-lg italic" v-html="item.time"></span>
           </div>
         </div>
       </swiper-slide>
@@ -25,15 +25,9 @@ export default {
     SwiperSlide
   },
   created() {
-    if (this.outlets.items.length) {
-      const items = [];
-      for (const item in this.outlets.items) {
-        for (const elem of this.outlets.items[item]) {
-          items.push(elem);
-        }
-      }
-      this.items = items;
+    if (this.outlets.length) {
       this.swiperOptions['slidesPerView'] = this.$device.isDesktop ? 3 : 1;
+      this.swiperOptions['spaceBetween'] = this.$device.isDesktop? 5 : 0;
     }
   },
   data: () => ({

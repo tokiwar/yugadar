@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Югадар',
+    title: 'ЮгаДар',
     meta: [
       {charset: 'utf-8'},
       {name: 'viewport', content: 'width=device-width, initial-scale=1'},
@@ -38,11 +38,12 @@ export default {
       theme: {
         extend: {
           backgroundImage: {
-            'main-page-pattern': "url('@/assets/img/main-page-block-2.png')",
-            'about-page-pattern': "url('@/assets/img/about-page-block-1.png')",
+            'parallax-table':  "url('@/assets/img/parallax/parallax-table.png')",
+            'parallax-sorbet' : "url('@/assets/img/parallax/parallax-sorbet.png')",
+            'parallax-icecream' : "url('@/assets/img/parallax/parallax-icecream.png')",
+            'parallax-icecream-plate' : "url('@/assets/img/parallax/parallax-icecream-plate.png')",
           },
           backgroundSize: {
-            '104': '26rem',
           },
           colors: {
             'blue-green-100': '#b5e8d5',
@@ -61,6 +62,8 @@ export default {
             '112': '28rem',
             '120': '30rem',
             '128': '32rem',
+            '136': '34rem',
+            '144': '36rem',
             '152': '38rem',
             '160': '40rem',
             '168': '42rem',

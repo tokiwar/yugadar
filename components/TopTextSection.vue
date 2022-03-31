@@ -19,7 +19,7 @@ export default {
   computed: {
     className() {
       if (this.$device.isDesktop) {
-        return 'h-104' + ' ' + this.SectionData.color + ' ' + this.classNameStatic;
+        return 'h-96' + ' ' + this.SectionData.color + ' ' + this.classNameStatic;
       } else {
         return 'h-48' + ' ' + this.SectionData.color + ' ' + this.classNameStatic;
       }

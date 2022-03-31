@@ -18,19 +18,19 @@ export default {
       },
       {
         name: 'Мороженое',
-        link: '/catalog'
+        link: '/catalog/'
       },
       {
         name: 'О нас',
-        link: '/about'
+        link: '/about/'
       },
       {
         name: 'Контакты',
-        link: '/contacts'
+        link: '/contacts/'
       },
       {
         name: 'Точки продажи',
-        link: '/outlets'
+        link: '/outlets/'
       },
     ]
   }),

@@ -8,7 +8,7 @@
       <div class="absolute text-white flex flex-col justify-center items-center mt-36 font-black">
         <span :class="{'text-6xl': $device.isDesktop, 'text-2xl': !$device.isDesktop}">ЮгаДар</span>
         <span :class="{'text-9xl': $device.isDesktop, 'text-5xl': !$device.isDesktop}">МОРОЖЕНОЕ</span>
-        <NuxtLink to="/about"
+        <NuxtLink to="/about/"
                   class="mt-10 text-xl border-2 px-4 py-2 text-white border-white hover:bg-black hover:border-black ease-in-out duration-300">
           О НАС
         </NuxtLink>
@@ -65,14 +65,14 @@ export default {
       subtitle: 'Подзаголовок',
       text: 'Это текст. Нажмите один раз и выберите «Редактировать текст» или просто дважды кликните, чтобы добавить свой текст и настроить шрифт.',
       name: 'МОРОЖЕНОЕ',
-      link: '/catalog',
+      link: '/catalog/',
       img: require('~/assets/img/main-page-block-1.png'),
       imageRight: true
     },
     sectionDataParallax: {
       title: 'Мороженое',
-      subtitle: 'Только натуральное',
-      bg: 'bg-main-page-pattern'
+      subtitle: 'только натуральное',
+      bg: 'bg-parallax-sorbet bg-auto'
     },
     sectionData2: {
       title: 'Заголовок',
