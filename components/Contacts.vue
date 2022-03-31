@@ -8,12 +8,12 @@
         {{ contacts.title }}
       </div>
       <div v-if="contacts.subtitle" class="font-marck"
-           :class="{'text-2xl w-3/6 pt-2':$device.isDesktop, 'text-3xl' : !$device.isDesktop}">
+           :class="{'text-2xl w-3/6 pt-2':$device.isDesktop, 'text-xl' : !$device.isDesktop}">
         {{ contacts.subtitle }}
       </div>
       <div class="flex flex-col"
            :class="{'pt-8 text-2xl text-justify space-y-4' : $device.isDesktop, 'pt-12 w-full text-lg text-left space-y-2' : !$device.isDesktop}"
-           v-if="contacts.address || contacts.name || contacts.phone || contacts.email || contacts.time">
+           v-if="contacts.address || contacts.name || contacts.phone || contacts.email || contacts.time || contacts.itn || contacts.psrn">
         <div v-if="contacts.address" v-html="contacts.address"/>
         <div class="flex" :class="{'space-x-4 flex-row' : $device.isDesktop, 'flex-col' : !$device.isDesktop}"
              v-if="contacts.name && contacts.phone">
@@ -23,6 +23,16 @@
                :href="`tel:${phone.phoneClear}`"
                v-for="phone in contacts.phone">{{ `${phone.phone} (${phone.name})` }}</a>
           </div>
+        </div>
+        <div class="flex" :class="{'space-x-4 flex-row' : $device.isDesktop, 'flex-col' : !$device.isDesktop}"
+             v-if="contacts.time">
+          <div class="underline">{{ `ИНН:` }}</div>
+          <div v-html="contacts.itn"></div>
+        </div>
+        <div class="flex" :class="{'space-x-4 flex-row' : $device.isDesktop, 'flex-col' : !$device.isDesktop}"
+             v-if="contacts.time">
+          <div class="underline">{{ `ОГРНИП:` }}</div>
+          <div v-html="contacts.psrn"></div>
         </div>
         <div class="flex" :class="{'space-x-4 flex-row' : $device.isDesktop, 'flex-col' : !$device.isDesktop}"
              v-if="contacts.time">

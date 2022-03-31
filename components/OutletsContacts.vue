@@ -4,15 +4,15 @@
            :class="{'my-16' :$device.isDesktop}">
     <div class="flex flex-col justify-center items-center font-black text-center"
          :class="{'w-3/6' : $device.isDesktop, 'w-4/5 my-14': !$device.isDesktop}">
-      <div v-if="outlets.title" :class="{'text-5xl w-4/6':$device.isDesktop, 'text-3xl' : !$device.isDesktop}">
+      <div v-if="outlets.title" :class="{'text-5xl w-4/6':$device.isDesktop, 'text-2xl' : !$device.isDesktop}">
         {{ outlets.title }}
       </div>
       <div v-if="outlets.subtitle" class="font-marck"
-           :class="{'text-2xl w-3/6 pt-2':$device.isDesktop, 'text-3xl' : !$device.isDesktop}">
+           :class="{'text-2xl w-3/6 pt-2':$device.isDesktop, 'text-xl' : !$device.isDesktop}">
         {{ outlets.subtitle }}
       </div>
-      <div v-if="outlets.items" class="flex flex-col space-y-4 text-justify text-xl font-bold"
-           :class="{'pt-8':$device.isDesktop, 'pt-12' : !$device.isDesktop}">
+      <div v-if="outlets.items" class="flex flex-col text-justify font-bold"
+           :class="{'pt-8 text-xl space-y-4':$device.isDesktop, 'pt-12 text-lg space-y-2' : !$device.isDesktop}">
         <div v-for="item in outlets.items" :key="item.key" v-html="item.value"/>
       </div>
       <div v-if="outlets.text" v-html="outlets.text" class="text-justify space-y-4"
