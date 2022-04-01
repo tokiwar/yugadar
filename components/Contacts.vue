@@ -9,7 +9,7 @@
         {{ contacts.title }}
       </div>
       <div v-if="contacts.subtitle" class="font-marck"
-           :class="{'text-2xl w-3/6 pt-2':$device.isDesktop, 'text-2xl' : $device.isTablet, 'text-xl' : $device.isMobile}">
+           :class="{'text-3xl w-3/6 pt-2':$device.isDesktop, 'text-2xl' : $device.isTablet, 'text-xl' : $device.isMobile}">
         {{ contacts.subtitle }}
       </div>
       <div class="flex flex-col"
