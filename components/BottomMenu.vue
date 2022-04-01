@@ -1,5 +1,6 @@
 <template class="">
-  <div class="font-bold flex" :class="{'flex-row space-x-14' : $device.isDesktop, 'flex-col space-y-6' :!$device.isDesktop}">
+  <div class="font-bold flex"
+       :class="{'flex-row space-x-14' : $device.isDesktopOrTablet, 'flex-col space-y-6' :$device.isMobile}">
     <div class="flex flex-col space-y-4">
       <span class="text-3xl">Адрес</span>
       <div class="flex flex-col">

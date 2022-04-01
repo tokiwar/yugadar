@@ -4,11 +4,13 @@
     <section v-if="$device.isDesktop"
              class="grid grid-cols-3 grid-rows-3 gap-x-16 gap-y-4 select-none font-bold text-center w-3/6 mx-auto mt-10">
       <template v-for="item in items">
-        <div class="flex flex-col">
+        <div class="flex flex-col items-center">
           <img :src="item.image" alt=""/>
-          <span class="text-2xl" v-html="item.nameHtml"></span>
-          <span class="h-0.5 w-5/6 bg-gray-500 my-2 mx-auto"></span>
-          <span class="italic">{{ item.description }}</span>
+          <div class="flex flex-col pt-4 h-48">
+            <span class="text-2xl h-16 flex items-center justify-center" v-html="item.nameHtml"></span>
+            <span class="h-0.5 w-64 bg-gray-500 my-2 mx-auto"></span>
+            <span class="italic h-20">{{ item.description }}</span>
+          </div>
         </div>
       </template>
     </section>

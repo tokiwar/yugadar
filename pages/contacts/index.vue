@@ -3,13 +3,7 @@
     <TopTextSection :section-data="topSectionData"/>
     <Contacts :contacts="contacts"/>
     <ParallaxSection v-if="$device.isDesktop" :section-data="sectionDataParallax"/>
-    <section v-else class="flex justify-center items-center bg-blue-green-100 select-none"
-             :class="{'h-192 flex-row' : $device.isDesktop, 'h-auto flex-col-reverse' : !$device.isDesktop}">
-      <div class="">
-        <img :class="{'h-104 object-cover object-center' : !$device.isDesktop}"
-             :src="require('~/assets/img/parallax/parallax-icecream-plate.png')" alt=""/>
-      </div>
-    </section>
+    <NonParallaxSection :section-data="sectionDataNonParallax" v-else/>
     <OutletsContacts :outlets="outlets"/>
   </div>
 </template>
@@ -25,6 +19,10 @@ export default {
   data: () => ({
     sectionDataParallax: {
       bg: 'bg-parallax-icecream-plate bg-cover',
+    },
+    sectionDataNonParallax: {
+      bg: 'bg-blue-green-100',
+      bgImage: require('~/assets/img/parallax/parallax-icecream-plate.png')
     },
     outlets: {
       title: 'Розничные точки реализации мороженого',

@@ -3,13 +3,7 @@
     <TopTextSection :section-data="topSectionData"/>
     <TextSection :section-data="sectionData1"/>
     <ParallaxSection v-if="$device.isDesktop" :section-data="sectionDataParallax"/>
-    <section v-else class="flex flex-row justify-center items-center select-none"
-             :class="{'h-160' : $device.isDesktop, 'h-auto': !$device.isDesktop}">
-      <img class="w-full object-cover object-center"
-           :class="{'h-full' : $device.isDesktop, 'h-96': !$device.isDesktop}"
-           :src="require('~/assets/img/about-page-block-1.png')"
-           alt=""/>
-    </section>
+    <NonParallaxSection :section-data="sectionDataNonParallax" v-else/>
     <TextSection :section-data="sectionData2"/>
   </div>
 </template>
@@ -25,6 +19,10 @@ export default {
   data: () => ({
     sectionDataParallax: {
       bg: 'bg-parallax-table bg-cover',
+    },
+    sectionDataNonParallax: {
+      bg: '',
+      bgImage: require('~/assets/img/about-page-block-1.png')
     },
     sectionData1: {
       title: 'О нашем качестве',

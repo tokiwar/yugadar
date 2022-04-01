@@ -12,13 +12,13 @@
         {{ outlets.subtitle }}
       </div>
       <div v-if="outlets.items" class="flex flex-col text-justify font-bold"
-           :class="{'pt-8 text-xl space-y-4':$device.isDesktop, 'pt-12 text-lg space-y-2' : !$device.isDesktop}">
+           :class="{'pt-8 text-xl space-y-4 w-4/5':$device.isDesktopOrTablet, 'pt-12 text-lg space-y-2' : $device.isMobile}">
         <div v-for="item in outlets.items" :key="item.key" v-html="item.value"/>
       </div>
       <div v-if="outlets.text" v-html="outlets.text" class="text-justify space-y-4"
            :class="{'w-5/6 pt-8':$device.isDesktop, 'pt-12' : !$device.isDesktop}"></div>
       <NuxtLink v-if="outlets.link && outlets.name" :to="outlets.link"
-                class="mt-10 text-xl border-2 px-4 py-2 border-black hover:bg-black hover:text-white ease-in-out duration-300">
+                class="mt-10 text-2xl border-2 px-4 py-2 border-black hover:bg-black hover:text-white ease-in-out duration-300">
         {{ outlets.name }}
       </NuxtLink>
     </div>
