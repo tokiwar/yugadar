@@ -10,7 +10,7 @@
     </NuxtLink>
     <hr>
   </div>
-  <div class="flex flex-row h-20 font-bold items-center place-content-between" v-else-if="$device.isTablet">
+  <div class="flex flex-row h-20 font-bold items-center place-content-between z-40" v-else-if="$device.isTablet">
     <NuxtLink class="m-auto" :class="{'pointer-events-none' : $route.path === '/'}" to="/">
       <img class="w-32" :src="require('~/assets/img/logo-2.png')" alt=""/>
     </NuxtLink>
