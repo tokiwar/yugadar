@@ -1,7 +1,12 @@
 export default {
+  ssr: true,
+  target: "server",
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'ЮгаДар',
+    htmlAttrs: {
+      lang: "ru"
+    },
     meta: [
       {charset: 'utf-8'},
       {name: 'viewport', content: 'width=device-width, initial-scale=1'},
@@ -38,13 +43,12 @@ export default {
       theme: {
         extend: {
           backgroundImage: {
-            'parallax-table':  "url('@/assets/img/parallax/parallax-table.png')",
-            'parallax-sorbet' : "url('@/assets/img/parallax/parallax-sorbet.png')",
-            'parallax-icecream' : "url('@/assets/img/parallax/parallax-icecream.png')",
-            'parallax-icecream-plate' : "url('@/assets/img/parallax/parallax-icecream-plate.png')",
+            'parallax-table': "url('@/assets/img/parallax/parallax-table.png')",
+            'parallax-sorbet': "url('@/assets/img/parallax/parallax-sorbet.png')",
+            'parallax-icecream': "url('@/assets/img/parallax/parallax-icecream.png')",
+            'parallax-icecream-plate': "url('@/assets/img/parallax/parallax-icecream-plate.png')",
           },
-          backgroundSize: {
-          },
+          backgroundSize: {},
           colors: {
             'blue-green-100': '#b5e8d5',
             'light-plum-100': '#c3a9d4',
@@ -55,7 +59,7 @@ export default {
             'gotham': ['Gotham Pro'],
             'nunito': ['Nunito'],
             'roboto': ['Roboto'],
-            'marck' : ['Marck Script'],
+            'marck': ['Marck Script'],
           },
           height: {
             '104': '26rem',
@@ -86,13 +90,17 @@ export default {
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
     '@nuxtjs/device',
+    '@nuxtjs/proxy',
     'nuxt-mq'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: '/',
+    proxy: true
+  },
+
+  proxy: {
+    '/api/': {target: 'http://yugadar/'}
   },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa

@@ -15,6 +15,7 @@ export default {
     }
   },
   data: () => ({
+    test: null,
     topSectionData: {
       title: 'Наше',
       subtitle: 'МОРОЖЕНОЕ',
@@ -183,5 +184,11 @@ export default {
       },
     },
   }),
+  async asyncData({ $axios })
+  {
+    const resp = await $axios.$get(
+      '/api/'
+    );
+  }
 }
 </script>
