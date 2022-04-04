@@ -100,7 +100,8 @@ export default {
   },
 
   proxy: {
-    '/api/': {target: 'http://yugadar/'}
+    '/api': {target: 'http://yugadar/'},
+    '/upload': { target: "http://yugadar/"}
   },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa

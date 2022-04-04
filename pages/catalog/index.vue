@@ -15,7 +15,6 @@ export default {
     }
   },
   data: () => ({
-    test: null,
     topSectionData: {
       title: 'Наше',
       subtitle: 'МОРОЖЕНОЕ',
@@ -184,11 +183,17 @@ export default {
       },
     },
   }),
-  async asyncData({ $axios })
-  {
-    const resp = await $axios.$get(
-      '/api/'
+  async asyncData({$axios}) {
+    const catalog = {
+      iceCream: {
+        title: 'Мороженое в ассортименте (Пломбир жир 12%)',
+        rows: ['', 'Цена (1 кг)', 'Цена (тара 3 кг)',],
+      }
+    };
+    catalog.iceCream.items = await $axios.$get(
+      '/api/catalog/'
     );
+    return {catalog}
   }
 }
 </script>
