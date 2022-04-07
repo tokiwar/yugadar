@@ -6,6 +6,17 @@
         :class="{'h-112 object-cover object-center w-full':$device.isTablet, 'h-104 object-cover object-center' : $device.isMobile}"
         :src="SectionData.bgImage" alt=""/>
     </div>
+    <div v-if="SectionData.title || SectionData.subtitle"
+         class="text-white flex flex-col justify-center items-center font-black"
+         :class="{'absolute mt-36' : $device.isDesktop, 'mt-10' : !$device.isDesktop}"
+    >
+        <span v-if="SectionData.subtitle"
+              v-html="SectionData.subtitle"
+              class="font-marck text-3xl"/>
+      <span v-if="SectionData.title"
+            v-html="SectionData.title"
+            class="text-5xl"/>
+    </div>
   </section>
 </template>
 <script>

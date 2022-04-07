@@ -18,11 +18,11 @@ export default {
   },
   data: () => ({
     sectionDataParallax: {
-      bg: 'bg-parallax-table bg-cover',
+      bg: 'bg-parallax-icecream-2 bg-cover',
     },
     sectionDataNonParallax: {
       bg: '',
-      bgImage: require('~/assets/img/about-page-block-1.png')
+      bgImage: require('~/assets/img/main-page-block-3.png')
     },
     sectionData1: {
       title: 'О нашем качестве',

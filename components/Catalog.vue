@@ -2,7 +2,7 @@
   <div class="my-20 font-bold" :class="{'flex flex-col justify-center items-center text-center' : $device.isDesktop}">
     <div :class="{'text-7xl w-4/6':$device.isDesktop, 'text-5xl text-center' : !$device.isDesktop}">Ассортимент</div>
     <section v-if="$device.isDesktop"
-             class="grid grid-cols-3 grid-rows-3 gap-x-16 gap-y-4 select-none font-bold text-center w-3/6 mx-auto mt-10">
+             class="grid grid-cols-3 auto-rows-auto gap-x-16 gap-y-4 select-none font-bold text-center w-3/6 mx-auto mt-10">
       <template v-for="item in items">
         <div class="flex flex-col items-center">
           <img :src="item.image" alt=""/>

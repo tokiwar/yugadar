@@ -17,6 +17,7 @@ export default {
       {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}
     ]
   },
+  loading: '@/components/LoadingBar.vue',
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
@@ -46,6 +47,7 @@ export default {
             'parallax-table': "url('@/assets/img/parallax/parallax-table.png')",
             'parallax-sorbet': "url('@/assets/img/parallax/parallax-sorbet.png')",
             'parallax-icecream': "url('@/assets/img/parallax/parallax-icecream.png')",
+            'parallax-icecream-2': "url('@/assets/img/parallax/parallax-icecream-2.png')",
             'parallax-icecream-plate': "url('@/assets/img/parallax/parallax-icecream-plate.png')",
           },
           backgroundSize: {},
@@ -85,9 +87,7 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
     '@nuxtjs/device',
     '@nuxtjs/proxy',
@@ -101,13 +101,13 @@ export default {
 
   proxy: {
     '/api': {target: 'http://yugadar/'},
-    '/upload': { target: "http://yugadar/"}
+    '/upload': {target: "http://yugadar/"}
   },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
-      lang: 'en'
+      lang: 'ru'
     }
   },
 
