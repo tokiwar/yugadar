@@ -4,7 +4,7 @@
     <TextSection :section-data="sectionData1"/>
     <ParallaxSection v-if="$device.isDesktop" :section-data="sectionDataParallax"/>
     <NonParallaxSection :section-data="sectionDataNonParallax" v-else/>
-    <TextSection :section-data="sectionData2"/>
+    <FeedbackSection :section-data="sectionData2"/>
   </div>
 </template>
 
@@ -32,9 +32,38 @@ export default {
       link: '/contacts/'
     },
     sectionData2: {
-      title: 'Заголовок2',
-      subtitle: 'Подзаголовок2',
-      text: 'Это текст. Нажмите один раз и выберите «Редактировать текст» или просто дважды кликните, чтобы добавить свой текст и настроить шрифт2.'
+      title: 'Отзывы',
+      feedbacks: [
+        {
+          key: 0,
+          text: 'Мороженое в целом вкусное, но, как по мне, дорогое. За два шарика вам придётся заплатить 100 рублей. Причём их размер не очень большой. Также не понравилось, что не было сдачи с тысячи рублей. Не было приятно бегать за разменом, когда тебе уже наложили мороженое. В целом твёрдая тройка.',
+          positive: true,
+          name: 'Андрей Венцловский',
+          date: '22.06.2021',
+        },
+        {
+          key: 1,
+          text: 'всё бэд',
+          positive: false,
+          name: 'Петя',
+          date: '01.08.2021',
+        },
+        {
+          key: 2,
+          text: 'Очень вкусное мороженое!!!',
+          positive: true,
+          name: 'Юлия Владимировна',
+          date: '16.07.2021',
+        },
+        {
+          key: 3,
+          text: 'всё бэд',
+          positive: false,
+          name: 'Таня',
+          date: '12.06.2021',
+        }
+      ]
+     // subtitle: 'Оставьте первый отзыв',
     },
     topSectionData: {
       title: 'Кто такие',
