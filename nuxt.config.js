@@ -1,6 +1,6 @@
 export default {
   ssr: true,
-  target: "server",
+  target: "static",
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'ЮгаДар',
@@ -17,7 +17,7 @@ export default {
       {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}
     ]
   },
-  loading: '@/components/LoadingBar.vue',
+  //loading: '@/components/LoadingBar.vue',
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
@@ -27,7 +27,8 @@ export default {
   ],
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    {src: '@/plugins/ymapPlugin.js', mode: 'client'}
+    {src: '@/plugins/ymapPlugin.js', mode: 'client'},
+    '@/plugins/axios',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -63,7 +64,7 @@ export default {
             'roboto': ['Roboto'],
             'marck': ['Marck Script'],
           },
-          width:{
+          width: {
             '104': '26rem',
             '112': '28rem',
             '120': '30rem',
@@ -110,13 +111,16 @@ export default {
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    proxy: true
+    //proxy: true,
+    proxy: false,
+    prefix: '/api',
+    baseURL: 'https://yugadar.ru/api'
   },
 
-  proxy: {
-    '/api': {target: 'http://yugadar/'},
-    '/upload': {target: "http://yugadar/"}
-  },
+  // proxy: {
+  //   '/api': {target: 'https://yugadar.ru/', changeOrigin: true},
+  //   '/upload': {target: 'https://yugadar.ru/', changeOrigin: true}
+  // },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {

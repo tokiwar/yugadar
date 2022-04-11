@@ -184,16 +184,16 @@ export default {
     },
   }),
   async asyncData({$axios}) {
-    // const catalog = {
-    //   iceCream: {
-    //     title: 'Мороженое в ассортименте (Пломбир жир 12%)',
-    //     rows: ['', 'Цена (1 кг)', 'Цена (тара 3 кг)',],
-    //   }
-    // };
-    // catalog.iceCream.items = await $axios.$get(
-    //   '/api/catalog/'
-    // );
-    // return {catalog}
+    const catalog = {
+      iceCream: {
+        title: 'Мороженое в ассортименте (Пломбир жир 12%)',
+        rows: ['', 'Цена (1 кг)', 'Цена (тара 3 кг)',],
+      }
+    };
+    catalog.iceCream.items = await $axios.$get(
+      '/catalog/'
+    );
+    return {catalog}
   }
 }
 </script>
