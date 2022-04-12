@@ -191,7 +191,7 @@ export default {
       }
     };
     catalog.iceCream.items = await $axios.$get(
-      '/catalog/'
+      '/api/catalog/'
     );
     return {catalog}
   }

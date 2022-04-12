@@ -1,6 +1,6 @@
 export default {
   ssr: true,
-  target: "static",
+  target: "server",
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'ЮгаДар',
@@ -111,16 +111,16 @@ export default {
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    //proxy: true,
-    proxy: false,
-    prefix: '/api',
-    baseURL: 'https://yugadar.ru/api'
+    proxy: true,
+    // proxy: false,
+    // prefix: '/api',
+    // baseURL: 'https://yugadar.ru/api'
   },
 
-  // proxy: {
-  //   '/api': {target: 'https://yugadar.ru/', changeOrigin: true},
-  //   '/upload': {target: 'https://yugadar.ru/', changeOrigin: true}
-  // },
+  proxy: {
+    '/api': {target: 'https://yugadar.ru/'},
+    '/upload': {target: 'https://yugadar.ru/'}
+  },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
