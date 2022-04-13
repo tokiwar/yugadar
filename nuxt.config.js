@@ -118,8 +118,8 @@ export default {
   },
 
   proxy: {
-    '/api': {target: 'https://yugadar.ru/'},
-    '/upload': {target: 'https://yugadar.ru/'}
+    '/api': {target: 'http://80.78.254.16/', changeOrigin: true},
+    '/upload': {target: 'http://80.78.254.16/', changeOrigin:true}
   },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
