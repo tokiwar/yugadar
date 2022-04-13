@@ -2,7 +2,7 @@
   <div>
     <TopTextSection :section-data="topSectionData"/>
     <Outlets :outlets="items"/>
-    <no-ssr>
+    <client-only>
       <yandex-map :class="{'h-192': $device.isDesktop, 'h-120': !$device.isDesktop}" :coords="initCoords" :zoom="zoom"
                   :scroll-zoom="false">
         <ymap-marker
@@ -15,7 +15,7 @@
           :balloon-template="getBalloonTemplate(marker)"
         />
       </yandex-map>
-    </no-ssr>
+    </client-only>
     <TextSection :section-data="sectionData"/>
   </div>
 </template>

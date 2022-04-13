@@ -63,7 +63,7 @@ export default {
           date: '12.06.2021',
         }
       ]
-     // subtitle: 'Оставьте первый отзыв',
+      // subtitle: 'Оставьте первый отзыв',
     },
     topSectionData: {
       title: 'Кто такие',

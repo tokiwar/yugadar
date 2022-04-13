@@ -1,8 +1,5 @@
 <template>
   <header class="h-21 select-none">
-    <head>
-      <title>ЮгаДар</title>
-    </head>
     <TopMenu :menu="menu"/>
   </header>
 </template>

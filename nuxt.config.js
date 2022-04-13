@@ -18,7 +18,9 @@ export default {
     ]
   },
   //loading: '@/components/LoadingBar.vue',
-
+  generate: {
+    minify: false
+  },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     '@/assets/css/fonts.css',
@@ -27,7 +29,7 @@ export default {
   ],
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    {src: '@/plugins/ymapPlugin.js', mode: 'client'},
+    {src: '@/plugins/ymapPlugin.js', ssr: false,},
     '@/plugins/axios',
   ],
 
@@ -130,5 +132,6 @@ export default {
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {}
+  build: {
+  }
 }
