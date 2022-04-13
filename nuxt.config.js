@@ -108,8 +108,13 @@ export default {
     '@nuxtjs/pwa',
     '@nuxtjs/device',
     '@nuxtjs/proxy',
-    'nuxt-mq'
+    'nuxt-mq',
+    '@nuxtjs/robots',
   ],
+  robots: {
+    UserAgent: '*',
+    Disallow: '/'
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
