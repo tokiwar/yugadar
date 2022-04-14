@@ -3,7 +3,7 @@
     <div :class="{'text-7xl w-4/6':$device.isDesktop, 'text-5xl text-center' : !$device.isDesktop}">Ассортимент</div>
     <section v-if="$device.isDesktop"
              class="grid grid-cols-3 auto-rows-auto gap-x-16 gap-y-4 select-none font-bold text-center w-3/6 mx-auto mt-10">
-      <template v-for="item in items">
+      <div v-for="item in items" :key="item.key">
         <div class="flex flex-col items-center">
           <img :src="item.image" alt=""/>
           <div class="flex flex-col pt-4 h-48">
@@ -12,21 +12,19 @@
             <span class="italic h-20">{{ item.description }}</span>
           </div>
         </div>
-      </template>
+      </div>
     </section>
     <section class="my-10" v-else>
-      <client-only>
-        <swiper :options="swiperOptions" v-if="items">
-          <swiper-slide v-for="item in items" :key="item.name">
-            <div class="flex flex-col justify-start items-center space-y-2">
-              <img :src="item.image" alt=""/>
-              <span class="text-xl font-black">{{ item.name }}</span>
-              <span class="h-0.5 w-2/6 bg-gray-500 my-2 mx-auto"></span>
-              <span class="text-lg italic">{{ item.description }}</span>
-            </div>
-          </swiper-slide>
-        </swiper>
-      </client-only>
+      <swiper :options="swiperOptions" v-if="items">
+        <swiper-slide v-for="item in items" :key="item.key">
+          <div class="flex flex-col justify-start items-center space-y-2">
+            <img :src="item.image" alt=""/>
+            <span class="text-xl font-black">{{ item.name }}</span>
+            <span class="h-0.5 w-2/6 bg-gray-500 my-2 mx-auto"></span>
+            <span class="text-lg italic">{{ item.description }}</span>
+          </div>
+        </swiper-slide>
+      </swiper>
     </section>
   </div>
 </template>
