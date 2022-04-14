@@ -15,16 +15,18 @@
       </template>
     </section>
     <section class="my-10" v-else>
-      <swiper :options="swiperOptions" v-if="items">
-        <swiper-slide v-for="item in items" :key="item.name">
-          <div class="flex flex-col justify-start items-center space-y-2">
-            <img :src="item.image" alt=""/>
-            <span class="text-xl font-black">{{ item.name }}</span>
-            <span class="h-0.5 w-2/6 bg-gray-500 my-2 mx-auto"></span>
-            <span class="text-lg italic">{{ item.description }}</span>
-          </div>
-        </swiper-slide>
-      </swiper>
+      <client-only>
+        <swiper :options="swiperOptions" v-if="items">
+          <swiper-slide v-for="item in items" :key="item.name">
+            <div class="flex flex-col justify-start items-center space-y-2">
+              <img :src="item.image" alt=""/>
+              <span class="text-xl font-black">{{ item.name }}</span>
+              <span class="h-0.5 w-2/6 bg-gray-500 my-2 mx-auto"></span>
+              <span class="text-lg italic">{{ item.description }}</span>
+            </div>
+          </swiper-slide>
+        </swiper>
+      </client-only>
     </section>
   </div>
 </template>

@@ -1,24 +1,26 @@
 <template>
   <section class="bg-light-yellow-100">
-    <swiper :options="swiperOptions" v-if="outlets">
-      <swiper-slide v-for="item in outlets" :key="item.name">
-        <div class="flex flex-col justify-start items-center">
-          <img
-            :class="{'h-136 rounded-2xl': $device.isDesktop, 'h-104 rounded-xl' :$device.isTablet && $mq === 'lg', 'h-80 rounded-xl' : $device.isTablet && $mq !== 'lg' }"
-            :src="item.img"
-            alt=""/>
-          <div class="flex flex-col items-center justify-center py-4 w-4/6 h-32 text-center"
-               :class="{'h-36' : $device.isTablet && $mq !== 'lg'}">
+    <client-only>
+      <swiper :options="swiperOptions" v-if="outlets">
+        <swiper-slide v-for="item in outlets" :key="item.name">
+          <div class="flex flex-col justify-start items-center">
+            <img
+                :class="{'h-136 rounded-2xl': $device.isDesktop, 'h-104 rounded-xl' :$device.isTablet && $mq === 'lg', 'h-80 rounded-xl' : $device.isTablet && $mq !== 'lg' }"
+                :src="item.img"
+                alt=""/>
+            <div class="flex flex-col items-center justify-center py-4 w-4/6 h-32 text-center"
+                 :class="{'h-36' : $device.isTablet && $mq !== 'lg'}">
             <span class="font-bold leading-6"
                   :class="{'text-xl' : $device.isDesktop || $device.isMobile, 'text-base' :$device.isTablet && $mq !== 'lg'}"
                   v-html="item.description"></span>
-            <span class="italic"
-                  :class="{'text-lg': $device.isDesktop || $device.isMobile, 'text-sm' : $device.isTablet && $mq !== 'lg' }"
-                  v-html="item.time"></span>
+              <span class="italic"
+                    :class="{'text-lg': $device.isDesktop || $device.isMobile, 'text-sm' : $device.isTablet && $mq !== 'lg' }"
+                    v-html="item.time"></span>
+            </div>
           </div>
-        </div>
-      </swiper-slide>
-    </swiper>
+        </swiper-slide>
+      </swiper>
+    </client-only>
   </section>
 </template>
 <script>
