@@ -1,7 +1,6 @@
 <template>
   <section class="bg-light-yellow-100">
-    <client-only>
-      <swiper :options="swiperOptions" v-if="outlets">
+      <swiper :options="swiperOptions" v-show="outlets">
         <swiper-slide v-for="item in outlets" :key="item.name">
           <div class="flex flex-col justify-start items-center">
             <img
@@ -20,11 +19,11 @@
           </div>
         </swiper-slide>
       </swiper>
-    </client-only>
   </section>
 </template>
 <script>
 import {Swiper, SwiperSlide} from 'vue-awesome-swiper'
+import 'swiper/css/swiper.css'
 
 export default {
   name: 'Outlets',
@@ -38,14 +37,16 @@ export default {
       const options = {
         loop: true,
         initialSlide: 0,
+        Observer: true,
+        ObserveParents: true,
         autoplay: {
           delay: 3000,
           disableOnInteraction: false
         }
       };
       if (this.outlets.length) {
-        options['slidesPerView'] = this.$device.isDesktopOrTablet ? 3 : 1;
-        options['spaceBetween'] = this.$device.isDesktop ? 5 : 0;
+       options['slidesPerView'] = this.$device.isDesktopOrTablet ? 3 : 1;
+       options['spaceBetween'] = this.$device.isDesktop ? 5 : 0;
       }
       return options;
     }
