@@ -5,6 +5,8 @@
     <img v-if="SectionData.img"
          :class="{'w-3/6 h-full ' : $device.isDesktop, 'h-112 w-full' : $device.isTablet, 'h-96' : $device.isMobile}"
          class="object-cover object-center"
+         width="1037"
+         height="640"
          :src="SectionData.img" alt=""/>
     <div :class="{'w-3/6' : $device.isDesktop, 'h-112 w-4/5' : !$device.isDesktop}"
          class="flex flex-col justify-center items-center font-black text-center">
