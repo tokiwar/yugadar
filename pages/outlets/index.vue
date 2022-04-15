@@ -1,6 +1,6 @@
 <template>
   <div>
-    <TopTextSection :section-data="topSectionData"/>
+    <TopTextSection :section-data="logoData"/>
     <Outlets :outlets="items"/>
     <client-only>
       <yandex-map :class="{'h-192': $device.isDesktop, 'h-120': !$device.isDesktop}" :coords="initCoords" :zoom="zoom"
@@ -57,11 +57,6 @@ export default {
       subtitle: 'Подзаголовок',
       text: 'Это текст. Нажмите один раз и выберите «Редактировать текст» или просто дважды кликните, чтобы добавить свой текст и настроить шрифт.'
     },
-    topSectionData: {
-      title: 'Точки',
-      subtitle: 'ПРОДАЖИ',
-      color: 'bg-light-yellow-100'
-    }
   }),
   head() {
     return {
@@ -69,10 +64,12 @@ export default {
     }
   },
   async asyncData({$axios}) {
-    const items =  await $axios.$get(
+    const result =  await $axios.$get(
       '/api/outlets/'
     );
-    return {items}
+    const items = result.items;
+    const logoData = result['top-text-section'].logoData;
+    return {items, logoData}
   },
   methods: {
     getBalloonTemplate(coordsData) {

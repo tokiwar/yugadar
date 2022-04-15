@@ -1,6 +1,6 @@
 <template>
   <div>
-    <TopTextSection :section-data="topSectionData"/>
+    <TopTextSection :section-data="logoData"/>
     <Catalog :items="catalog.iceCream.items"/>
     <CatalogPrice class="mt-20" :catalog="catalog"/>
   </div>
@@ -15,11 +15,6 @@ export default {
     }
   },
   data: () => ({
-    topSectionData: {
-      title: 'Наше',
-      subtitle: 'МОРОЖЕНОЕ',
-      color: 'bg-blue-green-100',
-    },
   }),
   async asyncData({$axios}) {
     const catalog = {
@@ -28,10 +23,12 @@ export default {
         rows: ['', 'Цена (1 кг)', 'Цена (тара 3 кг)',],
       }
     };
-    catalog.iceCream.items = await $axios.$get(
+    const result = await $axios.$get(
       '/api/catalog/'
     );
-    return {catalog}
+    catalog.iceCream.items = result.catalog;
+    const logoData = result['top-text-section'].logoData;
+    return {catalog, logoData}
   }
 }
 </script>

@@ -7,6 +7,7 @@
   url('~/assets/fonts/GothamPro-BoldItalic.ttf') format('truetype');
   font-weight: bold;
   font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
@@ -18,6 +19,7 @@
   url('~/assets/fonts/GothamPro-Italic.ttf') format('truetype');
   font-weight: normal;
   font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
@@ -29,6 +31,7 @@
   url('~/assets/fonts/GothamPro-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -40,6 +43,7 @@
   url('~/assets/fonts/GothamPro-BlackItalic.ttf') format('truetype');
   font-weight: 900;
   font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
@@ -51,6 +55,7 @@
   url('~/assets/fonts/GothamPro-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -62,6 +67,7 @@
   url('~/assets/fonts/GothamProNarrow-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -73,6 +79,7 @@
   url('~/assets/fonts/GothamProNarrow-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -84,6 +91,7 @@
   url('~/assets/fonts/GothamPro-LightItalic.ttf') format('truetype');
   font-weight: 300;
   font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
@@ -95,6 +103,7 @@
   url('~/assets/fonts/GothamPro-Light.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -106,6 +115,7 @@
   url('~/assets/fonts/GothamPro-Black.ttf') format('truetype');
   font-weight: 900;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -117,6 +127,7 @@
   url('~/assets/fonts/GothamPro.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -128,6 +139,7 @@
   url('~/assets/fonts/GothamPro-MediumItalic.ttf') format('truetype');
   font-weight: 500;
   font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
@@ -135,6 +147,7 @@
   src: local('Nunito SemiBold'), local('Nunito-SemiBold'), url('~/assets/fonts/Nunitosemibold.woff2') format('woff2'), url('~/assets/fonts/Nunitosemibold.woff') format('woff');
   font-weight: 600;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -142,6 +155,7 @@
   src: local('Nunito ExtraBold'), local('Nunito-ExtraBold'), url('~/assets/fonts/Nunitoextrabold.woff2') format('woff2'), url('~/assets/fonts/Nunitoextrabold.woff') format('woff');
   font-weight: 800;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -149,6 +163,7 @@
   src: local('Nunito SemiBold Italic'), local('Nunito-SemiBoldItalic'), url('~/assets/fonts/Nunitosemibolditalic.woff2') format('woff2'), url('~/assets/fonts/Nunitosemibolditalic.woff') format('woff');
   font-weight: 600;
   font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
@@ -156,6 +171,7 @@
   src: local('Nunito ExtraLight Italic'), local('Nunito-ExtraLightItalic'), url('~/assets/fonts/Nunitoextralightitalic.woff2') format('woff2'), url('~/assets/fonts/Nunitoextralightitalic.woff') format('woff');
   font-weight: 200;
   font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
@@ -163,6 +179,7 @@
   src: local('Nunito Bold'), local('Nunito-Bold'), url('~/assets/fonts/Nunitobold.woff2') format('woff2'), url('~/assets/fonts/Nunitobold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -170,6 +187,7 @@
   src: local('Nunito Regular'), local('Nunito-Regular'), url('~/assets/fonts/Nunitoregular.woff2') format('woff2'), url('~/assets/fonts/Nunitoregular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -177,6 +195,7 @@
   src: local('Nunito ExtraLight'), local('Nunito-ExtraLight'), url('~/assets/fonts/Nunitoextralight.woff2') format('woff2'), url('~/assets/fonts/Nunitoextralight.woff') format('woff');
   font-weight: 200;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -184,6 +203,7 @@
   src: local('Nunito Light Italic'), local('Nunito-LightItalic'), url('~/assets/fonts/Nunitolightitalic.woff2') format('woff2'), url('~/assets/fonts/Nunitolightitalic.woff') format('woff');
   font-weight: 300;
   font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
@@ -191,6 +211,7 @@
   src: local('Nunito Black Italic'), local('Nunito-BlackItalic'), url('~/assets/fonts/Nunitoblackitalic.woff2') format('woff2'), url('~/assets/fonts/Nunitoblackitalic.woff') format('woff');
   font-weight: 900;
   font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
@@ -198,6 +219,7 @@
   src: local('Nunito Italic'), local('Nunito-Italic'), url('~/assets/fonts/Nunitoitalic.woff2') format('woff2'), url('~/assets/fonts/Nunitoitalic.woff') format('woff');
   font-weight: 400;
   font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
@@ -205,6 +227,7 @@
   src: local('Nunito ExtraBold Italic'), local('Nunito-ExtraBoldItalic'), url('~/assets/fonts/Nunitoextrabolditalic.woff2') format('woff2'), url('~/assets/fonts/Nunitoextrabolditalic.woff') format('woff');
   font-weight: 800;
   font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
@@ -212,6 +235,7 @@
   src: local('Nunito Bold Italic'), local('Nunito-BoldItalic'), url('~/assets/fonts/Nunitobolditalic.woff2') format('woff2'), url('~/assets/fonts/Nunitobolditalic.woff') format('woff');
   font-weight: 700;
   font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
@@ -219,6 +243,7 @@
   src: local('Nunito Black'), local('Nunito-Black'), url('~/assets/fonts/Nunitoblack.woff2') format('woff2'), url('~/assets/fonts/Nunitoblack.woff') format('woff');
   font-weight: 900;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -226,6 +251,7 @@
   src: local('Nunito Light'), local('Nunito-Light'), url('~/assets/fonts/Nunitolight.woff2') format('woff2'), url('~/assets/fonts/Nunitolight.woff') format('woff');
   font-weight: 300;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -233,6 +259,7 @@
   src: local('Roboto Thin'), local('Roboto-Thin'), url('~/assets/fonts/Robotothin.woff2') format('woff2'), url('~/assets/fonts/Robotothin.woff') format('woff'), url('~/assets/fonts/Robotothin.ttf') format('truetype');
   font-weight: 100;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -240,6 +267,7 @@
   src: local('Roboto Thin Italic'), local('Roboto-ThinItalic'), url('~/assets/fonts/Robotothinitalic.woff2') format('woff2'), url('~/assets/fonts/Robotothinitalic.woff') format('woff'), url('~/assets/fonts/Robotothinitalic.ttf') format('truetype');
   font-weight: 100;
   font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
@@ -247,6 +275,7 @@
   src: local('Roboto Light'), local('Roboto-Light'), url('~/assets/fonts/Robotolight.woff2') format('woff2'), url('~/assets/fonts/Robotolight.woff') format('woff'), url('~/assets/fonts/Robotolight.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -254,6 +283,7 @@
   src: local('Roboto Light Italic'), local('Roboto-LightItalic'), url('~/assets/fonts/Robotolightitalic.woff2') format('woff2'), url('~/assets/fonts/Robotolightitalic.woff') format('woff'), url('~/assets/fonts/Robotolightitalic.ttf') format('truetype');
   font-weight: 300;
   font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
@@ -261,6 +291,7 @@
   src: local('Roboto'), local('Roboto-Regular'), url('~/assets/fonts/Roboto.woff2') format('woff2'), url('~/assets/fonts/Roboto.woff') format('woff'), url('~/assets/fonts/Roboto.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -268,6 +299,7 @@
   src: local('Roboto Italic'), local('Roboto-Italic'), url('~/assets/fonts/Robotoitalic.woff2') format('woff2'), url('~/assets/fonts/Robotoitalic.woff') format('woff'), url('~/assets/fonts/Robotoitalic.ttf') format('truetype');
   font-weight: 400;
   font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
@@ -275,6 +307,7 @@
   src: local('Roboto Medium'), local('Roboto-Medium'), url('~/assets/fonts/Robotomedium.woff2') format('woff2'), url('~/assets/fonts/Robotomedium.woff') format('woff'), url('~/assets/fonts/Robotomedium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -282,6 +315,7 @@
   src: local('Roboto Medium Italic'), local('Roboto-MediumItalic'), url('~/assets/fonts/Robotomediumitalic.woff2') format('woff2'), url('~/assets/fonts/Robotomediumitalic.woff') format('woff'), url('~/assets/fonts/Robotomediumitalic.ttf') format('truetype');
   font-weight: 500;
   font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
@@ -289,6 +323,7 @@
   src: local('Roboto Bold'), local('Roboto-Bold'), url('~/assets/fonts/Robotobold.woff2') format('woff2'), url('~/assets/fonts/Robotobold.woff') format('woff'), url('~/assets/fonts/Robotobold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -296,6 +331,7 @@
   src: local('Roboto Bold Italic'), local('Roboto-BoldItalic'), url('~/assets/fonts/Robotobolditalic.woff2') format('woff2'), url('~/assets/fonts/Robotobolditalic.woff') format('woff'), url('~/assets/fonts/Robotobolditalic.ttf') format('truetype');
   font-weight: 700;
   font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
@@ -303,6 +339,7 @@
   src: local('Roboto Black'), local('Roboto-Black'), url('~/assets/fonts/Robotoblack.woff2') format('woff2'), url('~/assets/fonts/Robotoblack.woff') format('woff'), url('~/assets/fonts/Robotoblack.ttf') format('truetype');
   font-weight: 900;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -310,10 +347,13 @@
   src: local('Roboto Black Italic'), local('Roboto-BlackItalic'), url('~/assets/fonts/Robotoblackitalic.woff2') format('woff2'), url('~/assets/fonts/Robotoblackitalic.woff') format('woff'), url('~/assets/fonts/Robotoblackitalic.ttf') format('truetype');
   font-weight: 900;
   font-style: italic;
+  font-display: swap;
 }
+
 @font-face {
   font-family: 'Marck Script';
   src: local('Marck Script'), local('MarckScript-Regular'), url('~/assets/fonts/marckscript.woff2') format('woff2'), url('~/assets/fonts/marckscript.woff') format('woff'), url('~/assets/fonts/marckscript.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }

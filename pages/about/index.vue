@@ -1,6 +1,6 @@
 <template>
   <div>
-    <TopTextSection :section-data="topSectionData"/>
+    <TopTextSection :section-data="logoData"/>
     <TextSection :section-data="sectionData1"/>
     <ParallaxSection v-if="$device.isDesktop" :section-data="sectionDataParallax"/>
     <NonParallaxSection :section-data="sectionDataNonParallax" v-else/>
@@ -17,13 +17,6 @@ export default {
     }
   },
   data: () => ({
-    sectionDataParallax: {
-      bg: 'bg-parallax-icecream-2 bg-cover',
-    },
-    sectionDataNonParallax: {
-      bg: '',
-      bgImage: require('~/assets/img/main-page-block-3.png')
-    },
     sectionData1: {
       title: 'О нашем качестве',
       subtitle: 'только натуральное мороженое',
@@ -65,11 +58,15 @@ export default {
       ]
       // subtitle: 'Оставьте первый отзыв',
     },
-    topSectionData: {
-      title: 'Кто такие',
-      subtitle: 'ЮГАДАР',
-      color: 'bg-light-plum-100',
-    }
-  })
+  }),
+  async asyncData({$axios}) {
+    const result = await $axios.$get(
+      '/api/about/'
+    );
+    const logoData = result['top-text-section'].logoData;
+    const sectionDataParallax = result['parallax-section'].sectionDataParallax;
+    const sectionDataNonParallax = result['parallax-section'].sectionDataNonParallax;
+    return {logoData, sectionDataParallax, sectionDataNonParallax}
+  },
 }
 </script>

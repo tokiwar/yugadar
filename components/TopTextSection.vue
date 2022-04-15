@@ -2,10 +2,10 @@
   <section v-if="SectionData.title || SectionData.subtitle"
            :class="className">
     <div class="text-white flex flex-col justify-center items-center font-black">
-      <span v-if="SectionData.title"
-            :class="{'text-6xl': $device.isDesktop, 'text-2xl': !$device.isDesktop}">{{ SectionData.title }}</span>
       <span v-if="SectionData.subtitle"
-            :class="{'text-9xl': $device.isDesktop, 'text-5xl': !$device.isDesktop}">{{ SectionData.subtitle }}</span>
+            :class="{'text-6xl': $device.isDesktop, 'text-2xl': !$device.isDesktop}">{{ SectionData.subtitle }}</span>
+      <span v-if="SectionData.title"
+            :class="{'text-9xl': $device.isDesktop, 'text-5xl': !$device.isDesktop}">{{ SectionData.title }}</span>
     </div>
   </section>
 </template>
@@ -19,9 +19,9 @@ export default {
   computed: {
     className() {
       if (this.$device.isDesktop) {
-        return 'h-96' + ' ' + this.SectionData.color + ' ' + this.classNameStatic;
+        return 'h-96' + ' ' + this.SectionData.bgColor + ' ' + this.classNameStatic;
       } else {
-        return 'h-48' + ' ' + this.SectionData.color + ' ' + this.classNameStatic;
+        return 'h-48' + ' ' + this.SectionData.bgColor + ' ' + this.classNameStatic;
       }
     }
   }
