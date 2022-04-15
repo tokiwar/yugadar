@@ -24,38 +24,17 @@ export default {
       ]
     }
   },
-  data: () => ({
-    sliderSettings: {
-      infinite: true,
-      autoplay: true,
-    },
-    sectionDataNonParallax: {
-      bg: 'bg-blue-green-100',
-      bgImage: require('~/assets/img/parallax/parallax-sorbet.png'),
-      title: 'Мороженое',
-      subtitle: 'только натуральное',
-    },
-    sectionDataParallax: {
-      title: 'Мороженое',
-      subtitle: 'только натуральное',
-      bg: 'bg-parallax-sorbet bg-auto'
-    },
-  }),
+  data: () => ({}),
   async asyncData({$axios}) {
     const result = await $axios.$get(
       '/api/main/'
     );
-    const logoData = {
-      logoImage: result.props.UF_LOGO_IMAGE,
-      bgColor: 'bg-light-yellow-100',
-      subtitle: 'ЮгаДар',
-      title: 'МОРОЖЕНОЕ',
-      link: '/about/',
-      name: 'О НАС',
-    }
+    const logoData = result['top-text-section-with-image'].logoData;
     const sectionDataTop = result['text-section-half'].sectionDataTop;
     const sectionDataBottom = result['text-section-half'].sectionDataBottom;
-    return {logoData, sectionDataTop, sectionDataBottom}
+    const sectionDataParallax = result['parallax-section'].sectionDataParallax;
+    const sectionDataNonParallax = result['parallax-section'].sectionDataNonParallax;
+    return {logoData, sectionDataTop, sectionDataBottom, sectionDataParallax, sectionDataNonParallax}
   },
 }
 </script>
