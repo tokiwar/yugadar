@@ -8,12 +8,12 @@
         <div class="flex flex-col justify-center items-center h-104">
           <div
             class="flex flex-col items-center justify-start space-y-8 py-8 h-96 text-justify border-4 bg-white border-gray-100 rounded-3xl shadow-lg"
-            :class="{'w-160' : $device.isDesktop, 'w-11/12' :$device.isMobile}">
+            :class="{'w-152' : $device.isDesktop, 'w-11/12' :$device.isMobile}">
             <div class="flex flex-col w-5/6">
               <span class="text-3xl" v-html="item.name"></span>
-              <span class="w-5/6 text-base" v-html="item.date"></span>
+              <span class="w-5/6 text-base underline" v-html="item.date"></span>
             </div>
-            <span class="w-5/6 text-between" :class="{'text-xl' : $device.isDesktop, 'text-sm' : $device.isMobile }"
+            <span class="w-5/6 text-between" :class="{'text-lg' : $device.isDesktop, 'text-sm' : $device.isMobile }"
                   v-html="item.text"></span>
           </div>
         </div>
