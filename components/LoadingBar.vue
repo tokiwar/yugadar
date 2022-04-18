@@ -8,13 +8,17 @@ export default {
   name: 'LoadingBar',
   data: () => ({
     loading: false,
+    duration: 3000,
   }),
   methods: {
     start() {
       this.loading = true;
     },
     finish() {
-      this.loading = false;
+      setTimeout(() => {
+          this.loading = false;
+        },
+      this.duration);
     }
   }
 }
