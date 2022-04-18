@@ -44,6 +44,19 @@ export default {
 
   tailwindcss: {
     config: {
+      purge: {
+        enabled: false,
+        content: [
+          './components/**/*.{vue,js}',
+          './layouts/**/*.vue',
+          './pages/**/*.vue',
+          './plugins/**/*.{js,ts}',
+          './nuxt.config.{js,ts}'
+        ],
+        options: {
+          safelist: [/^bg-/, /^text-/, /^border-/]
+        }
+      },
       theme: {
         extend: {
           backgroundImage: {
@@ -58,7 +71,7 @@ export default {
             'blue-green-100': '#b5e8d5',
             'light-plum-100': '#c3a9d4',
             'light-yellow-100': '#f9db79',
-            'light-pink-100': '#ffbfb3',
+            'light-pink-100': '#ffbfb3'
           },
           fontFamily: {
             'gotham': ['Gotham Pro'],
@@ -126,7 +139,7 @@ export default {
 
   proxy: {
     '/api': {target: 'http://80.78.254.16/', changeOrigin: true},
-    '/upload': {target: 'http://80.78.254.16/', changeOrigin:true}
+    '/upload': {target: 'http://80.78.254.16/', changeOrigin: true}
   },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
@@ -137,6 +150,5 @@ export default {
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {
-  }
+  build: {}
 }
