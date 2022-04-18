@@ -17,3 +17,7 @@ img {
 .hamburger {
   -webkit-tap-highlight-color: transparent;
 }
+
+html {
+  font-size: 16px;
+}
