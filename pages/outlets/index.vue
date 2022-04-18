@@ -8,9 +8,9 @@
         <ymap-marker
           v-for="marker in items"
           :coords="marker.coords"
-          :marker-id="marker.id"
+          :marker-id="marker.key"
           :hint-content="marker.hint"
-          :key="marker.id"
+          :key="marker.key"
           :icon="markerIcon"
           :balloon-template="getBalloonTemplate(marker)"
         />
