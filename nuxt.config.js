@@ -59,13 +59,6 @@ export default {
       },
       theme: {
         extend: {
-          backgroundImage: {
-            'parallax-table': "url('@/assets/img/parallax/parallax-table.png')",
-            'parallax-sorbet': "url('@/assets/img/parallax/parallax-sorbet.png')",
-            'parallax-icecream': "url('@/assets/img/parallax/parallax-icecream.png')",
-            'parallax-icecream-2': "url('@/assets/img/parallax/parallax-icecream-2.png')",
-            'parallax-icecream-plate': "url('@/assets/img/parallax/parallax-icecream-plate.png')",
-          },
           backgroundSize: {},
           colors: {
             'blue-green-100': '#b5e8d5',
