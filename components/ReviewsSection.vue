@@ -1,8 +1,8 @@
 <template>
   <div class="select-none h-auto font-black text-center py-20 space-y-20 bg-blue-green-100">
-    <div class="leading-5" v-if="SectionData.title"
+    <div class="leading-5"
          :class="{'text-6xl':$device.isDesktop, 'text-4xl' : !$device.isDesktop}"
-         v-html="SectionData.title"/>
+         v-html="'Отзывы'"/>
     <swiper :options="swiperOptions" v-if="items" class="w-full">
       <swiper-slide v-for="item in items" :key="item.name">
         <div class="flex flex-col justify-center items-center h-104">
@@ -26,20 +26,14 @@ import {Swiper, SwiperSlide} from 'vue-awesome-swiper'
 import 'swiper/css/swiper.css'
 
 export default {
-  name: 'FeedbackSection',
-  props: ['SectionData'],
+  name: 'ReviewsSection',
+  props: ['items'],
   components: {
     Swiper,
     SwiperSlide
   },
   data: () => ({}),
   computed: {
-    display() {
-      return this.SectionData.title || this.SectionData.subtitle || this.SectionData.text;
-    },
-    items() {
-      return this.SectionData.feedbacks;
-    },
     swiperOptions() {
       const options = {
         loop: true,

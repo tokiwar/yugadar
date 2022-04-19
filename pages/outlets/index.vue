@@ -52,11 +52,6 @@ export default {
     initCoords: [
       45.617003, 38.942364
     ],
-    sectionData: {
-      title: 'Заголовок',
-      subtitle: 'Подзаголовок',
-      text: 'Это текст. Нажмите один раз и выберите «Редактировать текст» или просто дважды кликните, чтобы добавить свой текст и настроить шрифт.'
-    },
   }),
   head() {
     return {
@@ -69,7 +64,8 @@ export default {
     );
     const items = result.items;
     const logoData = result['top-text-section'].logoData;
-    return {items, logoData}
+    const sectionData = result['text-section'].sectionData;
+    return {items, logoData, sectionData}
   },
   methods: {
     getBalloonTemplate(coordsData) {
