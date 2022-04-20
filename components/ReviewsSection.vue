@@ -23,6 +23,7 @@
         </div>
       </swiper-slide>
     </swiper>
+    <button>Оставить отзыв</button>
   </div>
 </template>
 <script>
