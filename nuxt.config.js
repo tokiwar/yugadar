@@ -55,7 +55,7 @@ export default {
           },
           fontFamily: {
             'nunito': ['Nunito'],
-            'marck': ['Marck Script'],
+            'marck': ['Marck Script']
           },
           width: {
             '104': '26rem',
