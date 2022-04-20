@@ -6,7 +6,7 @@
          v-html="'Отзывы'"/>
     <swiper :options="swiperOptions" v-if="items" class="w-full">
       <swiper-slide v-for="item in items" :key="item.name">
-        <div class="flex flex-col justify-center items-center h-auto">
+        <div class="flex flex-col justify-center items-center h-84">
           <div
             class="flex flex-col items-center justify-start text-justify border-4 bg-white border-gray-100 rounded-3xl shadow-lg"
             :class="{'w-152 space-y-8 h-96 py-8' : $device.isDesktop, 'w-11/12 space-y-2 h-64 py-4' :$device.isMobile}">
