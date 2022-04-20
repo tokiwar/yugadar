@@ -11,6 +11,8 @@ export default {
       {charset: 'utf-8'},
       {name: 'viewport', content: 'width=device-width, initial-scale=1'},
       {hid: 'description', name: 'description', content: 'Мороженое от кубанского производителя «ЮгаДар»'},
+      {hid: 'og:image', name: 'og:image', content: 'https://yugadar.ru/upload/uf/363/3p1yu54eiz7ezs9buuvtsdxndxwd69ki.webp'},
+      {hid: 'og:url', name: 'og:url', content: 'https://yugadar.ru/'},
       {name: 'format-detection', content: 'telephone=no'},
       {name: 'yandex-verification', content: 'fa73cb5e3abd3dce'}
     ],
