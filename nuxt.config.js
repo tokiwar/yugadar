@@ -16,6 +16,17 @@ export default {
     ],
     link: [
       {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}
+    ],
+    script: [
+      {
+        type: 'application/ld+json',
+        json: {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "url": "https://yugadar.ru/",
+          "logo": "https://yugadar.ru/upload/uf/363/3p1yu54eiz7ezs9buuvtsdxndxwd69ki.webp"
+        }
+      }
     ]
   },
   //loading: '@/components/LoadingBar.vue',
@@ -33,7 +44,6 @@ export default {
     {src: '@/plugins/ymapPlugin.js', ssr: false},
     '@/plugins/axios'
   ],
-
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 

@@ -13,11 +13,28 @@ export default {
   name: 'ContactsPage',
   head() {
     return {
-      title: '«ЮгаДар» - Контакты'
+      title: '«ЮгаДар» - Контакты',
+      script: [
+        {
+          type: 'application/ld+json',
+          json: {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Тимашевск",
+              "postalCode": "350056",
+              "streetAddress": "пос. Индустриальный, Центральная усадьба"
+            },
+            "email": "mamay4339061@gmail.com",
+            "name": "ЮгаДар",
+            "telephone": "+79184339061"
+          }
+        }
+      ]
     }
   },
-  data: () => ({
-  }),
+  data: () => ({}),
   async asyncData({$axios}) {
     const result = await $axios.$get(
       '/api/contacts/'
