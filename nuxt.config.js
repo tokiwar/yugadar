@@ -11,7 +11,8 @@ export default {
       {charset: 'utf-8'},
       {name: 'viewport', content: 'width=device-width, initial-scale=1'},
       {hid: 'description', name: 'description', content: 'Мороженое от кубанского производителя «ЮгаДар»'},
-      {name: 'format-detection', content: 'telephone=no'}
+      {name: 'format-detection', content: 'telephone=no'},
+      {name: 'yandex-verification', content: 'fa73cb5e3abd3dce'}
     ],
     link: [
       {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}
@@ -131,7 +132,7 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    extend(config, { isClient }) {
+    extend(config, {isClient}) {
       if (isClient) {
         config.optimization.splitChunks.maxSize = 51200
       }
