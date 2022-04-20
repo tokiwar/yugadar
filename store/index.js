@@ -8,5 +8,5 @@ export const mutations = {
   },
   closeMenu(state) {
     state.menuOpened = false;
-  }
+  },
 }

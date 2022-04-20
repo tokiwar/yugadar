@@ -5,9 +5,9 @@
     </div>
     <div v-if="this.SectionData.title || this.SectionData.subtitle || (this.SectionData.link && this.SectionData.name)"
          class="absolute text-white flex flex-col justify-center items-center mt-36 font-black">
-      <span v-if="SectionData.subtitle" :class="{'text-6xl': $device.isDesktop, 'text-2xl': !$device.isDesktop}"
+      <h2 v-if="SectionData.subtitle" :class="{'text-6xl': $device.isDesktop, 'text-2xl': !$device.isDesktop}"
             v-html="SectionData.subtitle"/>
-      <span v-if="SectionData.title" :class="{'text-9xl': $device.isDesktop, 'text-5xl': !$device.isDesktop}"
+      <h1 v-if="SectionData.title" :class="{'text-9xl': $device.isDesktop, 'text-5xl': !$device.isDesktop}"
             v-html="SectionData.title"/>
       <NuxtLink v-if="this.SectionData.link && this.SectionData.name" :to="SectionData.link"
                 class="mt-10 text-xl border-2 px-4 py-2 text-white border-white hover:bg-black hover:border-black ease-in-out duration-300"

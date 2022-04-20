@@ -23,6 +23,6 @@ export default {
     ...mapState([
       "menuOpened",
     ]),
-  }
+  },
 }
 </script>

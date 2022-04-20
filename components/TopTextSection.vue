@@ -2,10 +2,10 @@
   <section v-if="SectionData.title || SectionData.subtitle"
            :class="className">
     <div class="text-white flex flex-col justify-center items-center font-black">
-      <span v-if="SectionData.subtitle"
-            :class="{'text-6xl': $device.isDesktop, 'text-2xl': !$device.isDesktop}">{{ SectionData.subtitle }}</span>
-      <span v-if="SectionData.title"
-            :class="{'text-9xl': $device.isDesktop, 'text-5xl': !$device.isDesktop}">{{ SectionData.title }}</span>
+      <h2 v-if="SectionData.subtitle"
+            :class="{'text-6xl': $device.isDesktop, 'text-2xl': !$device.isDesktop}">{{ SectionData.subtitle }}</h2>
+      <h1 v-if="SectionData.title"
+            :class="{'text-9xl': $device.isDesktop, 'text-5xl': !$device.isDesktop}">{{ SectionData.title }}</h1>
     </div>
   </section>
 </template>
