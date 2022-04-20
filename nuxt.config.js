@@ -44,19 +44,6 @@ export default {
 
   tailwindcss: {
     config: {
-      purge: {
-        enabled: false,
-        content: [
-          './components/**/*.{vue,js}',
-          './layouts/**/*.vue',
-          './pages/**/*.vue',
-          './plugins/**/*.{js,ts}',
-          './nuxt.config.{js,ts}'
-        ],
-        options: {
-          safelist: [/^bg-/, /^text-/, /^border-/]
-        }
-      },
       theme: {
         extend: {
           backgroundSize: {},
@@ -82,7 +69,7 @@ export default {
             '168': '42rem',
             '176': '44rem',
             '184': '46rem',
-            '192': '48rem',
+            '192': '48rem'
           },
           height: {
             '104': '26rem',
@@ -96,10 +83,10 @@ export default {
             '168': '42rem',
             '176': '44rem',
             '184': '46rem',
-            '192': '48rem',
+            '192': '48rem'
           },
           maxHeight: {
-            '160': '40rem',
+            '160': '40rem'
           }
         }
       }

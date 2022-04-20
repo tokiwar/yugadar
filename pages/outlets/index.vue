@@ -45,7 +45,7 @@ export default {
   data: () => ({
     markerIcon: {
       layout: 'default#imageWithContent',
-      imageHref: require('~/assets/img/logo-3.png'),
+      imageHref: require('~/assets/img/logo-balloon.png'),
       imageSize: [30, 30],
       imageOffset: [0, -15],
     },

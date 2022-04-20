@@ -1,7 +1,7 @@
 <template>
   <div v-if="$device.isDesktop" class="flex flex-row items-center bg-white font-black w-max m-auto">
     <NuxtLink class="px-8 py-4" :class="{'pointer-events-none' : $route.path === '/'}" to="/">
-      <img class="w-32" :src="require('~/assets/img/logo-2.png')" alt=""/>
+      <img class="w-32" :src="require('@/assets/img/logo-top.png')" alt=""/>
     </NuxtLink>
     <NuxtLink :class="{'text-yellow-500 underline pointer-events-none' : menuItem.link === $route.path}"
               class="px-8 py-4 hover:text-yellow-500 hover:underline text-2xl" v-for="menuItem in menu"
@@ -12,7 +12,7 @@
   </div>
   <div class="flex flex-row h-20 font-bold items-center place-content-between z-40" v-else-if="$device.isTablet">
     <NuxtLink class="m-auto" :class="{'pointer-events-none' : $route.path === '/'}" to="/">
-      <img class="w-32" :src="require('~/assets/img/logo-2.png')" alt=""/>
+      <img class="w-32" :src="require('@/assets/img/logo-top.png')" alt=""/>
     </NuxtLink>
     <div class="absolute text-l font-black uppercase right-0">
       <button class="hamburger hamburger--spin" :class="{'is-active': opened}" type="button" @click.prevent="close">
@@ -32,7 +32,7 @@
   </div>
   <div class="flex flex-row h-20 font-bold items-center place-content-between" v-else>
     <NuxtLink class="m-auto" :class="{'pointer-events-none' : $route.path === '/'}" to="/">
-      <img class="w-32" :src="require('~/assets/img/logo-2.png')" alt=""/>
+      <img class="w-32" :src="require('@/assets/img/logo-top.png')" alt=""/>
     </NuxtLink>
     <div class="absolute text-l font-black uppercase right-0">
       <button class="hamburger hamburger--spin" :class="{'is-active': opened}" type="button" @click.prevent="close">
@@ -59,19 +59,11 @@ export default {
   props: ['menu'],
   data: () => ({
     opened: false,
-    iconOpened: require('~/assets/img/service/menuOpened.png'),
-    iconClosed: require('~/assets/img/service/menuClosed.png'),
   }),
   computed: {
     ...mapState([
       "menuOpened",
     ]),
-    icon() {
-      if (!this.opened) {
-        return this.iconClosed;
-      }
-      return this.iconOpened;
-    }
   },
   methods: {
     ...mapMutations([
