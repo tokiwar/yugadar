@@ -100,7 +100,8 @@ export default {
     '@nuxtjs/device',
     '@nuxtjs/proxy',
     'nuxt-mq',
-    '@nuxtjs/robots'
+    '@nuxtjs/robots',
+    '@nuxtjs/sitemap'
   ],
   robots: {
     UserAgent: '*',

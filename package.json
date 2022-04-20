@@ -17,6 +17,7 @@
     "@nuxtjs/proxy": "^2.1.0",
     "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/robots": "^2.5.0",
+    "@nuxtjs/sitemap": "^2.4.0",
     "@nuxtjs/tailwindcss": "^4.2.1",
     "concurrently": "^7.0.0",
     "core-js": "^3.19.3",
