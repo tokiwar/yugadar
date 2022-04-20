@@ -67,9 +67,7 @@ export default {
             'light-pink-100': '#ffbfb3'
           },
           fontFamily: {
-            'gotham': ['Gotham Pro'],
             'nunito': ['Nunito'],
-            'roboto': ['Roboto'],
             'marck': ['Marck Script'],
           },
           width: {
