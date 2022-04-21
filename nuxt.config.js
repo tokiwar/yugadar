@@ -68,7 +68,8 @@ export default {
             'blue-green-100': '#b5e8d5',
             'light-plum-100': '#c3a9d4',
             'light-yellow-100': '#f9db79',
-            'light-pink-100': '#ffbfb3'
+            'light-pink-100': '#ffbfb3',
+            'black-rgba': 'rgba(0, 0, 0, 0.7)'
           },
           fontFamily: {
             'nunito': ['Nunito'],
