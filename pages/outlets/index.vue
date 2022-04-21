@@ -55,7 +55,10 @@ export default {
   }),
   head() {
     return {
-      title: '«ЮгаДар» - Точки продажи'
+      title: '«ЮгаДар» - Точки продажи',
+      meta: [
+        {hid: 'description', name: 'description', content: 'Мороженое от кубанского производителя «ЮгаДар» - Точки продажи'},
+      ]
     }
   },
   async asyncData({$axios}) {

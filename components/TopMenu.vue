@@ -1,7 +1,7 @@
 <template>
   <div v-if="$device.isDesktop" class="flex flex-row items-center bg-white font-black w-max m-auto">
     <NuxtLink class="px-8 py-4" :class="{'pointer-events-none' : $route.path === '/'}" to="/">
-      <img class="w-32" :src="logo" width="128" height="54" alt=""/>
+      <logo color="#F59E0B"/>
     </NuxtLink>
     <NuxtLink :class="{'text-yellow-500 underline pointer-events-none' : menuItem.link === $route.path}"
               class="px-8 py-4 hover:text-yellow-500 hover:underline text-2xl" v-for="menuItem in menu"
@@ -86,13 +86,13 @@ export default {
       }
     }
   },
-  async fetch() {
-    const result = await this.$axios.$get(
-      '/api/service/'
-    );
-    if (result.service && result.service.logo) {
-      this.logo = result.service.logo;
-    }
-  },
+  // async fetch() {
+  //   const result = await this.$axios.$get(
+  //     '/api/service/'
+  //   );
+  //   if (result.service && result.service.logo) {
+  //     this.logo = result.service.logo;
+  //   }
+  // },
 }
 </script>

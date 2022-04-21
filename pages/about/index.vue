@@ -13,11 +13,13 @@ export default {
   name: 'AboutPage',
   head() {
     return {
-      title: '«ЮгаДар» - О нас'
+      title: '«ЮгаДар» - О нас',
+      meta: [
+        {hid: 'description', name: 'description', content: 'Мороженое от кубанского производителя «ЮгаДар» - О нас'},
+      ]
     }
   },
-  data: () => ({
-  }),
+  data: () => ({}),
   async asyncData({$axios}) {
     const result = await $axios.$get(
       '/api/about/'

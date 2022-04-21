@@ -11,7 +11,10 @@ export default {
   name: 'CatalogPage',
   head() {
     return {
-      title: '«ЮгаДар» - Мороженое'
+      title: '«ЮгаДар» - Мороженое',
+      meta: [
+        {hid: 'description', name: 'description', content: 'Мороженое от кубанского производителя «ЮгаДар» - Мороженое'},
+      ]
     }
   },
   data: () => ({
