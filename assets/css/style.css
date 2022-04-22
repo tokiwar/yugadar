@@ -17,3 +17,7 @@ img {
 .hamburger {
   -webkit-tap-highlight-color: transparent;
 }
+
+.overflow-hidden {
+  overflow: hidden;
+}
