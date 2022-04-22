@@ -10,3 +10,10 @@ export const mutations = {
     state.menuOpened = false;
   },
 }
+
+export const actions = {
+  toggleOverflow() {
+    const body = document.querySelector('body');
+    body.classList.toggle('overflow-hidden');
+  }
+}

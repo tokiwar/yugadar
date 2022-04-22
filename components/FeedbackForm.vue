@@ -7,7 +7,7 @@
       <span class="flex justify-end">
         <svg fill="#4b5563" stroke="#f3f4f6" xmlns="http://www.w3.org/2000/svg" class="cursor-pointer"
              @click.prevent="close" :width="$device.isDesktopOrTablet ? 40 : 30"
-             :height="$device.isDesktopOrTablet ? 40 : 30" version="1"
+             :height="$device.isDesktopOrTablet ? 40 : 20" version="1"
              viewBox="0 0 24 24"><path
           d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"></path></svg>
       </span>
@@ -26,19 +26,42 @@
             }}</span>
         </div>
         <div class="mb-6">
-          <label for="message" class="block mb-2 text-base text-gray-900 dark:text-gray-400">Ваш отзыв*</label>
+          <label for="email" class="block mb-2 text-base text-gray-900 dark:text-gray-300">Ваш e-mail*</label>
+          <input :class="{'border-red-500' : validation.hasError('email')}"
+                 type="text" id="email"
+                 v-model="email"
+                 class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 focus:outline-none text-base rounded-lg focus:border-yellow-500 block w-full p-2.5"
+                 placeholder="name@email.ru">
+          <span class="text-xs text-red-500" v-if="validation.hasError('email')">{{
+              validation.firstError('email')
+            }}</span>
+        </div>
+        <div class="mb-6">
+          <label for="email" class="block mb-2 text-base text-gray-900 dark:text-gray-300">Ваш телефон*</label>
+          <input :class="{'border-red-500' : validation.hasError('phone')}"
+                 type="text" id="phone"
+                 v-model="phone"
+                 v-mask="'+7 (###) ###-##-##'"
+                 class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 focus:outline-none text-base rounded-lg focus:border-yellow-500 block w-full p-2.5"
+                 placeholder="+7 (***) ***-**-**">
+          <span class="text-xs text-red-500" v-if="validation.hasError('phone')">{{
+              validation.firstError('phone')
+            }}</span>
+        </div>
+        <div class="mb-6">
+          <label for="message" class="block mb-2 text-base text-gray-900 dark:text-gray-400">Ваш сообщение*</label>
           <textarea :class="{'border-red-500' : validation.hasError('message')}"
                     id="message" rows="4"
                     v-model="message"
                     class="resize-none h-48 block p-2.5 w-full text-base text-gray-900 focus:outline-none bg-gray-50 rounded-lg border border-gray-300 focus:border-yellow-500"
-                    placeholder="Оставьте отзыв ..."></textarea>
+                    placeholder="Введите текст ..."></textarea>
           <span class="text-xs text-red-500" v-if="validation.hasError('message')">{{
               validation.firstError('message')
             }}</span>
         </div>
         <button type="submit"
                 class="text-white bg-yellow-500 hover:bg-yellow-600 focus:outline-none rounded-lg text-base px-5 py-2.5 text-center">
-          Отправить отзыв
+          Отправить
         </button>
       </form>
     </div>
@@ -48,9 +71,11 @@
 import {Validator} from 'simple-vue-validator'
 
 export default {
-  name: 'ReviewsForm',
+  name: 'FeedbackForm',
   data: () => ({
     name: '',
+    email: '',
+    phone: '',
     message: '',
     result: '',
   }),
@@ -65,6 +90,33 @@ export default {
             return 'Не менее 3 символов';
           } else if (value.length > 300) {
             return 'Не более 300 символов';
+          }
+        } else {
+          return 'Это поле необходимо заполнить';
+        }
+      });
+    },
+    'email': (value) => {
+      return Validator.custom(() => {
+        if (!Validator.isEmpty(value)) {
+          const valEmail = new RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+          if (!valEmail.test(value)) {
+            return 'Пожалуйста, введите корректный адрес электронной почты';
+          } else if (value.length > 300) {
+            return 'Не более 300 символов';
+          }
+        } else {
+          return 'Это поле необходимо заполнить';
+        }
+      });
+    },
+    'phone': (value) => {
+      return Validator.custom(() => {
+        if (!Validator.isEmpty(value)) {
+          const digits = value.replace(/[^0-9]/g, "").substr(1);
+          const digitsLength = digits.length;
+          if (digitsLength < 10) {
+            return 'Введите корректный номер телефона';
           }
         } else {
           return 'Это поле необходимо заполнить';
@@ -95,6 +147,7 @@ export default {
   methods: {
     reset() {
       this.name = '';
+      this.email = '';
       this.message = '';
       this.result = '';
       this.validation.reset();
@@ -112,12 +165,14 @@ export default {
           const body = {
             name: this.name,
             message: this.message,
+            email: this.email,
+            phone: this.phone
           };
           const token = await this.$recaptcha.execute('login');
           if (token) {
             body['token'] = token;
             const res = await this.$axios.$post(
-              '/api/review/',
+              '/api/feedback/',
               body
             );
             if (res.result && res.message) {

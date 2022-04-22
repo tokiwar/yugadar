@@ -25,6 +25,7 @@
         </swiper-slide>
       </swiper>
       <button class="bg-white py-4 px-8 border-4 border-gray-100 hover:border-gray-300 rounded-3xl shadow-lg font-bold"
+              :class="{'text-sm' : $device.isMobile}"
               @click.prevent="toggleReviewsForm">Оставить отзыв
       </button>
     </div>
@@ -34,6 +35,7 @@
 <script>
 import {Swiper, SwiperSlide} from 'vue-awesome-swiper'
 import 'swiper/css/swiper.css'
+import {mapActions} from 'vuex'
 
 export default {
   name: 'ReviewsSection',
@@ -46,10 +48,12 @@ export default {
     closed: true,
   }),
   methods: {
+    ...mapActions([
+      "toggleOverflow"
+    ]),
     toggleReviewsForm() {
       this.closed = !this.closed;
-      const body = document.querySelector('body');
-      body.classList.toggle('overflow-hidden');
+      this.toggleOverflow();
     },
   },
   computed: {

@@ -11,9 +11,14 @@ export default {
       {name: 'viewport', content: 'width=device-width, initial-scale=1'},
       {hid: 'description', name: 'description', content: 'Мороженое от кубанского производителя «ЮгаДар»'},
       {
+        hid: 'og:title',
+        name: 'og:title',
+        content: 'Мороженое «ЮгаДар»'
+      },
+      {
         hid: 'og:image',
         name: 'og:image',
-        content: 'https://yugadar.ru/upload/uf/363/3p1yu54eiz7ezs9buuvtsdxndxwd69ki.webp'
+        content: 'https://yugadar.ru/yugadar.jpg'
       },
       {hid: 'og:url', name: 'og:url', content: 'https://yugadar.ru/'},
       {name: 'format-detection', content: 'telephone=no'},
@@ -48,6 +53,7 @@ export default {
   plugins: [
     {src: '@/plugins/ymapPlugin.js', ssr: false},
     {src: '@/plugins/simple-validator.js', ssr: true},
+    {src: '@/plugins/v-mask.js', ssr: true},
     '@/plugins/axios'
   ],
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -76,6 +82,8 @@ export default {
             'marck': ['Marck Script']
           },
           width: {
+            '84': '21rem',
+            '88': '22rem',
             '104': '26rem',
             '112': '28rem',
             '120': '30rem',

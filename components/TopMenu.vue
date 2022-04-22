@@ -58,7 +58,7 @@
 </template>
 
 <script>
-import {mapMutations, mapState} from 'vuex'
+import {mapMutations, mapActions} from 'vuex'
 
 export default {
   name: 'TopMenu',
@@ -67,18 +67,17 @@ export default {
     opened: false,
     logo: require('@/assets/img/logo-top.png')
   }),
-  computed: {
-    ...mapState([
-      "menuOpened",
-    ]),
-  },
   methods: {
+    ...mapActions([
+      "toggleOverflow"
+    ]),
     ...mapMutations([
       "openMenu",
       "closeMenu",
     ]),
     close() {
       this.opened = !this.opened;
+      this.toggleOverflow();
       if (this.opened) {
         this.openMenu();
       } else {
