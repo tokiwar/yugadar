@@ -1,7 +1,6 @@
 export default {
   ssr: true,
   target: "server",
-  // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'ЮгаДар',
     htmlAttrs: {
@@ -48,6 +47,7 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     {src: '@/plugins/ymapPlugin.js', ssr: false},
+    {src: '@/plugins/simple-validator.js', ssr: true},
     '@/plugins/axios'
   ],
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -56,7 +56,7 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
-    '@nuxtjs/tailwindcss',
+    '@nuxtjs/tailwindcss'
   ],
 
   tailwindcss: {
@@ -121,13 +121,19 @@ export default {
     '@nuxtjs/proxy',
     'nuxt-mq',
     '@nuxtjs/robots',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    '@nuxtjs/recaptcha'
   ],
   robots: {
     UserAgent: '*',
     Disallow: '/'
   },
 
+  recaptcha: {
+    hideBadge: true,
+    siteKey: '6LfSzZAfAAAAAHw6Wn9Cbjy7DKlu3Um7JzUzjFcD',
+    version: 3
+  },
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     proxy: true
