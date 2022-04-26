@@ -18,7 +18,7 @@ export default {
       {
         hid: 'og:image',
         name: 'og:image',
-        content: 'https://yugadar.ru/yugadar.jpg'
+        content: 'https://yugadar.ru/logo.png'
       },
       {hid: 'og:url', name: 'og:url', content: 'https://yugadar.ru/'},
       {name: 'format-detection', content: 'telephone=no'},
@@ -34,7 +34,7 @@ export default {
           "@context": "https://schema.org",
           "@type": "Organization",
           "url": "https://yugadar.ru/",
-          "logo": "https://yugadar.ru/upload/uf/363/3p1yu54eiz7ezs9buuvtsdxndxwd69ki.webp"
+          "logo": "https://yugadar.ru/logo.png"
         }
       }
     ]
@@ -43,7 +43,6 @@ export default {
   generate: {
     minify: false
   },
-  // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     '@/assets/css/fonts.css',
     '@/assets/css/style.css',

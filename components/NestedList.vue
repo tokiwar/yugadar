@@ -1,0 +1,22 @@
+<template>
+  <div class="flex flex-col w-full items-center justify-center" v-if="policyText">
+    <div class="my-10" :class="{'w-3/6' : $device.isDesktopOrTablet, 'w-11/12' : $device.isMobile}">
+      <ol class="space-y-4">
+        <li v-for="item in policyText" :key="item.key">
+          <p class="text-2xl font-black mb-2" v-html="item.title"/>
+          <p class="font-bold mb-2 text-base" v-if="item.text" v-html="item.text"/>
+          <ol v-if="item.items" class="list-outside ml-8 list-disc text-base"
+              :class="{'ml-8' : $device.isDesktopOrTablet, 'ml-4' : $device.isMobile}">
+            <li v-for="subItem in item.items" v-html="subItem.text" :key="subItem.key"/>
+          </ol>
+        </li>
+      </ol>
+    </div>
+  </div>
+</template>
+<script>
+export default {
+  name: 'NestedList',
+  props: ['policyText']
+}
+</script>

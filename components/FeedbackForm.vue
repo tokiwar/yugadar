@@ -59,6 +59,20 @@
               validation.firstError('message')
             }}</span>
         </div>
+        <div class="flex flex-col items-start mb-6">
+          <div class="flex flex-row">
+            <div class="flex items-center h-5">
+              <input id="terms" v-model="terms" type="checkbox" value="Y"
+                     class="w-4 h-4 border border-yellow-300 rounded bg-gray-50 focus:ring-3 focus:ring-yellow-300">
+            </div>
+            <label for="terms" class="ml-2 text-sm font-medium text-gray-900">Я ознакомлен и согласен с <a
+              target="_blank" href="/privacy-policy/" class="text-yellow-600 hover:underline">«Политикой
+              конфиденциальности»</a></label>
+          </div>
+          <span class="text-xs text-red-500" v-if="validation.hasError('terms')">{{
+              validation.firstError('terms')
+            }}</span>
+        </div>
         <button type="submit"
                 class="text-white bg-yellow-500 hover:bg-yellow-600 focus:outline-none rounded-lg text-base px-5 py-2.5 text-center">
           Отправить
@@ -77,6 +91,7 @@ export default {
     email: '',
     phone: '',
     message: '',
+    terms: '',
     result: '',
   }),
   validators: {
@@ -136,6 +151,14 @@ export default {
         }
       });
     },
+    'terms': (value) => {
+      return Validator.custom(() => {
+        if (!Validator.isEmpty(value)) {
+        } else {
+          return 'Это поле необходимо заполнить';
+        }
+      });
+    },
   },
   async mounted() {
     try {
@@ -166,7 +189,8 @@ export default {
             name: this.name,
             message: this.message,
             email: this.email,
-            phone: this.phone
+            phone: this.phone,
+            terms: this.terms
           };
           const token = await this.$recaptcha.execute('login');
           if (token) {

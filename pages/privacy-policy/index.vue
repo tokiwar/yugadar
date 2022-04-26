@@ -1,7 +1,7 @@
 <template>
   <div>
     <TopTextSection :section-data="logoData"/>
-    <TextSection :section-data="sectionData"/>
+    <nested-list :policy-text="policyText"/>
   </div>
 </template>
 
@@ -9,16 +9,26 @@
 
 export default {
   name: 'PrivacyPolicyPage',
-  data: () => ({
-    logoData: {
-      title: 'ПОЛИТИКА',
-      subtitle: 'КОНФИДЕНЦИАЛЬНОСТИ',
-      reverse: true,
-      bgColor: 'bg-light-plum-100',
-    },
-    sectionData: {
-      text: '123123132'
+  head() {
+    return {
+      title: '«ЮгаДар» - Политика конфиденциальности',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Мороженое от кубанского производителя «ЮгаДар» - Политика конфиденциальности'
+        },
+      ]
     }
-  })
+  },
+  data: () => ({}),
+  async asyncData({$axios}) {
+    const result = await $axios.$get(
+      '/api/privacy-policy/'
+    );
+    const logoData = result['top-text-section'].logoData;
+    const policyText = result['json-data'].policyText;
+    return {logoData, policyText}
+  },
 }
 </script>
