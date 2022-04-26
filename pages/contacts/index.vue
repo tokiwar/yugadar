@@ -17,6 +17,9 @@ export default {
       meta: [
         {hid: 'description', name: 'description', content: 'Мороженое от кубанского производителя «ЮгаДар» - Контакты'},
       ],
+      link: [
+        {rel: 'canonical', href: 'https://yugadar.ru/contacts/'}
+      ],
       script: [
         {
           type: 'application/ld+json',

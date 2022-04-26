@@ -14,6 +14,9 @@ export default {
       title: '«ЮгаДар» - Мороженое',
       meta: [
         {hid: 'description', name: 'description', content: 'Мороженое от кубанского производителя «ЮгаДар» - Мороженое'},
+      ],
+      link: [
+        {rel: 'canonical', href: 'https://yugadar.ru/catalog/'}
       ]
     }
   },

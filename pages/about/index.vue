@@ -16,6 +16,9 @@ export default {
       title: '«ЮгаДар» - О нас',
       meta: [
         {hid: 'description', name: 'description', content: 'Мороженое от кубанского производителя «ЮгаДар» - О нас'},
+      ],
+      link: [
+        {rel: 'canonical', href: 'https://yugadar.ru/about/'}
       ]
     }
   },

@@ -21,6 +21,9 @@ export default {
           name: 'description',
           content: 'Мороженое от кубанского производителя «ЮгаДар»'
         }
+      ],
+      link: [
+        {rel: 'canonical', href: 'https://yugadar.ru/'}
       ]
     }
   },
