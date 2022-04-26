@@ -8,7 +8,7 @@
             :src="$device.isDesktop ? item['img'] : ($device.isMobile ? item['img-mobile'] : ($device.isTablet ? item['img-table'] : ''))"
             :width="$device.isDesktop ? 544 : ($device.isMobile ? 390 : ($device.isTablet ? 320 : ''))"
             :height="$device.isDesktop ? 544 : ($device.isMobile ? 390 : ($device.isTablet ? 320 : ''))"
-            alt=""/>
+            :alt="item.name"/>
           <div class="flex flex-col items-center justify-center py-4 w-4/6 h-32 text-center"
                :class="{'h-36' : $device.isTablet && $mq !== 'lg'}">
             <span class="font-bold leading-6"

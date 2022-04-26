@@ -5,7 +5,7 @@
       <img
         :class="{'h-112 object-cover object-center w-full':$device.isTablet, 'h-104 object-cover object-center' : $device.isMobile}"
         width="844" height="416"
-        :src="$device.isDesktopOrTablet ? SectionData.bgImage : SectionData.bgImageMobile" alt=""/>
+        :src="$device.isDesktopOrTablet ? SectionData.bgImage : SectionData.bgImageMobile" alt="image"/>
     </div>
     <div v-if="SectionData.title || SectionData.subtitle"
          class="text-white flex flex-col justify-center items-center font-black"
