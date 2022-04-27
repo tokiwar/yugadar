@@ -2,7 +2,7 @@
   <div class="fixed w-full h-full bg-black-rgba top-0 z-40 left-0 flex items-center justify-center"
        @click.self="close">
     <div
-      class="h-auto opacity-100 relative top-0 left-0 z-50 bg-white border-yellow-500 rounded-3xl shadow-lg pt-4 px-10 flex flex-col"
+      class="h-auto opacity-100 relative top-0 left-0 z-50 bg-white border-black shadow-lg pt-4 px-10 flex flex-col"
       :class="{'w-136 border-8 pb-12' : $device.isDesktopOrTablet, 'w-88 border-4 pb-8' : $device.isMobile}">
       <span class="flex justify-end">
         <svg fill="#4b5563" stroke="#f3f4f6" xmlns="http://www.w3.org/2000/svg" class="cursor-pointer"
@@ -19,7 +19,7 @@
           <input :class="{'border-red-500' : validation.hasError('name')}"
                  type="text" id="name"
                  v-model="name"
-                 class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 focus:outline-none text-base rounded-lg focus:border-yellow-500 block w-full p-2.5"
+                 class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 focus:outline-none text-base focus:border-black block w-full p-2.5"
                  placeholder="Иванов Иван Иванович">
           <span class="text-xs text-red-500" v-if="validation.hasError('name')">{{
               validation.firstError('name')
@@ -30,14 +30,14 @@
           <textarea :class="{'border-red-500' : validation.hasError('message')}"
                     id="message" rows="4"
                     v-model="message"
-                    class="resize-none h-48 block p-2.5 w-full text-base text-gray-900 focus:outline-none bg-gray-50 rounded-lg border border-gray-300 focus:border-yellow-500"
+                    class="resize-none h-48 block p-2.5 w-full text-base text-gray-900 focus:outline-none bg-gray-50 border border-gray-300 focus:border-black"
                     placeholder="Оставьте отзыв ..."></textarea>
           <span class="text-xs text-red-500" v-if="validation.hasError('message')">{{
               validation.firstError('message')
             }}</span>
         </div>
         <button type="submit"
-                class="text-white bg-yellow-500 hover:bg-yellow-600 focus:outline-none rounded-lg text-base px-5 py-2.5 text-center">
+                class="text-black border-2 bg-white border-black hover:bg-black hover:border-white hover:text-white focus:outline-none font-bold text-xl px-4 py-2 text-center ease-in-out duration-300">
           Отправить отзыв
         </button>
       </form>

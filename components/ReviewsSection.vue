@@ -24,9 +24,9 @@
           </div>
         </swiper-slide>
       </swiper>
-      <button class="bg-white py-4 px-8 border-4 border-gray-100 hover:border-gray-300 rounded-3xl shadow-lg font-bold"
-              :class="{'text-sm' : $device.isMobile}"
-              @click.prevent="toggleReviewsForm">Оставить отзыв
+      <button @click.prevent="toggleReviewsForm"
+              class="text-black border-2 bg-white border-black hover:bg-black hover:border-white hover:text-white focus:outline-none font-bold text-xl px-4 py-2 text-center ease-in-out duration-300">
+        Оставить отзыв
       </button>
     </div>
     <reviews-form @close="toggleReviewsForm" :class="{'hidden' : closed, 'fixed': !closed}"/>
