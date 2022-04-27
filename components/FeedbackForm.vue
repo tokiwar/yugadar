@@ -14,67 +14,72 @@
       <div v-if="result" class="w-full text-center font-bold text-black"
            :class="{'text-xl' : $device.isDesktopOrTablet, 'text-lg' : $device.isMobile}" v-html="result"/>
       <form v-else class="w-full flex flex-col mt-2 font-bold" @submit.prevent="formSubmit" ref="form">
-        <div class="mb-6">
-          <label for="name" class="block mb-2 text-base text-gray-900 dark:text-gray-300">Ваше имя*</label>
+        <div :class="{'mb-6 text-base' : $device.isDesktopOrTablet, 'mb-2 text-sm': $device.isMobile}">
+          <label for="name" class="block mb-2 text-gray-900 dark:text-gray-300">Ваше имя*</label>
           <input :class="{'border-red-500' : validation.hasError('name')}"
                  type="text" id="name"
                  v-model="name"
-                 class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 focus:outline-none text-base focus:border-black block w-full p-2.5"
+                 class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 focus:outline-none focus:border-black block w-full p-2.5"
                  placeholder="Иванов Иван Иванович">
           <span class="text-xs text-red-500" v-if="validation.hasError('name')">{{
               validation.firstError('name')
             }}</span>
         </div>
-        <div class="mb-6">
-          <label for="email" class="block mb-2 text-base text-gray-900 dark:text-gray-300">Ваш e-mail*</label>
+        <div :class="{'mb-6 text-base' : $device.isDesktopOrTablet, 'mb-2 text-sm': $device.isMobile}">
+          <label for="email" class="block mb-2 text-gray-900 dark:text-gray-300">Ваш e-mail*</label>
           <input :class="{'border-red-500' : validation.hasError('email')}"
                  type="text" id="email"
                  v-model="email"
-                 class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 focus:outline-none text-base focus:border-black block w-full p-2.5"
+                 class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 focus:outline-none focus:border-black block w-full p-2.5"
                  placeholder="name@email.ru">
           <span class="text-xs text-red-500" v-if="validation.hasError('email')">{{
               validation.firstError('email')
             }}</span>
         </div>
-        <div class="mb-6">
-          <label for="email" class="block mb-2 text-base text-gray-900 dark:text-gray-300">Ваш телефон*</label>
+        <div :class="{'mb-6 text-base' : $device.isDesktopOrTablet, 'mb-2 text-sm': $device.isMobile}">
+          <label for="email" class="block mb-2 text-gray-900 dark:text-gray-300">Ваш телефон*</label>
           <input :class="{'border-red-500' : validation.hasError('phone')}"
                  type="text" id="phone"
                  v-model="phone"
                  v-mask="'+7 (###) ###-##-##'"
-                 class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 focus:outline-none text-base focus:border-black block w-full p-2.5"
+                 class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 focus:outline-none focus:border-black block w-full p-2.5"
                  placeholder="+7 (***) ***-**-**">
           <span class="text-xs text-red-500" v-if="validation.hasError('phone')">{{
               validation.firstError('phone')
             }}</span>
         </div>
-        <div class="mb-6">
-          <label for="message" class="block mb-2 text-base text-gray-900 dark:text-gray-400">Ваш сообщение*</label>
-          <textarea :class="{'border-red-500' : validation.hasError('message'), 'h-48' : $device.isDesktopOrTablet, 'h-32': $device.isMobile}"
-                    id="message" rows="4"
-                    v-model="message"
-                    class="resize-none block p-2.5 w-full text-base text-gray-900 focus:outline-none bg-gray-50 border border-gray-300 focus:border-black"
-                    placeholder="Введите текст ..."></textarea>
+        <div :class="{'mb-6 text-base' : $device.isDesktopOrTablet, 'mb-2 text-sm': $device.isMobile}">
+          <label for="message" class="block mb-2 text-gray-900 dark:text-gray-400">Ваш сообщение*</label>
+          <textarea
+            :class="{'border-red-500' : validation.hasError('message'), 'h-48' : $device.isDesktopOrTablet, 'h-24': $device.isMobile}"
+            id="message" rows="4"
+            v-model="message"
+            class="resize-none block p-2.5 w-full text-gray-900 focus:outline-none bg-gray-50 border border-gray-300 focus:border-black"
+            placeholder="Введите текст ..."></textarea>
           <span class="text-xs text-red-500" v-if="validation.hasError('message')">{{
               validation.firstError('message')
             }}</span>
         </div>
-        <div class="flex flex-col items-start mb-6">
+        <div class="flex flex-col items-start"
+             :class="{'mb-6 text-base' : $device.isDesktopOrTablet, 'mb-2 text-sm': $device.isMobile}">
           <div class="flex flex-row">
             <div class="flex items-center h-5">
               <input id="terms" v-model="terms" type="checkbox" value="Y"
                      class="w-4 h-4 border border-yellow-300 rounded bg-gray-50 focus:ring-3 focus:ring-yellow-300">
             </div>
-            <label for="terms" class="ml-2 text-sm font-medium text-gray-900">Я ознакомлен и согласен с <a
-              target="_blank" href="/privacy-policy/" class="font-bold hover:underline">«Политикой
-              конфиденциальности»</a></label>
+            <label for="terms" class="ml-2 font-medium text-gray-900"
+                   :class="{'text-sm': $device.isDesktopOrTablet, 'text-xs': $device.isMobile}">Я ознакомлен и согласен
+              с <a
+                target="_blank" href="/privacy-policy/" class="font-bold hover:underline">«Политикой
+                конфиденциальности»</a></label>
           </div>
           <span class="text-xs text-red-500" v-if="validation.hasError('terms')">{{
               validation.firstError('terms')
             }}</span>
         </div>
         <button type="submit"
-                class="text-black border-2 bg-white border-black hover:bg-black hover:border-white hover:text-white focus:outline-none font-bold text-xl px-4 py-2 text-center ease-in-out duration-300">
+                class="text-black border-2 bg-white border-black hover:bg-black hover:text-white focus:outline-none font-bold px-4 py-2 text-center ease-in-out duration-300"
+                :class="{'text-xl' : $device.isDesktopOrTablet, 'text-sm': $device.isMobile}">
           Отправить
         </button>
       </form>

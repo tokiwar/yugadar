@@ -9,7 +9,7 @@
         <swiper-slide v-for="item in items" :key="item.name">
           <div class="flex flex-col justify-center items-center h-auto">
             <div
-              class="flex flex-col items-center justify-start text-justify border-4 bg-white border-gray-100 rounded-3xl shadow-lg"
+              class="flex flex-col items-center justify-start text-justify border-2 bg-white border-black shadow-lg"
               :class="{'w-152 space-y-8 h-96 py-8' : $device.isDesktop, 'w-11/12 space-y-2 h-72 py-4' :$device.isMobile}">
               <div class="flex flex-col w-5/6">
               <span :class="{'text-3xl':$device.isDesktopOrTablet, 'text-xl' : $device.isMobile}"
@@ -25,7 +25,7 @@
         </swiper-slide>
       </swiper>
       <button @click.prevent="toggleReviewsForm"
-              class="text-black border-2 bg-white border-black hover:bg-black hover:border-white hover:text-white focus:outline-none font-bold text-xl px-4 py-2 text-center ease-in-out duration-300">
+              class="text-black border-2 bg-white border-black hover:bg-black hover:text-white focus:outline-none font-bold text-xl px-4 py-2 text-center ease-in-out duration-300">
         Оставить отзыв
       </button>
     </div>

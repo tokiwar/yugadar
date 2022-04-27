@@ -1,9 +1,9 @@
 <template>
   <footer class="bg-black flex flex-col justify-center items-center text-white space-y-10"
           :class="{'h-80': $device.isDesktop, 'h-auto py-14' :!$device.isDesktop}">
-    <BottomMenu :class="{'w-192' : $device.isDesktopOrTablet}"/>
+    <BottomMenu :class="{'w-auto' : $device.isDesktopOrTablet}"/>
     <div
-      :class="{'flex flex-row w-192 items-start space-x-4' : $device.isDesktopOrTablet, 'flex flex-col justify-center items-center' : $device.isMobile}">
+      :class="{'flex flex-row w-auto items-start space-x-4' : $device.isDesktopOrTablet, 'flex flex-col justify-center items-center' : $device.isMobile}">
       <span class="text-lg font-bold">©2022 «Югадар»</span>
       <span><NuxtLink class="text-sm text-gray-400 opacity-70"
                       to="/privacy-policy/">Политика конфиденциальности</NuxtLink></span>

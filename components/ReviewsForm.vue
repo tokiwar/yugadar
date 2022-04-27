@@ -14,30 +14,32 @@
       <div v-if="result" class="w-full text-center font-bold text-black"
            :class="{'text-xl' : $device.isDesktopOrTablet, 'text-lg' : $device.isMobile}" v-html="result"/>
       <form v-else class="w-full flex flex-col mt-2 font-bold" @submit.prevent="formSubmit" ref="form">
-        <div class="mb-6">
-          <label for="name" class="block mb-2 text-base text-gray-900 dark:text-gray-300">Ваше имя*</label>
+        <div :class="{'mb-6 text-base' : $device.isDesktopOrTablet, 'mb-2 text-sm': $device.isMobile}">
+          <label for="name" class="block mb-2 text-gray-900 dark:text-gray-300">Ваше имя*</label>
           <input :class="{'border-red-500' : validation.hasError('name')}"
                  type="text" id="name"
                  v-model="name"
-                 class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 focus:outline-none text-base focus:border-black block w-full p-2.5"
+                 class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 focus:outline-none focus:border-black block w-full p-2.5"
                  placeholder="Иванов Иван Иванович">
           <span class="text-xs text-red-500" v-if="validation.hasError('name')">{{
               validation.firstError('name')
             }}</span>
         </div>
-        <div class="mb-6">
-          <label for="message" class="block mb-2 text-base text-gray-900 dark:text-gray-400">Ваш отзыв*</label>
-          <textarea :class="{'border-red-500' : validation.hasError('message')}"
+        <div :class="{'mb-6 text-base' : $device.isDesktopOrTablet, 'mb-2 text-sm': $device.isMobile}">
+          <label for="message" class="block mb-2 text-gray-900 dark:text-gray-400">Ваш отзыв*</label>
+          <textarea
+            :class="{'border-red-500' : validation.hasError('message'), 'h-48' : $device.isDesktopOrTablet, 'h-32': $device.isMobile}"
                     id="message" rows="4"
                     v-model="message"
-                    class="resize-none h-48 block p-2.5 w-full text-base text-gray-900 focus:outline-none bg-gray-50 border border-gray-300 focus:border-black"
+                    class="resize-none block p-2.5 w-full text-gray-900 focus:outline-none bg-gray-50 border border-gray-300 focus:border-black"
                     placeholder="Оставьте отзыв ..."></textarea>
           <span class="text-xs text-red-500" v-if="validation.hasError('message')">{{
               validation.firstError('message')
             }}</span>
         </div>
         <button type="submit"
-                class="text-black border-2 bg-white border-black hover:bg-black hover:border-white hover:text-white focus:outline-none font-bold text-xl px-4 py-2 text-center ease-in-out duration-300">
+                class="text-black border-2 bg-white border-black hover:bg-black hover:text-white focus:outline-none font-bold px-4 py-2 text-center ease-in-out duration-300"
+                :class="{'text-xl' : $device.isDesktopOrTablet, 'text-sm': $device.isMobile}">
           Отправить отзыв
         </button>
       </form>

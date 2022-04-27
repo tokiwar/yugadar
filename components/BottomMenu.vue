@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="font-bold flex"
+    <div class="font-bold flex item-center justify-center"
          :class="{'flex-row space-x-14' : $device.isDesktopOrTablet, 'flex-col space-y-6' :$device.isMobile}">
       <div class="flex flex-col space-y-4">
         <span class="text-3xl">Адрес</span>
@@ -18,7 +18,7 @@
           <a href="mailto:mamay4339061@gmail.com">mamay4339061@gmail.com</a>
           <a href="tel:+79184339061">Тел. +7 (918) 433-90-61</a>
           <button @click.prevent="toggleFeedbackForm"
-                  class="text-black border-2 bg-white hover:bg-black hover:border-white hover:text-white focus:outline-none font-bold text-base px-4 py-2 text-center ease-in-out duration-300">
+                  class="hover:text-black border-white hover:border-none border-2 hover:bg-white border-black bg-black text-white focus:outline-none font-bold text-xl px-4 py-2 text-center ease-in-out duration-300">
             Обратная связь
           </button>
         </div>
