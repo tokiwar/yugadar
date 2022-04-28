@@ -184,7 +184,8 @@ export default {
       '*TYPE=',
       '*utm*=',
       '*openstat=',
-      '*from='
+      '*from=',
+      '/_nuxt/'
     ],
     Allow: ['*/upload/', '/bitrix/*.js', '/bitrix/*.css', '/local/*.js', '/local/*.css', '/local/*.jpg', '/local/*.jpeg', '/local/*.png', '/local/*.gif'],
     Sitemap: 'https://yugadar.ru/sitemap.xml'
