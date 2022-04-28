@@ -21,6 +21,7 @@
     "@nuxtjs/sitemap": "^2.4.0",
     "@nuxtjs/svg": "^0.4.0",
     "@nuxtjs/tailwindcss": "^4.2.1",
+    "@nuxtjs/yandex-metrika": "^1.4.0",
     "concurrently": "^7.0.0",
     "core-js": "^3.19.3",
     "cross-env": "^7.0.3",

@@ -126,7 +126,13 @@ export default {
     'nuxt-mq',
     '@nuxtjs/robots',
     '@nuxtjs/sitemap',
-    '@nuxtjs/recaptcha'
+    '@nuxtjs/recaptcha',
+    ['@nuxtjs/yandex-metrika',
+      {
+        id: '88647007',
+        webvisor: true
+      }
+    ]
   ],
   robots: {
     UserAgent: '*',
