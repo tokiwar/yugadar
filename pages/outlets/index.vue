@@ -3,7 +3,7 @@
     <TopTextSection :section-data="logoData"/>
     <Outlets :outlets="items"/>
     <client-only>
-      <yandex-map :class="{'h-192': $device.isDesktop, 'h-120': !$device.isDesktop}" :coords="initCoords" :zoom="zoom"
+      <yandex-map @map-was-initialized="displayMap" v-show="showMap" :class="{'h-192': $device.isDesktop, 'h-120': !$device.isDesktop}" :coords="initCoords" :zoom="zoom"
                   :scroll-zoom="false">
         <ymap-marker
           v-for="marker in items"
@@ -16,7 +16,7 @@
         />
       </yandex-map>
     </client-only>
-    <TextSection :section-data="sectionData"/>
+    <TextSection v-if="false" :section-data="sectionData"/>
   </div>
 </template>
 
@@ -52,6 +52,7 @@ export default {
     initCoords: [
       45.617003, 38.942364
     ],
+    showMap: false,
   }),
   head() {
     return {
@@ -74,6 +75,9 @@ export default {
     return {items, logoData, sectionData}
   },
   methods: {
+    displayMap(){
+      this.showMap = true;
+    },
     getBalloonTemplate(coordsData) {
       return `
         <div class="pl-4">

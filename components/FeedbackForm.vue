@@ -3,7 +3,7 @@
        @click.self="close">
     <div
       class="h-auto opacity-100 relative top-0 left-0 z-50 bg-white border-black shadow-lg pt-4 px-10 flex flex-col"
-      :class="{'w-136 border-8 pb-12' : $device.isDesktopOrTablet, 'w-88 border-4 pb-8' : $device.isMobile}">
+      :class="{'w-136 border-4 pb-12' : $device.isDesktopOrTablet, 'w-88 border-4 pb-8' : $device.isMobile}">
       <span class="flex justify-end">
         <svg fill="#4b5563" stroke="#f3f4f6" xmlns="http://www.w3.org/2000/svg" class="cursor-pointer"
              @click.prevent="close" :width="$device.isDesktopOrTablet ? 40 : 30"

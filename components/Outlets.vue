@@ -1,17 +1,20 @@
 <template>
-  <section class="bg-light-yellow-100">
+  <section class="bg-light-yellow-100 pb-10">
     <swiper :options="swiperOptions" v-show="outlets">
       <swiper-slide v-for="item in outlets" :key="item.name">
         <div class="flex flex-col justify-start items-center">
           <img
-            :class="{'h-136 rounded-2xl': $device.isDesktop, 'h-104 rounded-xl' :$device.isTablet && $mq === 'lg', 'h-80 rounded-xl' : $device.isTablet && $mq !== 'lg' }"
+            class="border-2 border-black"
+            :class="{'h-136': $device.isDesktop, 'h-104' :$device.isTablet && $mq === 'lg', 'h-80' : $device.isTablet && $mq !== 'lg' }"
             :src="$device.isDesktop ? item['img'] : ($device.isMobile ? item['img-mobile'] : ($device.isTablet ? item['img-table'] : ''))"
             :width="$device.isDesktop ? 544 : ($device.isMobile ? 390 : ($device.isTablet ? 320 : ''))"
             :height="$device.isDesktop ? 544 : ($device.isMobile ? 390 : ($device.isTablet ? 320 : ''))"
             :alt="item.name"/>
-          <div class="flex flex-col items-center justify-center py-4 w-4/6 h-32 text-center"
-               :class="{'h-36' : $device.isTablet && $mq !== 'lg'}">
-            <span class="font-bold leading-6"
+          <div
+            class="flex flex-col items-center justify-center py-4 h-28 text-center bg-white border-black border-l-2 border-r-2 border-b-2"
+            :class="{'h-36' : $device.isTablet && $mq !== 'lg', 'w-136':$device.isDesktop, 'w-104' :$device.isTablet && $mq === 'lg', 'w-80' : $device.isTablet && $mq !== 'lg',
+             'w-full' : $device.isMobile}">
+            <span class="font-black leading-6"
                   :class="{'text-xl' : $device.isDesktop || $device.isMobile, 'text-base' :$device.isTablet && $mq !== 'lg'}"
                   v-html="item.description"></span>
             <span class="italic"

@@ -1,7 +1,7 @@
 <template>
   <div v-if="$device.isDesktop" class="flex flex-row items-center bg-white font-black w-max m-auto">
     <NuxtLink class="px-8 py-4" :class="{'pointer-events-none' : $route.path === '/'}" to="/">
-      <logo color="#F59E0B"/>
+      <logo :color="'#F59E0B'"/>
     </NuxtLink>
     <NuxtLink :class="{'text-yellow-500 underline pointer-events-none' : menuItem.link === $route.path}"
               class="px-8 py-4 hover:text-yellow-500 hover:underline text-2xl" v-for="menuItem in menu"
