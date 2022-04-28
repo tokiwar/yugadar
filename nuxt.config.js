@@ -132,7 +132,10 @@ export default {
         id: '88647007',
         webvisor: true
       }
-    ]
+    ],
+    ['@nuxtjs/google-analytics', {
+      id: 'G-MHK8SH97SL'
+    }]
   ],
   robots: {
     UserAgent: '*',
