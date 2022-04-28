@@ -50,7 +50,8 @@ export default {
     {src: '@/plugins/ymapPlugin.js', ssr: false},
     {src: '@/plugins/simple-validator.js', ssr: true},
     {src: '@/plugins/v-mask.js', ssr: true},
-    '@/plugins/axios'
+    '@/plugins/axios',
+    '@/plugins/gtag'
   ],
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -132,10 +133,7 @@ export default {
         id: '88647007',
         webvisor: true
       }
-    ],
-    ['@nuxtjs/google-analytics', {
-      id: 'G-MHK8SH97SL'
-    }]
+    ]
   ],
   robots: {
     UserAgent: '*',

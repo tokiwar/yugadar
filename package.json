@@ -35,6 +35,7 @@
     "vue-awesome-swiper": "^4.1.1",
     "vue-burger-menu": "^2.0.5",
     "vue-carousel": "^0.18.0",
+    "vue-gtag": "^1.16.1",
     "vue-server-renderer": "^2.6.14",
     "vue-template-compiler": "^2.6.14",
     "vue-yandex-maps": "^0.11.7",
