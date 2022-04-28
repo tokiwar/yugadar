@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <div class="flex flex-col items-center justify-center font-bold text-center my-20" v-for="section in catalog">
-      <span :class="{'text-3xl' : $device.isDesktop, 'text-2xl' : !$device.isDesktop}">{{ section.title }}</span>
+  <div class="mt-20">
+    <div class="flex flex-col items-center justify-center font-black text-center" v-for="section in catalog">
+      <span :class="{'text-6xl' : $device.isDesktop, 'text-2xl' : !$device.isDesktop}" v-html="section.title"/>
       <section class="grid grid-cols-3 grid-rows-3 select-none my-10 mx-auto"
                :class="{'w-3/6' : $device.isDesktop, 'text-base w-11/12' : !$device.isDesktop}">
         <div class="font-black p-2" :class="{'bg-gray-200 border-2' : row, 'border-r-2 border-b-2' : !row}"
