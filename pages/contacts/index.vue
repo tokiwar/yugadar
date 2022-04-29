@@ -16,6 +16,11 @@ export default {
       title: '«ЮгаДар» - Контакты',
       meta: [
         {hid: 'description', name: 'description', content: 'Мороженое от кубанского производителя «ЮгаДар» - Контакты'},
+        {
+          hid: 'keywords',
+          name: 'keywords',
+          content: 'тимашевск, инн, контакты, мороженое, огрнип, связаться'
+        }
       ],
       link: [
         {rel: 'canonical', href: 'https://yugadar.ru/contacts/'}

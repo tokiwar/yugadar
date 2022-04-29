@@ -18,6 +18,11 @@ export default {
           name: 'description',
           content: 'Мороженое от кубанского производителя «ЮгаДар» - Политика конфиденциальности'
         },
+        {
+          hid: 'keywords',
+          name: 'keywords',
+          content: 'данных, персональных, обработки, данные, оператор, персональные, пользователь, информации, передача, политика'
+        }
       ],
       link: [
         {rel: 'canonical', href: 'https://yugadar.ru/privacy-policy/'}

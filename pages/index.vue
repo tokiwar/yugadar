@@ -20,6 +20,11 @@ export default {
           hid: 'description',
           name: 'description',
           content: 'Мороженое от кубанского производителя «ЮгаДар»'
+        },
+        {
+          hid: 'keywords',
+          name: 'keywords',
+          content: 'мороженое, сладкое, югадар'
         }
       ],
       link: [

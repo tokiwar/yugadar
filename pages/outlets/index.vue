@@ -3,7 +3,8 @@
     <TopTextSection :section-data="logoData"/>
     <Outlets :outlets="items"/>
     <client-only>
-      <yandex-map @map-was-initialized="displayMap" v-show="showMap" :class="{'h-192': $device.isDesktop, 'h-120': !$device.isDesktop}" :coords="initCoords" :zoom="zoom"
+      <yandex-map @map-was-initialized="displayMap" v-show="showMap"
+                  :class="{'h-192': $device.isDesktop, 'h-120': !$device.isDesktop}" :coords="initCoords" :zoom="zoom"
                   :scroll-zoom="false">
         <ymap-marker
           v-for="marker in items"
@@ -58,7 +59,16 @@ export default {
     return {
       title: '«ЮгаДар» - Точки продажи',
       meta: [
-        {hid: 'description', name: 'description', content: 'Мороженое от кубанского производителя «ЮгаДар» - Точки продажи'},
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Мороженое от кубанского производителя «ЮгаДар» - Точки продажи'
+        },
+        {
+          hid: 'keywords',
+          name: 'keywords',
+          content: 'тимашевск, красная, заря, изюминка, парк, пионерская, продажи'
+        }
       ],
       link: [
         {rel: 'canonical', href: 'https://yugadar.ru/outlets/'}
@@ -66,7 +76,7 @@ export default {
     }
   },
   async asyncData({$axios}) {
-    const result =  await $axios.$get(
+    const result = await $axios.$get(
       '/api/outlets/'
     );
     const items = result.items;
@@ -75,7 +85,7 @@ export default {
     return {items, logoData, sectionData}
   },
   methods: {
-    displayMap(){
+    displayMap() {
       this.showMap = true;
     },
     getBalloonTemplate(coordsData) {

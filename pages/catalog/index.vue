@@ -13,15 +13,23 @@ export default {
     return {
       title: '«ЮгаДар» - Мороженое',
       meta: [
-        {hid: 'description', name: 'description', content: 'Мороженое от кубанского производителя «ЮгаДар» - Мороженое'},
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Мороженое от кубанского производителя «ЮгаДар» - Мороженое'
+        },
+        {
+          hid: 'keywords',
+          name: 'keywords',
+          content: 'мороженое, пломбир, цена, ассортименте, тара'
+        }
       ],
       link: [
         {rel: 'canonical', href: 'https://yugadar.ru/catalog/'}
       ]
     }
   },
-  data: () => ({
-  }),
+  data: () => ({}),
   async asyncData({$axios}) {
     const catalog = {
       iceCream: {
