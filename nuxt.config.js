@@ -25,7 +25,7 @@ export default {
       {name: 'yandex-verification', content: 'fa73cb5e3abd3dce'}
     ],
     link: [
-      {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}
+      {rel: 'icon', type: 'image/x-icon', href: 'https://yugadar.ru/favicon.ico'}
     ],
     script: [
       {
@@ -138,7 +138,9 @@ export default {
   ],
   robots: {
     UserAgent: '*',
-    Disallow: ['/cgi-bin', '/bitrix/',
+    Disallow: [
+      '/cgi-bin',
+      '/bitrix/',
       '*bitrix_*=',
       '/local/',
       '/*index.php$',
@@ -195,7 +197,18 @@ export default {
       '*from=',
       '/_nuxt/'
     ],
-    Allow: ['*/upload/', '/bitrix/*.js', '/bitrix/*.css', '/local/*.js', '/local/*.css', '/local/*.jpg', '/local/*.jpeg', '/local/*.png', '/local/*.gif'],
+    Allow: [
+      '/upload/',
+      '/bitrix/*.js',
+      '/bitrix/*.css',
+      '/local/*.js',
+      '/local/*.css',
+      '/local/*.jpg',
+      '/local/*.jpeg',
+      '/local/*.png',
+      '/local/*.gif',
+      '/static/'
+    ],
     Sitemap: 'https://yugadar.ru/sitemap.xml'
   },
 
