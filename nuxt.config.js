@@ -58,7 +58,6 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
     '@nuxtjs/dotenv'
   ],
@@ -67,7 +66,10 @@ export default {
     config: {
       theme: {
         extend: {
-          backgroundSize: {},
+          backgroundImage: {
+            'pattern-lines' : "url('@/assets/img/svg/pattern-lines.svg')",
+            'pattern-ice-cream' : "url('@/assets/img/svg/pattern-ice-cream.svg')"
+          },
           colors: {
             'blue-green-100': '#b5e8d5',
             'light-plum-100': '#c3a9d4',

@@ -33,8 +33,9 @@ export default {
   async asyncData({$axios}) {
     const catalog = {
       iceCream: {
-        title: 'Мороженое в ассортименте </br>(Пломбир жир 12%)',
-        rows: ['', 'Цена (1 кг)', 'Цена (тара 3 кг)',],
+        title: 'Мороженое в ассортименте',
+        'subtitle': '(пломбир жир 12%)',
+        rows: ['', 'Цена</br>(1 кг)', 'Цена</br>(3 кг)',],
       }
     };
     const result = await $axios.$get(

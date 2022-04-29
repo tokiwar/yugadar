@@ -1,5 +1,5 @@
 <template>
-  <section v-if="display" :class="className">
+  <section v-if="display" :class="className" class="bg-pattern-ice-cream">
     <div class="relative max-h-160">
       <img :width="$device.isDesktopOrTablet ? 293 :228 " :height="$device.isDesktopOrTablet ? 575 : 448" :class="{'h-112 my-14' : !$device.isDesktop}" :src="SectionData.logoImage" alt="image"/>
     </div>

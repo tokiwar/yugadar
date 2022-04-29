@@ -1,7 +1,8 @@
 <template>
   <div>
-    <TopTextSection :section-data="logoData"/>
-    <Outlets :outlets="items"/>
+    <TopTextSection :section-data="logoData">
+      <Outlets :outlets="items"/>
+    </TopTextSection>
     <client-only>
       <yandex-map @map-was-initialized="displayMap" v-show="showMap"
                   :class="{'h-192': $device.isDesktop, 'h-120': !$device.isDesktop}" :coords="initCoords" :zoom="zoom"

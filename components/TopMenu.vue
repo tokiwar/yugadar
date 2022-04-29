@@ -44,9 +44,9 @@
         </span>
       </button>
       <transition name="fade">
-        <div class="flex w-full flex-col fixed bg-white items-left justify-items py-2 mt-2 right-0" v-if="opened">
-          <NuxtLink class="px-4" @click.native="close"
-                    :class="{'text-yellow-500 underline pointer-events-none' : menuItem.link === $route.path}"
+        <div class="flex w-full flex-col text-2xl fixed bg-white items-center justify-items py-2 mt-2 right-0" v-if="opened">
+          <NuxtLink class="px-4 py-1" @click.native="close"
+                    :class="{'text-yellow-500 text-3xl underline pointer-events-none' : menuItem.link === $route.path}"
                     v-for="menuItem in menu" :key="menuItem.link"
                     :to="menuItem.link">
             {{ menuItem.name }}

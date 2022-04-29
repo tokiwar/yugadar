@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-light-yellow-100 pb-10">
+  <section :class="{'py-20' : $device.isDesktopOrTablet, 'py-10' : $device.isMobile}">
     <swiper :options="swiperOptions" v-show="outlets">
       <swiper-slide v-for="item in outlets" :key="item.name">
         <div class="flex flex-col justify-start items-center">

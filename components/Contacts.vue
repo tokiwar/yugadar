@@ -1,7 +1,7 @@
 <template>
   <section v-if="contacts.title || contacts.subtitle || contacts.text"
-           class="flex flex-row justify-center items-center select-none h-auto"
-           :class="{'my-16' :$device.isDesktop}">
+           class="flex flex-row justify-center items-center select-none h-auto bg-pattern-lines"
+           :class="{'py-16' :$device.isDesktop}">
     <div class="flex flex-col justify-center items-center font-black text-center"
          :class="{'w-3/6' : $device.isDesktop, 'w-4/5 my-14': !$device.isDesktop}">
       <div v-if="contacts.title"
