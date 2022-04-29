@@ -4,7 +4,7 @@
       <swiper-slide v-for="item in outlets" :key="item.name">
         <div class="flex flex-col justify-start items-center">
           <img
-            class="border-2 border-black"
+            class="border-2 border-black bg-light-yellow-100"
             :class="{'h-136': $device.isDesktop, 'h-104' :$device.isTablet && $mq === 'lg', 'h-80' : $device.isTablet && $mq !== 'lg' }"
             :src="$device.isDesktop ? item['img'] : ($device.isMobile ? item['img-mobile'] : ($device.isTablet ? item['img-table'] : ''))"
             :width="$device.isDesktop ? 544 : ($device.isMobile ? 390 : ($device.isTablet ? 320 : ''))"
