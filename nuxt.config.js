@@ -194,10 +194,10 @@ export default {
       '*TYPE=',
       '*utm*=',
       '*openstat=',
-      '*from=',
-      '/_nuxt/'
+      '*from='
     ],
     Allow: [
+      '/_nuxt/',
       '/upload/',
       '/bitrix/*.js',
       '/bitrix/*.css',
