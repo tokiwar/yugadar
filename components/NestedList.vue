@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col w-full items-center justify-center" v-if="policyText">
+  <div class="flex flex-col w-full items-center justify-center bg-pattern-lines" v-if="policyText">
     <div class="my-10" :class="{'w-3/6' : $device.isDesktopOrTablet, 'w-11/12' : $device.isMobile}">
       <ol class="space-y-4">
         <li v-for="item in policyText" :key="item.key">

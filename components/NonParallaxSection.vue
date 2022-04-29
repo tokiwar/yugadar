@@ -1,5 +1,5 @@
 <template>
-  <section v-else class="flex justify-center items-center select-none"
+  <section v-else class="flex justify-center items-center select-none bg-pattern-ice-cream"
            :class="className">
     <div class="">
       <img

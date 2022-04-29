@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="select-none h-auto font-black text-center bg-blue-green-100"
+    <div class="select-none h-auto font-black text-center bg-blue-green-100 bg-pattern-ice-cream"
          :class="{'space-y-20 py-20' : $device.isDesktopOrTablet, 'space-y-8 py-10' : $device.isMobile}">
       <div class="leading-5"
            :class="{'text-6xl':$device.isDesktop, 'text-4xl' : !$device.isDesktop}"
