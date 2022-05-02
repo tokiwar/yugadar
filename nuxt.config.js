@@ -25,11 +25,13 @@ export default {
       {name: 'yandex-verification', content: 'fa73cb5e3abd3dce'}
     ],
     link: [
-      {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'},
+      {rel: 'icon', type: 'image/x-icon', sizes: '16x16', href: '/favicon.ico'},
+      {rel: 'icon', type: 'image/x-icon', sizes: '32x32', href: '/favicon-32x32.ico'},
+      {rel: 'icon', type: 'image/x-icon', sizes: '48x48', href: '/favicon-48x48.ico'},
       {
         rel: "icon",
         type: "image/png",
-        sizes: "32x32",
+        sizes: "16x16",
         href: "/favicon-16x16.png"
       },
       {
@@ -41,13 +43,13 @@ export default {
       {
         rel: "icon",
         type: "image/png",
-        sizes: "32x32",
+        sizes: "48x48",
         href: "/favicon-48x48.png"
       },
       {
         rel: "icon",
         type: "image/png",
-        sizes: "32x32",
+        sizes: "96x96",
         href: "/favicon-96x96.png"
       },
       {
@@ -142,8 +144,8 @@ export default {
       theme: {
         extend: {
           backgroundImage: {
-            'pattern-lines' : "url('@/assets/img/svg/pattern-lines.svg')",
-            'pattern-ice-cream' : "url('@/assets/img/svg/pattern-ice-cream.svg')"
+            'pattern-lines': "url('@/assets/img/svg/pattern-lines.svg')",
+            'pattern-ice-cream': "url('@/assets/img/svg/pattern-ice-cream.svg')"
           },
           colors: {
             'blue-green-100': '#b5e8d5',
