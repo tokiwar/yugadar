@@ -15,6 +15,11 @@ export default {
     return {
       title: '«ЮгаДар» - Контакты',
       meta: [
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: 'Мороженое от кубанского производителя «ЮгаДар» - Контакты'
+        },
         {hid: 'description', name: 'description', content: 'Мороженое от кубанского производителя «ЮгаДар» - Контакты'},
         {
           hid: 'keywords',

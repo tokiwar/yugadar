@@ -61,6 +61,11 @@ export default {
       title: '«ЮгаДар» - Точки продажи',
       meta: [
         {
+          hid: 'og:description',
+          name: 'og:description',
+          content: 'Мороженое от кубанского производителя «ЮгаДар» - Точки продажи'
+        },
+        {
           hid: 'description',
           name: 'description',
           content: 'Мороженое от кубанского производителя «ЮгаДар» - Точки продажи'

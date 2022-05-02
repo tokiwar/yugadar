@@ -14,6 +14,11 @@ export default {
       title: '«ЮгаДар» - Мороженое',
       meta: [
         {
+          hid: 'og:description',
+          name: 'og:description',
+          content: 'Мороженое от кубанского производителя «ЮгаДар» - Мороженое'
+        },
+        {
           hid: 'description',
           name: 'description',
           content: 'Мороженое от кубанского производителя «ЮгаДар» - Мороженое'

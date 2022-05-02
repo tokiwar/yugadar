@@ -17,6 +17,11 @@ export default {
       title: '«ЮгаДар» - Главная страница',
       meta: [
         {
+          hid: 'og:description',
+          name: 'og:description',
+          content: 'Мороженое от кубанского производителя «ЮгаДар»'
+        },
+        {
           hid: 'description',
           name: 'description',
           content: 'Мороженое от кубанского производителя «ЮгаДар»'
