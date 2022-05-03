@@ -6,7 +6,8 @@
           <img
             class="border-2 border-black bg-light-yellow-100"
             :class="{'h-136': $device.isDesktop, 'h-104' :$device.isTablet && $mq === 'lg', 'h-80' : $device.isTablet && $mq !== 'lg' }"
-            :src="$device.isDesktop ? item['img'] : ($device.isMobile ? item['img-mobile'] : ($device.isTablet ? item['img-table'] : ''))"
+            :src="item['img']"
+            :srcset="`${item['img-2x']} 2x, ${item['img-3x']} 3x`"
             :width="$device.isDesktop ? 544 : ($device.isMobile ? 390 : ($device.isTablet ? 320 : ''))"
             :height="$device.isDesktop ? 544 : ($device.isMobile ? 390 : ($device.isTablet ? 320 : ''))"
             :alt="item.name"/>
