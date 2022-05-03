@@ -8,8 +8,8 @@
             :class="{'h-136': $device.isDesktop, 'h-104' :$device.isTablet && $mq === 'lg', 'h-80' : $device.isTablet && $mq !== 'lg' }"
             :src="item['img']"
             :srcset="`${item['img-2x']} 2x, ${item['img-3x']} 3x`"
-            :width="$device.isDesktop ? 544 : ($device.isMobile ? 390 : ($device.isTablet ? 320 : ''))"
-            :height="$device.isDesktop ? 544 : ($device.isMobile ? 390 : ($device.isTablet ? 320 : ''))"
+            :width="$device.isDesktop ? 544 : ($device.isMobile ? 544 : ($device.isTablet ? 320 : ''))"
+            :height="$device.isDesktop ? 544 : ($device.isMobile ? 544 : ($device.isTablet ? 320 : ''))"
             :alt="item.name"/>
           <div
             class="flex flex-col items-center justify-center py-4 h-28 text-center bg-white border-black border-l-2 border-r-2 border-b-2"
