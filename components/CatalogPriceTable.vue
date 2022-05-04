@@ -7,7 +7,7 @@
             :class="{'text-3xl w-3/6 pt-2':$device.isDesktop, 'text-3xl' : !$device.isDesktop}"
             v-html="section.subtitle"/>
       <section class="flex flex-col select-none my-10 mx-auto glassmorphism"
-               :class="{'w-3/6 p-10' : $device.isDesktop, 'text-base w-11/12 p-4' : !$device.isDesktop}">
+               :class="{'w-3/6 p-10' : $device.isDesktop, 'text-base w-11/12 p-2' : !$device.isDesktop}">
         <template v-for="item in section.items">
           <div class="flex flex-row justify-between h-24 border-b-4 border-dashed text-gray-700">
             <div class="p-2 flex items-center justify-center"
