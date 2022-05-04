@@ -4,9 +4,11 @@
     <BottomMenu :class="{'w-auto' : $device.isDesktopOrTablet}"/>
     <div
       :class="{'flex flex-row w-auto items-start space-x-4' : $device.isDesktopOrTablet, 'flex flex-col justify-center items-center' : $device.isMobile}">
-      <span class="text-lg font-bold">©2022 «Югадар»</span>
-      <span><NuxtLink class="text-sm text-gray-400 opacity-70"
-                      to="/privacy-policy/">Политика конфиденциальности</NuxtLink></span>
+      <span class="text-lg font-bold">©2022 «ЮгаДар»</span>
+      <span>
+        <NuxtLink class="text-sm text-gray-400 opacity-70"
+                  to="/privacy-policy/">Политика конфиденциальности</NuxtLink>
+      </span>
     </div>
   </footer>
 </template>
