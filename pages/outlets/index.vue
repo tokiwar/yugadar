@@ -59,36 +59,46 @@ export default {
   head() {
     return {
       title: '«ЮгаДар» - Точки продажи',
-      meta: [
-        {
-          hid: 'og:description',
-          name: 'og:description',
-          content: 'Мороженое от кубанского производителя «ЮгаДар» - Точки продажи'
-        },
-        {
-          hid: 'description',
-          name: 'description',
-          content: 'Мороженое от кубанского производителя «ЮгаДар» - Точки продажи'
-        },
-        {
-          hid: 'keywords',
-          name: 'keywords',
-          content: 'тимашевск, красная, заря, изюминка, парк, пионерская, продажи'
-        }
-      ],
+      meta: this.meta,
       link: [
         {rel: 'canonical', href: 'https://yugadar.ru/outlets/'}
       ]
     }
   },
-  async asyncData({$axios}) {
+  async asyncData({$axios, route}) {
+    const meta = [
+      {
+        hid: 'og:description',
+        name: 'og:description',
+        content: 'Мороженое от кубанского производителя «ЮгаДар» - Точки продажи'
+      },
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Мороженое от кубанского производителя «ЮгаДар» - Точки продажи'
+      },
+      {
+        hid: 'keywords',
+        name: 'keywords',
+        content: 'тимашевск, красная, заря, изюминка, парк, пионерская, продажи'
+      }
+    ];
+    if (Object.keys(route.query).length) {
+      meta.push(
+        {
+          hid: 'robots',
+          name: 'robots',
+          content: 'noindex, nofollow'
+        }
+      );
+    }
     const result = await $axios.$get(
       '/api/outlets/'
     );
     const items = result.items;
     const logoData = result['top-text-section'].logoData;
     const sectionData = result['text-section'].sectionData;
-    return {items, logoData, sectionData}
+    return {items, logoData, sectionData, meta}
   },
   methods: {
     displayMap() {

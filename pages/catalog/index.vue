@@ -12,30 +12,40 @@ export default {
   head() {
     return {
       title: '«ЮгаДар» - Мороженое',
-      meta: [
-        {
-          hid: 'og:description',
-          name: 'og:description',
-          content: 'Мороженое от кубанского производителя «ЮгаДар» - Мороженое'
-        },
-        {
-          hid: 'description',
-          name: 'description',
-          content: 'Мороженое от кубанского производителя «ЮгаДар» - Мороженое'
-        },
-        {
-          hid: 'keywords',
-          name: 'keywords',
-          content: 'мороженое, пломбир, цена, ассортименте, тара'
-        }
-      ],
+      meta: this.meta,
       link: [
         {rel: 'canonical', href: 'https://yugadar.ru/catalog/'}
       ]
     }
   },
   data: () => ({}),
-  async asyncData({$axios}) {
+  async asyncData({$axios, route}) {
+    const meta = [
+      {
+        hid: 'og:description',
+        name: 'og:description',
+        content: 'Мороженое от кубанского производителя «ЮгаДар» - Мороженое'
+      },
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Мороженое от кубанского производителя «ЮгаДар» - Мороженое'
+      },
+      {
+        hid: 'keywords',
+        name: 'keywords',
+        content: 'мороженое, пломбир, цена, ассортименте, тара'
+      }
+    ];
+    if (Object.keys(route.query).length) {
+      meta.push(
+        {
+          hid: 'robots',
+          name: 'robots',
+          content: 'noindex, nofollow'
+        }
+      );
+    }
     const catalog = {
       iceCream: {
         title: 'Мороженое в ассортименте',
@@ -48,7 +58,7 @@ export default {
     );
     catalog.iceCream.items = result.catalog;
     const logoData = result['top-text-section'].logoData;
-    return {catalog, logoData}
+    return {catalog, logoData, meta}
   }
 }
 </script>

@@ -15,30 +15,40 @@ export default {
   head() {
     return {
       title: '«ЮгаДар» - Главная страница',
-      meta: [
-        {
-          hid: 'og:description',
-          name: 'og:description',
-          content: 'Мороженое от кубанского производителя «ЮгаДар»'
-        },
-        {
-          hid: 'description',
-          name: 'description',
-          content: 'Мороженое от кубанского производителя «ЮгаДар»'
-        },
-        {
-          hid: 'keywords',
-          name: 'keywords',
-          content: 'мороженое, сладкое, югадар'
-        }
-      ],
+      meta: this.meta,
       link: [
-        {rel: 'canonical', href: 'https://yugadar.ru/'}
+        {rel: 'canonical', href: 'https://yugadar.ru/'},
       ]
     }
   },
   data: () => ({}),
-  async asyncData({$axios}) {
+  async asyncData({route, $axios}) {
+    const meta = [
+      {
+        hid: 'og:description',
+        name: 'og:description',
+        content: 'Мороженое от кубанского производителя «ЮгаДар»'
+      },
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Мороженое от кубанского производителя «ЮгаДар»'
+      },
+      {
+        hid: 'keywords',
+        name: 'keywords',
+        content: 'мороженое, сладкое, югадар'
+      }
+    ];
+    if (Object.keys(route.query).length) {
+      meta.push(
+        {
+          hid: 'robots',
+          name: 'robots',
+          content: 'noindex, nofollow'
+        }
+      );
+    }
     const result = await $axios.$get(
       '/api/main/'
     );
@@ -47,7 +57,7 @@ export default {
     const sectionDataBottom = result['text-section-half'].sectionDataBottom;
     const sectionDataParallax = result['parallax-section'].sectionDataParallax;
     const sectionDataNonParallax = result['parallax-section'].sectionDataNonParallax;
-    return {logoData, sectionDataTop, sectionDataBottom, sectionDataParallax, sectionDataNonParallax}
+    return {logoData, sectionDataTop, sectionDataBottom, sectionDataParallax, sectionDataNonParallax, meta}
   },
 }
 </script>

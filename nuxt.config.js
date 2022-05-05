@@ -142,6 +142,14 @@ export default {
     config: {
       theme: {
         extend: {
+          fontSize:{
+            '10xl': '10rem',
+            '11xl': '12rem',
+            '12xl': '15rem',
+            '13xl': '18rem',
+            '14xl': '21rem',
+            '15xl': '25rem'
+          },
           backgroundImage: {
             'pattern-lines': "url('@/assets/img/svg/pattern-lines.svg')",
             'pattern-ice-cream': "url('@/assets/img/svg/pattern-ice-cream.svg')"
@@ -217,7 +225,7 @@ export default {
   robots: {
     UserAgent: '*',
     Allow: [
-      '/',
+      '/'
     ],
     Sitemap: 'https://yugadar.ru/sitemap.xml'
   },

@@ -14,26 +14,36 @@ export default {
   head() {
     return {
       title: '«ЮгаДар» - О нас',
-      meta: [
-        {
-          hid: 'og:description',
-          name: 'og:description',
-          content: 'Мороженое от кубанского производителя «ЮгаДар» - О нас'
-        },
-        {hid: 'description', name: 'description', content: 'Мороженое от кубанского производителя «ЮгаДар» - О нас'},
-        {
-          hid: 'keywords',
-          name: 'keywords',
-          content: 'мороженое, вкусное, югадар, натуральное, ассортименте, качественный, контакты, насыщенное, хорошее'
-        }
-      ],
+      meta: this.meta,
       link: [
         {rel: 'canonical', href: 'https://yugadar.ru/about/'}
       ]
     }
   },
   data: () => ({}),
-  async asyncData({$axios}) {
+  async asyncData({$axios, route}) {
+    const meta = [
+      {
+        hid: 'og:description',
+        name: 'og:description',
+        content: 'Мороженое от кубанского производителя «ЮгаДар» - О нас'
+      },
+      {hid: 'description', name: 'description', content: 'Мороженое от кубанского производителя «ЮгаДар» - О нас'},
+      {
+        hid: 'keywords',
+        name: 'keywords',
+        content: 'мороженое, вкусное, югадар, натуральное, ассортименте, качественный, контакты, насыщенное, хорошее'
+      }
+    ];
+    if (Object.keys(route.query).length) {
+      meta.push(
+        {
+          hid: 'robots',
+          name: 'robots',
+          content: 'noindex, nofollow'
+        }
+      );
+    }
     const result = await $axios.$get(
       '/api/about/'
     );
@@ -42,7 +52,7 @@ export default {
     const sectionDataNonParallax = result['parallax-section'].sectionDataNonParallax;
     const sectionData = result['text-section'].sectionData;
     const items = result['items'];
-    return {logoData, sectionDataParallax, sectionDataNonParallax, sectionData, items}
+    return {logoData, sectionDataParallax, sectionDataNonParallax, sectionData, items, meta}
   },
 }
 </script>
