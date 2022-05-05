@@ -217,7 +217,7 @@ export default {
   robots: {
     UserAgent: '*',
     Allow: [
-      '/',
+      '/'
     ],
     Sitemap: 'https://yugadar.ru/sitemap.xml'
   },
@@ -229,7 +229,7 @@ export default {
   },
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    proxy: true,
+    proxy: dev,
     // proxy: false,
     // prefix: '/api',
      baseURL: 'https://yugadar.ru'
