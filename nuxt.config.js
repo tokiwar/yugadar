@@ -1,4 +1,3 @@
-//const dev = !process.env.PRODUCTION;
 export default {
   ssr: true,
   target: "server",
@@ -217,7 +216,7 @@ export default {
   robots: {
     UserAgent: '*',
     Allow: [
-      '/'
+      '/',
     ],
     Sitemap: 'https://yugadar.ru/sitemap.xml'
   },
@@ -228,17 +227,17 @@ export default {
     version: 3
   },
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  // axios: {
-  //   proxy: dev,
-  //   // proxy: false,
-  //   // prefix: '/api',
-  //    baseURL: 'https://yugadar.ru'
-  // },
-  //
+  axios: {
+    // proxy: true
+    // proxy: false,
+    // prefix: '/api',
+    // baseURL: 'https://yugadar.ru/api'
+  },
+
   // proxy: {
-  //   '/api': {target: 'https://yugadar.ru', changeOrigin: true},
-  //   //'/upload': {target: 'http://80.78.254.16/', changeOrigin: true},
-  //   '/upload': {target: 'https://yugadar.ru', changeOrigin: true}
+  //   '/api': {target: 'http://80.78.254.16/', changeOrigin: true},
+  //   '/upload': {target: 'http://80.78.254.16/', changeOrigin: true},
+  //   '/bitrix': {target: 'http://80.78.254.16/', changeOrigin: true}
   // },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
