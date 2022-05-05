@@ -1,4 +1,4 @@
-const dev = !process.env.PRODUCTION;
+//const dev = !process.env.PRODUCTION;
 export default {
   ssr: true,
   target: "server",
