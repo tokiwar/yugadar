@@ -228,17 +228,17 @@ export default {
   },
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    proxy: true
+   // proxy: true
     // proxy: false,
     // prefix: '/api',
-    // baseURL: 'https://yugadar.ru/api'
+     baseURL: 'https://yugadar.ru/'
   },
 
-  proxy: {
-    '/api': {target: 'http://80.78.254.16/', changeOrigin: true},
-    '/upload': {target: 'http://80.78.254.16/', changeOrigin: true},
-    '/bitrix': {target: 'http://80.78.254.16/', changeOrigin: true}
-  },
+  // proxy: {
+  //   '/api': {target: 'http://80.78.254.16/', changeOrigin: true},
+  //   '/upload': {target: 'http://80.78.254.16/', changeOrigin: true},
+  //   '/bitrix': {target: 'http://80.78.254.16/', changeOrigin: true}
+  // },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
