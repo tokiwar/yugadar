@@ -247,7 +247,9 @@ export default {
         id: process.env.YANDEX,
         webvisor: true
       }
-    ]
+    ],
+    '@nuxtjs/component-cache',
+    'nuxt-speedkit'
   ],
   robots: {
     UserAgent: '*',
