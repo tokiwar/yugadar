@@ -166,7 +166,7 @@ export default {
     config: {
       theme: {
         extend: {
-          fontSize:{
+          fontSize: {
             '10xl': '10rem',
             '11xl': '12rem',
             '12xl': '15rem',
@@ -237,7 +237,10 @@ export default {
     '@nuxtjs/proxy',
     'nuxt-mq',
     '@nuxtjs/robots',
-    '@nuxtjs/sitemap',
+    ['@nuxtjs/sitemap',
+      {
+        hostname: 'https://yugadar.ru'
+      }],
     '@nuxtjs/recaptcha',
     ['@nuxtjs/yandex-metrika',
       {
