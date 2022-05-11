@@ -10,6 +10,7 @@
             :data-srcset="`${item['img-2x']} 2x, ${item['img-3x']} 3x`"
             :width="$device.isDesktop ? 544 : ($device.isMobile ? 544 : ($device.isTablet ? 320 : ''))"
             :height="$device.isDesktop ? 544 : ($device.isMobile ? 544 : ($device.isTablet ? 320 : ''))"
+            :title="item.name"
             :alt="item.name"/>
           <div
             class="flex flex-col items- justify-center py-4 h-28 text-center bg-white border-black border-l-2 border-r-2 border-b-2"

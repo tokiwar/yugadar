@@ -1,7 +1,7 @@
 <template>
   <section v-if="display" :class="className" class="bg-pattern-ice-cream">
     <div class="relative max-h-160">
-      <img :width="$device.isDesktopOrTablet ? 293 :228 " :height="$device.isDesktopOrTablet ? 575 : 448" :class="{'h-112 my-14' : !$device.isDesktop}" :src="SectionData.logoImage" alt="image"/>
+      <img :width="$device.isDesktopOrTablet ? 293 :228 " :height="$device.isDesktopOrTablet ? 575 : 448" :class="{'h-112 my-14' : !$device.isDesktop}" :src="SectionData.logoImage" title="image" alt="image"/>
     </div>
     <div v-if="this.SectionData.title || this.SectionData.subtitle || (this.SectionData.link && this.SectionData.name)"
          class="absolute text-white flex flex-col justify-center items-center mt-36 font-black">

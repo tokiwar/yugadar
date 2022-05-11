@@ -36,6 +36,11 @@ export default {
         content: 'https://yugadar.ru/'
       },
       {
+        hid: 'og:site_name',
+        name: 'og:site_name',
+        content: 'Yugadar'
+      },
+      {
         name: 'format-detection',
         content: 'telephone=no'
       },

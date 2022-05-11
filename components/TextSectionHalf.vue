@@ -7,7 +7,7 @@
          class="object-cover object-center"
          width="1037"
          height="640"
-         :src="SectionData.img" alt="image"/>
+         :src="SectionData.img" alt="image" title="image"/>
     <div :class="{'w-3/6' : $device.isDesktop, 'h-112 w-4/5' : !$device.isDesktop}"
          class="flex flex-col justify-center items-center font-black text-center">
       <div v-if="SectionData.title" :class="{'text-6xl w-3/6' : $device.isDesktop, 'text-4xl' : !$device.isDesktop}">

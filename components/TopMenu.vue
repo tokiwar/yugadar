@@ -12,7 +12,7 @@
   </div>
   <div class="flex flex-row h-20 font-bold items-center place-content-between z-40" v-else-if="$device.isTablet">
     <NuxtLink class="m-auto" :class="{'pointer-events-none' : $route.path === '/'}" to="/">
-      <img class="w-32" :src="logo" alt=""/>
+      <img class="w-32" :src="logo" alt="logo" title="logo"/>
     </NuxtLink>
     <div class="absolute text-l font-black uppercase right-0">
       <button class="hamburger hamburger--spin" :class="{'is-active': opened}" type="button" @click.prevent="close">
