@@ -8,9 +8,18 @@ export default {
       lang: "ru"
     },
     meta: [
-      {charset: 'utf-8'},
-      {name: 'viewport', content: 'width=device-width, initial-scale=1'},
-      {hid: 'description', name: 'description', content: 'Мороженое от кубанского производителя «ЮгаДар»'},
+      {
+        charset: 'utf-8'
+      },
+      {
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1'
+      },
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Мороженое от кубанского производителя «ЮгаДар»'
+      },
       {
         hid: 'og:title',
         name: 'og:title',
@@ -21,9 +30,19 @@ export default {
         name: 'og:image',
         content: 'https://yugadar.ru/logo.png'
       },
-      {hid: 'og:url', name: 'og:url', content: 'https://yugadar.ru/'},
-      {name: 'format-detection', content: 'telephone=no'},
-      {name: 'yandex-verification', content: 'fa73cb5e3abd3dce'}
+      {
+        hid: 'og:url',
+        name: 'og:url',
+        content: 'https://yugadar.ru/'
+      },
+      {
+        name: 'format-detection',
+        content: 'telephone=no'
+      },
+      {
+        name: 'yandex-verification',
+        content: 'fa73cb5e3abd3dce'
+      }
     ],
     link: [
       {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'},

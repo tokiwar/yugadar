@@ -68,6 +68,16 @@ export default {
   async asyncData({$axios, route}) {
     const meta = [
       {
+        hid: 'og:title',
+        name: 'og:title',
+        content: '«ЮгаДар» - Точки продажи - Мороженое от кубанского производителя'
+      },
+      {
+        hid: 'og:url',
+        name: 'og:url',
+        content: 'https://yugadar.ru/outlets/'
+      },
+      {
         hid: 'og:description',
         name: 'og:description',
         content: 'Мороженое от кубанского производителя «ЮгаДар» - Точки продажи. Расположение и фото торговых точек в городе Тимашевске.'

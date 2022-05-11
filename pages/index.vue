@@ -25,6 +25,16 @@ export default {
   async asyncData({route, $axios}) {
     const meta = [
       {
+        hid: 'og:title',
+        name: 'og:title',
+        content: '«ЮгаДар» - Главная страница - Мороженое от кубанского производителя'
+      },
+      {
+        hid: 'og:url',
+        name: 'og:url',
+        content: 'https://yugadar.ru/'
+      },
+      {
         hid: 'og:description',
         name: 'og:description',
         content: 'Мороженое от кубанского производителя «ЮгаДар». Производство и продажа мороженого в городе Тимашевске и Краснодарском крае.'

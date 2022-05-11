@@ -24,6 +24,16 @@ export default {
   async asyncData({$axios, route}) {
     const meta = [
       {
+        hid: 'og:title',
+        name: 'og:title',
+        content: '«ЮгаДар» - О нас - Мороженое от кубанского производителя'
+      },
+      {
+        hid: 'og:url',
+        name: 'og:url',
+        content: 'https://yugadar.ru/about/'
+      },
+      {
         hid: 'og:description',
         name: 'og:description',
         content: 'Мороженое от кубанского производителя «ЮгаДар» - О нас. История компании и отзывы.'
