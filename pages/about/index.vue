@@ -13,7 +13,7 @@ export default {
   name: 'AboutPage',
   head() {
     return {
-      title: '«ЮгаДар» - О нас',
+      title: '«ЮгаДар» - О нас - Мороженое от кубанского производителя',
       meta: this.meta,
       link: [
         {rel: 'canonical', href: 'https://yugadar.ru/about/'}
@@ -26,13 +26,17 @@ export default {
       {
         hid: 'og:description',
         name: 'og:description',
-        content: 'Мороженое от кубанского производителя «ЮгаДар» - О нас'
+        content: 'Мороженое от кубанского производителя «ЮгаДар» - О нас. История компании и отзывы.'
       },
-      {hid: 'description', name: 'description', content: 'Мороженое от кубанского производителя «ЮгаДар» - О нас'},
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Мороженое от кубанского производителя «ЮгаДар» - О нас. История компании и отзывы.'
+      },
       {
         hid: 'keywords',
         name: 'keywords',
-        content: 'мороженое, вкусное, югадар, натуральное, ассортименте, качественный, контакты, насыщенное, хорошее'
+        content: 'мороженое, вкусное, югадар, натуральное, ассортименте, качественный, контакты, насыщенное, хорошее, тимашевск, краснодарский край'
       }
     ];
     if (Object.keys(route.query).length) {

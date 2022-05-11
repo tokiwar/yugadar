@@ -14,7 +14,7 @@ export default {
   name: 'IndexPage',
   head() {
     return {
-      title: '«ЮгаДар» - Главная страница',
+      title: '«ЮгаДар» - Главная страница - Мороженое от кубанского производителя',
       meta: this.meta,
       link: [
         {rel: 'canonical', href: 'https://yugadar.ru/'},
@@ -27,17 +27,17 @@ export default {
       {
         hid: 'og:description',
         name: 'og:description',
-        content: 'Мороженое от кубанского производителя «ЮгаДар»'
+        content: 'Мороженое от кубанского производителя «ЮгаДар». Производство и продажа мороженого в городе Тимашевске и Краснодарском крае.'
       },
       {
         hid: 'description',
         name: 'description',
-        content: 'Мороженое от кубанского производителя «ЮгаДар»'
+        content: 'Мороженое от кубанского производителя «ЮгаДар». Производство и продажа мороженого в городе Тимашевске и Краснодарском крае.'
       },
       {
         hid: 'keywords',
         name: 'keywords',
-        content: 'мороженое, сладкое, югадар'
+        content: 'мороженое, сладкое, югадар, тимашевск, краснодарский край'
       }
     ];
     if (Object.keys(route.query).length) {

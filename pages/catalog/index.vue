@@ -11,7 +11,7 @@ export default {
   name: 'CatalogPage',
   head() {
     return {
-      title: '«ЮгаДар» - Мороженое',
+      title: '«ЮгаДар» - Мороженое - Мороженое от кубанского производителя',
       meta: this.meta,
       link: [
         {rel: 'canonical', href: 'https://yugadar.ru/catalog/'}
@@ -24,17 +24,17 @@ export default {
       {
         hid: 'og:description',
         name: 'og:description',
-        content: 'Мороженое от кубанского производителя «ЮгаДар» - Мороженое'
+        content: 'Мороженое от кубанского производителя «ЮгаДар» - Мороженое. Ассортимент мороженого и объемы продажи.'
       },
       {
         hid: 'description',
         name: 'description',
-        content: 'Мороженое от кубанского производителя «ЮгаДар» - Мороженое'
+        content: 'Мороженое от кубанского производителя «ЮгаДар» - Мороженое. Ассортимент мороженого и объемы продажи.'
       },
       {
         hid: 'keywords',
         name: 'keywords',
-        content: 'мороженое, пломбир, цена, ассортименте, тара'
+        content: 'мороженое, пломбир, цена, ассортименте, тара, тимашевск, краснодарский край'
       }
     ];
     if (Object.keys(route.query).length) {

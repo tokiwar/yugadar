@@ -13,7 +13,7 @@ export default {
   name: 'ContactsPage',
   head() {
     return {
-      title: '«ЮгаДар» - Контакты',
+      title: '«ЮгаДар» - Контакты - Мороженое от кубанского производителя',
       meta: this.meta,
       link: [
         {rel: 'canonical', href: 'https://yugadar.ru/contacts/'}
@@ -44,13 +44,17 @@ export default {
       {
         hid: 'og:description',
         name: 'og:description',
-        content: 'Мороженое от кубанского производителя «ЮгаДар» - Контакты'
+        content: 'Мороженое от кубанского производителя «ЮгаДар» - Контакты. Как нас найти и связаться с нами.'
       },
-      {hid: 'description', name: 'description', content: 'Мороженое от кубанского производителя «ЮгаДар» - Контакты'},
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Мороженое от кубанского производителя «ЮгаДар» - Контакты. Как нас найти и связаться с нами.'
+      },
       {
         hid: 'keywords',
         name: 'keywords',
-        content: 'тимашевск, инн, контакты, мороженое, огрнип, связаться'
+        content: 'инн, контакты, мороженое, огрнип, связаться, тимашевск, краснодарский край'
       }
     ];
     if (Object.keys(route.query).length) {
