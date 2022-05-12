@@ -43,7 +43,8 @@ export default {
               },
               "email": "mamay4339061@gmail.com",
               "name": "ЮгаДар",
-              "telephone": "+79184339061"
+              "telephone": "+79184339061",
+              "image": "https://yugadar.ru/yugadar.jpg"
             },
             "datePublished": this.item.date,
             "reviewBody": this.item.text,
