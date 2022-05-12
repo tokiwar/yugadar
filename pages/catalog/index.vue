@@ -1,7 +1,7 @@
 <template>
   <div>
     <TopTextSection :section-data="logoData"/>
-    <Catalog v-if="false" :items="catalog.iceCream.items"/>
+    <catalog v-if="true" :items="catalog.iceCream.items"/>
     <catalog-price-table :catalog="catalog"/>
   </div>
 </template>

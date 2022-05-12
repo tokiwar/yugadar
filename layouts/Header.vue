@@ -1,5 +1,5 @@
 <template>
-  <header class="h-21 select-none">
+  <header class="h-21 select-none" itemscope itemtype="https://schema.org/WPHeader">
     <TopMenu :menu="menu"/>
   </header>
 </template>

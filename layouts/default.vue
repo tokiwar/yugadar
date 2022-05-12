@@ -19,6 +19,14 @@ export default {
     Header,
     Footer
   },
+  head() {
+    return {
+      bodyAttrs: {
+        itemscope: '',
+        itemtype : 'https://schema.org/WebPage'
+      }
+    }
+  },
   computed: {
     ...mapState([
       "menuOpened",
