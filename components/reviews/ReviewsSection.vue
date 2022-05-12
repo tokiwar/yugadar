@@ -7,21 +7,7 @@
            v-html="'Отзывы'"/>
       <swiper :options="swiperOptions" v-if="items" class="w-full">
         <swiper-slide v-for="item in items" :key="item.name">
-          <div class="flex flex-col justify-center items-center h-auto">
-            <div
-              class="flex flex-col items-center justify-start text-justify border-2 bg-white border-black shadow-lg"
-              :class="{'w-152 space-y-8 h-96 py-8' : $device.isDesktop, 'w-11/12 space-y-2 h-72 py-4' :$device.isMobile}">
-              <div class="flex flex-col w-5/6">
-              <span :class="{'text-3xl':$device.isDesktopOrTablet, 'text-xl' : $device.isMobile}"
-                    v-html="item.name"></span>
-                <span class="w-5/6 underline"
-                      :class="{'text-base' : $device.isDesktopOrTablet, 'text-sm' : $device.isMobile}"
-                      v-html="item.date"></span>
-              </div>
-              <span class="w-5/6 text-between" :class="{'text-lg' : $device.isDesktop, 'text-sm' : $device.isMobile }"
-                    v-html="item.text"></span>
-            </div>
-          </div>
+          <reviews-item :item="item"/>
         </swiper-slide>
       </swiper>
       <button @click.prevent="toggleReviewsForm"
@@ -36,11 +22,13 @@
 import {Swiper, SwiperSlide} from 'vue-awesome-swiper'
 import 'swiper/css/swiper.css'
 import {mapActions} from 'vuex'
+import ReviewsItem from "@/components/reviews/ReviewsItem";
 
 export default {
   name: 'ReviewsSection',
   props: ['items'],
   components: {
+    ReviewsItem,
     Swiper,
     SwiperSlide
   },
