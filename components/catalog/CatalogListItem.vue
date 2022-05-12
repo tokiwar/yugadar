@@ -1,6 +1,6 @@
 <template>
-  <div itemtype="https://schema.org/Product" itemprop="itemListElement" itemscope
-       class="flex flex-row justify-between h-24 border-b-4 border-dashed text-gray-700">
+  <div
+    class="flex flex-row justify-between h-24 border-b-4 border-dashed text-gray-700">
     <div itemprop="name"
          class="p-2 flex items-center justify-center"
          :class="{'text-2xl' : $device.isDesktop, 'text-sm font-bold w-3/6' : $device.isMobile}"

@@ -7,7 +7,7 @@
       <span v-if="section.subtitle" class="font-marck"
             :class="{'text-3xl w-3/6 pt-2':$device.isDesktop, 'text-3xl' : !$device.isDesktop}"
             v-html="section.subtitle"/>
-      <section itemtype="https://schema.org/ItemList" itemscope
+      <section
         class="flex flex-col select-none my-10 mx-auto glassmorphism"
                :class="{'w-3/6 p-10' : $device.isDesktop, 'text-base w-11/12 p-2' : !$device.isDesktop}">
         <template v-for="item in section.items">
