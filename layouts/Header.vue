@@ -1,12 +1,16 @@
 <template>
   <header class="h-21 select-none" itemscope itemtype="https://schema.org/WPHeader">
-    <TopMenu :menu="menu"/>
+    <top-menu :menu="menu"/>
   </header>
 </template>
 
 <script>
+import topMenu from "@/components/menu/TopMenu";
 export default {
   name: 'Header',
+  components:{
+    topMenu
+  },
   data: () => ({
     menu: [
       {

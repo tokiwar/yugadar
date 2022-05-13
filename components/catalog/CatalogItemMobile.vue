@@ -1,7 +1,7 @@
 <template>
   <div itemtype="https://schema.org/Product" itemscope class="flex flex-col justify-start items-center space-y-2">
     <img itemprop="image" :src="item.image" :alt="item.name" :title="item.name" width="356" height="356"/>
-    <meta itemprop="brand" content="ЮгаДар"/>
+    <meta itemprop="brand" itemtype="https://schema.org/Brand" itemscope content="ЮгаДар"/>
     <span itemprop="name" class="text-xl font-black" v-html="item.name"/>
     <span class="h-0.5 w-2/6 bg-gray-500 my-2 mx-auto"></span>
     <span itemprop="description" class="ml-4 pb-2 text-lg italic" v-html="item.description"/>

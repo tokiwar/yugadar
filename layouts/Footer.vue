@@ -1,8 +1,8 @@
 <template>
   <footer itemscope itemtype="https://schema.org/WPFooter"
-    class="bg-black flex flex-col justify-center items-center text-white space-y-10"
+          class="bg-black flex flex-col justify-center items-center text-white space-y-10"
           :class="{'h-80': $device.isDesktop, 'h-auto py-14' :!$device.isDesktop}">
-    <BottomMenu :class="{'w-auto' : $device.isDesktopOrTablet}"/>
+    <bottom-menu :class="{'w-auto' : $device.isDesktopOrTablet}"/>
     <div
       :class="{'flex flex-row w-auto items-start space-x-4' : $device.isDesktopOrTablet, 'flex flex-col justify-center items-center' : $device.isMobile}">
       <span class="text-lg font-bold">©<span itemprop="copyrightYear">2022</span> «ЮгаДар»</span>
@@ -15,7 +15,12 @@
 </template>
 
 <script>
+import bottomMenu from "@/components/menu/BottomMenu";
+
 export default {
-  name: 'Footer'
+  name: 'Footer',
+  components: {
+    bottomMenu
+  }
 }
 </script>

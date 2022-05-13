@@ -1,5 +1,5 @@
 <template>
-  <section class="py-20">
+  <section class="pt-20" :class="{'pb-10' : $device.isDesktopOrTablet}">
     <swiper :options="swiperOptions" v-show="outlets">
       <swiper-slide v-for="item in outlets" :key="item.name">
         <outlets-item :item="item"/>
@@ -10,15 +10,14 @@
 <script>
 import {Swiper, SwiperSlide} from 'vue-awesome-swiper'
 import 'swiper/css/swiper.css'
-import OutletsItem from "@/components/outlets/OutletsItem";
-
+import outletsItem from "@/components/outlets/OutletsItem";
 export default {
   name: 'Outlets',
   props: ['outlets'],
   components: {
-    OutletsItem,
     Swiper,
-    SwiperSlide
+    SwiperSlide,
+    outletsItem
   },
   computed: {
     swiperOptions() {

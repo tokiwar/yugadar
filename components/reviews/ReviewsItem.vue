@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col justify-center items-center h-auto">
     <div
-      class="flex flex-col items-center justify-start text-justify border-2 bg-white border-black shadow-lg"
+      class="flex flex-col items-center justify-start text-justify glassmorphism"
       :class="{'w-152 space-y-8 h-96 py-8' : $device.isDesktop, 'w-11/12 space-y-2 h-72 py-4' :$device.isMobile}">
       <div class="flex flex-col w-5/6">
               <span class="{'text-3xl':$device.isDesktopOrTablet, 'text-xl' : $device.isMobile}">
