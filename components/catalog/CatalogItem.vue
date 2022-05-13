@@ -1,5 +1,5 @@
 <template>
-  <div itemtype="https://schema.org/Product" itemscope class="flex flex-col items-center">
+  <div itemtype="https://schema.org/Product" itemprop="itemListElement" itemscope class="flex flex-col items-center">
     <img itemprop="image" :src="item.image" width="232" height="232" :alt="item.name" :title="item.name"/>
     <meta itemprop="brand" itemtype="https://schema.org/Brand" itemscope content="ЮгаДар"/>
     <div class="flex flex-col pt-4 h-48">

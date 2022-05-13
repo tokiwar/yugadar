@@ -1,5 +1,6 @@
 <template>
-  <div itemtype="https://schema.org/Product" itemscope class="flex flex-col justify-start items-center space-y-2">
+  <div itemtype="https://schema.org/Product" itemprop="itemListElement" itemscope
+       class="flex flex-col justify-start items-center space-y-2">
     <img itemprop="image" :src="item.image" :alt="item.name" :title="item.name" width="356" height="356"/>
     <meta itemprop="brand" itemtype="https://schema.org/Brand" itemscope content="ЮгаДар"/>
     <span itemprop="name" class="text-xl font-black" v-html="item.name"/>
