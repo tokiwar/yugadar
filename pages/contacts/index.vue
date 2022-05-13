@@ -1,16 +1,23 @@
 <template>
   <div>
     <TopTextSection :section-data="logoData"/>
-    <Contacts :contacts="contacts"/>
+    <contacts :contacts="contacts"/>
     <ParallaxSection v-if="$device.isDesktop" :section-data="sectionDataParallax"/>
     <NonParallaxSection :section-data="sectionDataNonParallax" v-else/>
-    <OutletsContacts :outlets="outlets"/>
+    <outlets-contacts :outlets="outlets"/>
   </div>
 </template>
 
 <script>
+import contacts from "@/components/contacts/Contacts";
+import outletsContacts from "@/components/contacts/OutletsContacts";
+
 export default {
   name: 'ContactsPage',
+  components: {
+    contacts,
+    outletsContacts
+  },
   head() {
     return {
       title: '«ЮгаДар» - Контакты - Мороженое от кубанского производителя',
