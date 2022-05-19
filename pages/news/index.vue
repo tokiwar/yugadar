@@ -1,12 +1,14 @@
 <template>
-  Новости
+  <div>
+    Новости
+  </div>
 </template>
 <script>
 export default {
   name: 'NewsPage',
   head() {
     return {
-      title: '«ЮгаДар» - Карта сайта - Новости и акции',
+      title: '«ЮгаДар» - Новости - События и акции',
       meta: this.meta,
       link: [
         {rel: 'canonical', href: 'https://yugadar.ru/news/'},
@@ -18,7 +20,7 @@ export default {
       {
         hid: 'og:title',
         name: 'og:title',
-        content: '«ЮгаДар» - Карта сайта - Новости и акции'
+        content: '«ЮгаДар» - Новости - События и акции',
       },
       {
         hid: 'og:url',

@@ -1,5 +1,7 @@
 <template>
-  Карта сайта
+  <div>
+    Карта сайта
+  </div>
 </template>
 <script>
 export default {
