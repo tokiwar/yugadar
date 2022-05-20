@@ -1,6 +1,6 @@
 <template>
   <div>
-    Новости
+    <TopTextSection :section-data="logoData"/>
   </div>
 </template>
 <script>
@@ -52,7 +52,11 @@ export default {
         }
       );
     }
-    return {meta}
+    const result = await $axios.$get(
+      '/api/news/'
+    );
+    const logoData = result['top-text-section'].logoData;
+    return {logoData, meta}
   },
 }
 </script>

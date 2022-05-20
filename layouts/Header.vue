@@ -18,6 +18,10 @@ export default {
         link: '/'
       },
       {
+        name: 'Новости',
+        link: '/news/'
+      },
+      {
         name: 'Мороженое',
         link: '/catalog/'
       },

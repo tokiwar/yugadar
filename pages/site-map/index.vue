@@ -1,6 +1,16 @@
 <template>
   <div>
-    Карта сайта
+    <TopTextSection :section-data="logoData"/>
+    <div class="flex flex-col w-full items-center justify-center bg-pattern-lines">
+      <div class="my-10 glassmorphism"
+           :class="{'w-2/6 p-10' : $device.isDesktopOrTablet, 'w-11/12 p-6' : $device.isMobile}">
+        <ul class="font-black space-y-4" :class="{'text-2xl' : $device.isDesktopOrTablet, 'text-xl' : $device.isMobile}">
+          <li v-for="item in siteMap" :key="item.key">{{item.key}} -
+            <nuxt-link class="hover:text-yellow-500 hover:underline " :to="item.link">{{ item.name }}</nuxt-link>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -15,6 +25,17 @@ export default {
       ]
     }
   },
+  data: () => ({
+    siteMap: [
+      {key: 1, link: '/', name: 'Главная страница'},
+      {key: 2, link: '/news/', name: 'Новости'},
+      {key: 3, link: '/catalog/', name: 'Мороженое'},
+      {key: 4, link: '/about/', name: 'О нас'},
+      {key: 5, link: '/contacts/', name: 'Контакты'},
+      {key: 6, link: '/outlets/', name: 'Точки продажи'},
+      {key: 7, link: '/privacy-policy/', name: 'Политика конфиденциальности'},
+    ]
+  }),
   async asyncData({route, $axios}) {
     const meta = [
       {
@@ -52,7 +73,11 @@ export default {
         }
       );
     }
-    return {meta}
+    const result = await $axios.$get(
+      '/api/site-map/'
+    );
+    const logoData = result['top-text-section'].logoData;
+    return {logoData, meta}
   },
 }
 </script>
