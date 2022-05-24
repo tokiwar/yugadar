@@ -3,13 +3,13 @@
            :class="className">
     <div class="">
       <img
-        :class="{'h-112 object-cover object-center w-full':$device.isTablet, 'h-104 object-cover object-center' : $device.isMobile}"
+        :class="{'h-auto w-full object-fill object-center':$device.isTablet, 'h-104 object-cover object-center' : $device.isMobile}"
         width="844" height="416"
         :src="$device.isDesktopOrTablet ? SectionData.bgImage : SectionData.bgImageMobile" alt="image" title="image"/>
     </div>
     <div v-if="SectionData.title || SectionData.subtitle"
          class="text-white flex flex-col justify-center items-center font-black"
-         :class="{'absolute mt-36' : $device.isDesktop, 'mt-10' : !$device.isDesktop}"
+         :class="{'absolute' : $device.isDesktopOrTablet,  'mt-36' :$device.isDesktop, 'mt-auto' : $device.isTablet, 'mt-10' : $device.isMobile}"
     >
         <span v-if="SectionData.subtitle"
               v-html="SectionData.subtitle"

@@ -1,5 +1,5 @@
 <template>
-  <div class="py-20 font-bold bg-pattern-lines flex flex-col justify-items items-center"
+  <div class="pt-10 font-bold bg-pattern-lines flex flex-col justify-items items-center"
        :class="{'flex flex-col justify-center items-center text-center' : $device.isDesktop}">
     <div :class="{'text-7xl w-4/6':$device.isDesktop, 'text-5xl text-center' : !$device.isDesktop}">Ассортимент</div>
     <section v-if="$device.isDesktop"
@@ -8,7 +8,7 @@
              class="grid grid-cols-3 auto-rows-auto gap-x-16 gap-y-4 select-none font-bold text-center w-3/6 mx-auto mt-10 glassmorphism bg-white">
       <catalog-item v-for="item in items" :key="item.key" :item="item"/>
     </section>
-    <section class="my-10 glassmorphism bg-white w-11/12" itemtype="https://schema.org/ItemList" itemscope v-else>
+    <section class="mt-10 glassmorphism bg-white w-11/12" itemtype="https://schema.org/ItemList" itemscope v-else>
       <swiper :options="swiperOptions" v-if="items">
         <swiper-slide v-for="item in items" :key="item.key">
           <catalog-item-mobile :item="item"/>

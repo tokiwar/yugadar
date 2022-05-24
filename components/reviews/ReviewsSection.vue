@@ -54,7 +54,7 @@ export default {
         }
       };
       if (this.items.length) {
-        options['slidesPerView'] = this.$device.isDesktopOrTablet ? 3 : 1;
+        options['slidesPerView'] = this.$device.isDesktop ? 3 : 1;
         options['spaceBetween'] = this.$device.isDesktop ? 5 : 0;
       }
       return options;
