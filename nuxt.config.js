@@ -187,6 +187,7 @@ export default {
           },
           fontFamily: {
             'nunito': ['Nunito'],
+            'nunito-sans': ['NunitoSans'],
             'marck': ['Marck Script']
           },
           width: {
