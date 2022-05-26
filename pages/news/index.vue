@@ -18,8 +18,15 @@ export default {
   },
   data: () => ({
     items: [
-      {key: 0, name: 'Открытие сайта', text: 'Открытие сайта скоро', date: '23.07.2021', image: require('@/assets/img/test.png')},
-     // {key: 1, name: 'Name', text: 'Text', date: 'Date'},
+      {
+        key: 0,
+        name: 'Открытие сайта',
+        text: 'Открытие сайта скоро',
+        code: '/news/site-opening/',
+        date: '23.07.2021',
+        image: require('@/assets/img/test.png')
+      },
+      // {key: 1, name: 'Name', text: 'Text', date: 'Date'},
       //{key: 2, name: 'Name', text: 'Text', date: 'Date'},
     ]
   }),
