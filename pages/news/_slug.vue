@@ -19,6 +19,7 @@ export default {
   }),
   async asyncData({params, route, $axios}) {
     const data = params // When calling /abc the slug will be "abc"
+    console.log(route.fullPath);
     return {data}
   }
 }

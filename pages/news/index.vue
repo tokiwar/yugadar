@@ -71,7 +71,8 @@ export default {
       '/api/news/'
     );
     const logoData = result['top-text-section'].logoData;
-    return {logoData, meta}
+    const items = result.items;
+    return {logoData, meta, items}
   },
 }
 </script>
