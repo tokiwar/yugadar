@@ -177,12 +177,11 @@ export default {
       this.email = '';
       this.message = '';
       this.result = '';
+      this.terms = '';
+      this.phone = '';
       this.validation.reset();
     },
     close() {
-      if (!this.result) {
-        this.$refs.form.reset();
-      }
       this.reset();
       this.$emit('close');
     },
