@@ -1,26 +1,22 @@
 <template>
-  <section>
-    <top-text-section :section-data="logoData"/>
-    <div class="h-96 bg-pattern-lines">
-      {{ logoData }}
-    </div>
-  </section>
+  <news-detail :item="item"/>
 </template>
 <script>
 export default {
-  data: () => ({
-    logoData: {
-      title: 'Открытие сайта',
-      bgColor: 'bg-light-pink-100',
-      text: 'Текст статьи',
-      image: 'Изображение статьи',
-      date: 'Дата'
+  data: () => ({}),
+  async asyncData({params, error, $axios}) {
+    const detailPageUrl = params.slug;
+    const result = await $axios.$post(
+      '/api/news/detail/',
+      {
+        code: detailPageUrl
+      }
+    );
+    const item = result.item;
+    if (!item) {
+      return error({statusCode: 404});
     }
-  }),
-  async asyncData({params, route, $axios}) {
-    const data = params // When calling /abc the slug will be "abc"
-    console.log(route.fullPath);
-    return {data}
+    return {item}
   }
 }
 </script>

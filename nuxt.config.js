@@ -250,7 +250,14 @@ export default {
       }
     ],
     '@nuxtjs/component-cache',
-    'nuxt-speedkit'
+    'nuxt-speedkit',
+    '@nuxtjs/redirect-module'
+  ],
+  redirect: [
+    {
+      from: '^.*(?<!\/)$',
+      to: (from, req) => req.url + '/'
+    }
   ],
   robots: {
     UserAgent: '*',
