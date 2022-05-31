@@ -240,7 +240,10 @@ export default {
     '@nuxtjs/robots',
     ['@nuxtjs/sitemap',
       {
-        hostname: 'https://yugadar.ru'
+        hostname: 'https://yugadar.ru',
+        routes: [
+          '/news/otkrytie-sayta/'
+        ]
       }],
     '@nuxtjs/recaptcha',
     ['@nuxtjs/yandex-metrika',
