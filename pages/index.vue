@@ -3,8 +3,10 @@
     <TopTextSectionWithImage :section-data="logoData"/>
     <TextSectionHalf :section-data="sectionDataTop"/>
     <ParallaxSection v-if="$device.isDesktop" :section-data="sectionDataParallax"/>
-    <NonParallaxSection :section-data="sectionDataNonParallax" v-else/>
+    <NonParallaxSection v-else :section-data="sectionDataNonParallax"/>
     <TextSectionHalf :section-data="sectionDataBottom"/>
+    <ParallaxSection v-if="$device.isDesktop" :section-data="sectionDataParallaxBottom"/>
+    <NonParallaxSection v-else :section-data="sectionDataNonParallaxBottom"/>
   </div>
 </template>
 
@@ -67,7 +69,18 @@ export default {
     const sectionDataBottom = result['text-section-half'].sectionDataBottom;
     const sectionDataParallax = result['parallax-section'].sectionDataParallax;
     const sectionDataNonParallax = result['parallax-section'].sectionDataNonParallax;
-    return {logoData, sectionDataTop, sectionDataBottom, sectionDataParallax, sectionDataNonParallax, meta}
+    const sectionDataParallaxBottom = result['parallax-section'].sectionDataParallaxBottom;
+    const sectionDataNonParallaxBottom = result['parallax-section'].sectionDataNonParallaxBottom;
+    return {
+      logoData,
+      sectionDataTop,
+      sectionDataBottom,
+      sectionDataParallax,
+      sectionDataNonParallax,
+      sectionDataParallaxBottom,
+      sectionDataNonParallaxBottom,
+      meta
+    }
   },
 }
 </script>
