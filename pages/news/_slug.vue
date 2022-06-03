@@ -1,5 +1,6 @@
 <template>
-  <news-detail :item="item"/>
+  <news-detail-red v-if="item.style === 'red'" :item="item"/>
+  <news-detail-purple v-else :item="item"/>
 </template>
 <script>
 export default {
