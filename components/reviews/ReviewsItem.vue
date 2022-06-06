@@ -33,6 +33,10 @@ export default {
               "@type": "Person",
               "name": this.item.name
             },
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5"
+            },
             "itemReviewed": {
               "@type": "Organization",
               "address": {
