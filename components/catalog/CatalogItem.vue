@@ -2,6 +2,7 @@
   <div itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope class="flex flex-col items-center">
     <img itemprop="image" :src="item.image" width="232" height="232" :alt="item.name" :title="item.name"/>
     <meta itemprop="brand" itemtype="https://schema.org/Brand" itemscope content="ЮгаДар"/>
+    <meta itemprop="url" content="https://yugadar.ru/catalog/">
     <meta itemprop="position" :content="item.key">
     <div class="flex flex-col pt-4 h-48">
       <span itemprop="name" class="text-2xl h-16 flex items-center justify-center" v-html="item.nameHtml"></span>
