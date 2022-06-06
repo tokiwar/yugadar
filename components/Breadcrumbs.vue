@@ -1,5 +1,5 @@
 <template>
-  <nav v-if="routes" class="py-2 mt-10 mx-10 font-black text-xl rounded-md bg-gray-100">
+  <nav v-if="routes" class="py-2 mt-10 mx-auto font-black text-xl rounded-md bg-gray-100 w-max">
     <ul class="flex px-10 flex-row space-x-2">
       <li v-for="route in routes">
         <nuxt-link v-if="route.route" class="hover:text-yellow-500 hover:underline text-gray-700" :to="route.route">
