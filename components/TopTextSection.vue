@@ -15,7 +15,8 @@
             :class="{'text-9xl': $device.isDesktop, 'text-5xl': !$device.isDesktop}">{{ SectionData.title }}</h1>
       </div>
     </section>
-    <slot></slot>
+    <slot name="breadcrumbs"></slot>
+    <slot name="content"></slot>
   </div>
 </template>
 <script>

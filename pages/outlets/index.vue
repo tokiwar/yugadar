@@ -1,7 +1,12 @@
 <template>
   <div>
     <TopTextSection :section-data="logoData">
-      <outlets :outlets="items"/>
+      <template v-slot:breadcrumbs>
+        <breadcrumbs :routes="routes"/>
+      </template>
+      <template v-slot:content>
+        <outlets :outlets="items"/>
+      </template>
     </TopTextSection>
     <client-only>
       <outlets-map :items="items"/>
@@ -65,7 +70,18 @@ export default {
     const items = result.items;
     const logoData = result['top-text-section'].logoData;
     const sectionData = result['text-section'].sectionData;
-    return {items, logoData, sectionData, meta}
+    const routes = [
+      {
+        key: 0,
+        name: 'Главная страница',
+        route: '/'
+      },
+      {
+        key: 1,
+        name: 'Точки продажи'
+      }
+    ];
+    return {items, logoData, sectionData, meta, routes}
   },
 }
 </script>
