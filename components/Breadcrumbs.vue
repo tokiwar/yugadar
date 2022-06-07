@@ -13,7 +13,7 @@
               :itemprop="route.name ? 'itemListElement' : false" :itemscope="route.name ? 'itemscope' : false"
               :itemtype="route.name ? 'https://schema.org/ListItem' : false"
               :class="{'h-10 px-2' : $device.isDesktopOrTablet, 'h-8 px-1' :$device.isMobile}">
-            <meta itemprop="position" v-if="route.name" :content="route.key">
+            <meta itemprop="position" v-if="route.name" :content="route.position">
             <meta itemprop="name" v-if="route.name" :content="route.name">
             <nuxt-link class="hover:text-yellow-500 hover:underline" itemprop="item" :to="route.route"
                        v-if="route.route"

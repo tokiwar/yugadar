@@ -67,7 +67,8 @@ export default {
       {
         key: 0,
         name: 'Главная',
-        route: '/'
+        route: '/',
+        position: 1
       },
       {
         key: 1,
@@ -76,7 +77,8 @@ export default {
         key: 2,
         name: 'Новости',
         route: '/news/',
-        current: true
+        current: true,
+        position: 2
       }
     ];
     return {logoData, meta, items, routes}

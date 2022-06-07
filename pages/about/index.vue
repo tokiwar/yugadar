@@ -74,7 +74,8 @@ export default {
       {
         key: 0,
         name: 'Главная',
-        route: '/'
+        route: '/',
+        position: 1
       },
       {
         key: 1,
@@ -83,7 +84,8 @@ export default {
         key: 2,
         name: 'О нас',
         route: '/about/',
-        current: true
+        current: true,
+        position: 2
       }
     ];
     return {logoData, sectionDataParallax, sectionDataNonParallax, sectionData, items, meta, routes}

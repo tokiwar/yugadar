@@ -69,7 +69,8 @@ export default {
       {
         key: 0,
         name: 'Главная',
-        route: '/'
+        route: '/',
+        position: 1
       },
       {
         key: 1,
@@ -78,7 +79,8 @@ export default {
         key: 2,
         name: 'Политика конфиденциальности',
         route: '/privacy-policy/',
-        current: true
+        current: true,
+        position: 2
       }
     ];
     return {logoData, policyText, meta, routes}
