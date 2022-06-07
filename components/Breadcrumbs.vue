@@ -1,6 +1,6 @@
 <template>
   <nav v-if="routes" class="flex flex-row mt-10 font-bold select-none"
-       :class="{'ml-10' : $device.isDesktopOrTablet, 'ml-2 text-sm' : $device.isMobile}">
+       :class="{'ml-10' : $device.isDesktopOrTablet, 'ml-2 text-xs' : $device.isMobile}">
     <ul class="flex flex-row justify-center items-center relative">
       <li class="bg-white rounded-full p-3 z-10 shadow-2xl">
         <logo-mini :color="'#F59E0B'" class="w-auto"
