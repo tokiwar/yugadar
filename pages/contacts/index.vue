@@ -1,6 +1,10 @@
 <template>
   <div>
-    <TopTextSection :section-data="logoData"/>
+    <TopTextSection :section-data="logoData">
+      <template v-slot:breadcrumbs>
+        <breadcrumbs :routes="routes"/>
+      </template>
+    </TopTextSection>
     <contacts :contacts="contacts"/>
     <ParallaxSection v-if="$device.isDesktop" :section-data="sectionDataParallax"/>
     <NonParallaxSection :section-data="sectionDataNonParallax" v-else/>
@@ -94,7 +98,21 @@ export default {
     const sectionDataParallax = result['parallax-section'].sectionDataParallax;
     const sectionDataNonParallax = result['parallax-section'].sectionDataNonParallax;
     const contacts = result['contacts'];
-    return {outlets, logoData, sectionDataParallax, sectionDataNonParallax, contacts, meta}
+    const routes = [
+      {
+        key: 0,
+        name: 'Главная',
+        route: '/'
+      },
+      {
+        key: 1,
+      },
+      {
+        key: 2,
+        name: 'Контакты'
+      }
+    ];
+    return {outlets, logoData, sectionDataParallax, sectionDataNonParallax, contacts, meta, routes}
   },
 }
 </script>

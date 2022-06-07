@@ -1,6 +1,10 @@
 <template>
   <div>
-    <TopTextSection :section-data="logoData"/>
+    <TopTextSection :section-data="logoData">
+      <template v-slot:breadcrumbs>
+        <breadcrumbs :routes="routes"/>
+      </template>
+    </TopTextSection>
     <catalog :items="catalog.iceCream.items"/>
     <catalog-price-table :catalog="catalog"/>
   </div>
@@ -68,7 +72,21 @@ export default {
     );
     catalog.iceCream.items = result.catalog;
     const logoData = result['top-text-section'].logoData;
-    return {catalog, logoData, meta}
+    const routes = [
+      {
+        key: 0,
+        name: 'Главная',
+        route: '/'
+      },
+      {
+        key: 1,
+      },
+      {
+        key: 2,
+        name: 'Мороженое'
+      }
+    ];
+    return {catalog, logoData, meta, routes}
   }
 }
 </script>

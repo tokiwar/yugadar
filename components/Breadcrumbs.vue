@@ -1,18 +1,26 @@
 <template>
-  <nav v-if="routes" class="py-2 mt-10 mx-auto font-black text-xl rounded-md bg-gray-100 w-max">
-    <ul class="flex px-10 flex-row space-x-2">
-      <li v-for="route in routes">
-        <nuxt-link v-if="route.route" class="hover:text-yellow-500 hover:underline text-gray-700" :to="route.route">
-          {{ route.name }}
-        </nuxt-link>
-        <div class="flex items-center space-x-2" v-else>
-          <svg class="w-6 h-6 text-gray-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd"
-                  d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                  clip-rule="evenodd"></path>
-          </svg>
-          <span class="underline text-yellow-500">{{ route.name }}</span>
-        </div>
+  <nav v-if="routes" class="flex flex-row mt-10 font-bold select-none"
+       :class="{'ml-10' : $device.isDesktopOrTablet, 'ml-2 text-sm' : $device.isMobile}">
+    <ul class="flex flex-row justify-center items-center relative">
+      <li class="bg-white rounded-full p-3 z-10 shadow-2xl">
+        <logo-mini :color="'#F59E0B'" class="w-auto"
+                   :class="{'h-12' : $device.isDesktopOrTablet, 'h-6' : $device.isMobile}"/>
+      </li>
+      <li class="absolute bg-gray-50 rounded-3xl shadow-xl"
+          :class="{'left-12 px-10' : $device.isDesktopOrTablet, 'left-7 px-5' : $device.isMobile}">
+        <ul class="w-max flex flex-row" itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li v-for="route in routes" :key="route.key" class="bg-gray-50 flex items-center justify-center"
+              itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"
+              :class="{'h-10 px-2' : $device.isDesktopOrTablet, 'h-8 px-1' :$device.isMobile}">
+            <meta itemprop="position" :content="route.key">
+            <meta itemprop="name" v-if="route.name" :content="route.name">
+            <nuxt-link class="hover:text-yellow-500 hover:underline" itemprop="item" :to="route.route" v-if="route.route">
+              {{ route.name }}
+            </nuxt-link>
+            <span v-else-if="!route.name" class="text-gray-500">|</span>
+            <span v-else class="text-yellow-500 underline" itemprop="item">{{ route.name }}</span>
+          </li>
+        </ul>
       </li>
     </ul>
   </nav>

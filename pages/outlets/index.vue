@@ -73,11 +73,14 @@ export default {
     const routes = [
       {
         key: 0,
-        name: 'Главная страница',
+        name: 'Главная',
         route: '/'
       },
       {
         key: 1,
+      },
+      {
+        key: 2,
         name: 'Точки продажи'
       }
     ];

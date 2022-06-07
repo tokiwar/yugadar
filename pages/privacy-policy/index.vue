@@ -1,6 +1,10 @@
 <template>
   <div>
-    <TopTextSection :section-data="logoData"/>
+    <TopTextSection :section-data="logoData">
+      <template v-slot:breadcrumbs>
+        <breadcrumbs :routes="routes"/>
+      </template>
+    </TopTextSection>
     <nested-list :policy-text="policyText"/>
   </div>
 </template>
@@ -61,7 +65,21 @@ export default {
     );
     const logoData = result['top-text-section'].logoData;
     const policyText = result['json-data'].policyText;
-    return {logoData, policyText, meta}
+    const routes = [
+      {
+        key: 0,
+        name: 'Главная',
+        route: '/'
+      },
+      {
+        key: 1,
+      },
+      {
+        key: 2,
+        name: 'Политика конфиденциальности'
+      }
+    ];
+    return {logoData, policyText, meta, routes}
   },
 }
 </script>

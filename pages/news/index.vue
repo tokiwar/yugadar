@@ -1,6 +1,10 @@
 <template>
   <div>
-    <top-text-section :section-data="logoData"/>
+    <top-text-section :section-data="logoData">
+      <template v-slot:breadcrumbs>
+        <breadcrumbs :routes="routes"/>
+      </template>
+    </top-text-section>
     <news-list :items="items"/>
   </div>
 </template>
@@ -16,8 +20,7 @@ export default {
       ]
     }
   },
-  data: () => ({
-  }),
+  data: () => ({}),
   async asyncData({route, $axios}) {
     const meta = [
       {
@@ -60,7 +63,21 @@ export default {
     );
     const logoData = result['top-text-section'].logoData;
     const items = result.items;
-    return {logoData, meta, items}
+    const routes = [
+      {
+        key: 0,
+        name: 'Главная',
+        route: '/'
+      },
+      {
+        key: 1,
+      },
+      {
+        key: 2,
+        name: 'Новости'
+      }
+    ];
+    return {logoData, meta, items, routes}
   },
 }
 </script>

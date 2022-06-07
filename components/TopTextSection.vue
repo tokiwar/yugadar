@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-pattern-ice-cream py-20" :class="classNameTop">
+  <div class="bg-pattern-ice-cream pt-40 pb-20" :class="classNameTop">
     <section v-if="SectionData.title || SectionData.subtitle"
              :class="className">
       <div class="text-white flex flex-col justify-center items-center font-black" v-if="SectionData.reverse">
