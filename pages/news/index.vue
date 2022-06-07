@@ -74,7 +74,9 @@ export default {
       },
       {
         key: 2,
-        name: 'Новости'
+        name: 'Новости',
+        route: '/news/',
+        current: true
       }
     ];
     return {logoData, meta, items, routes}

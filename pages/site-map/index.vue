@@ -93,7 +93,9 @@ export default {
       },
       {
         key: 2,
-        name: 'Карта сайта'
+        name: 'Карта сайта',
+        route: '/site-map/',
+        current: true
       }
     ];
     return {logoData, meta, routes}

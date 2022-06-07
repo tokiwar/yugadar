@@ -109,7 +109,9 @@ export default {
       },
       {
         key: 2,
-        name: 'Контакты'
+        name: 'Контакты',
+        route: '/contacts/',
+        current: true
       }
     ];
     return {outlets, logoData, sectionDataParallax, sectionDataNonParallax, contacts, meta, routes}

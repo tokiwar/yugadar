@@ -83,7 +83,9 @@ export default {
       },
       {
         key: 2,
-        name: 'Мороженое'
+        name: 'Мороженое',
+        route: '/catalog/',
+        current: true
       }
     ];
     return {catalog, logoData, meta, routes}

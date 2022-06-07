@@ -81,7 +81,9 @@ export default {
       },
       {
         key: 2,
-        name: 'Точки продажи'
+        name: 'Точки продажи',
+        route: '/outlets/',
+        current: true
       }
     ];
     return {items, logoData, sectionData, meta, routes}

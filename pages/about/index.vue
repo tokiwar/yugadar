@@ -81,7 +81,9 @@ export default {
       },
       {
         key: 2,
-        name: 'О нас'
+        name: 'О нас',
+        route: '/about/',
+        current: true
       }
     ];
     return {logoData, sectionDataParallax, sectionDataNonParallax, sectionData, items, meta, routes}

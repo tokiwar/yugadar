@@ -10,15 +10,17 @@
           :class="{'left-12 px-10' : $device.isDesktopOrTablet, 'left-7 px-5' : $device.isMobile}">
         <ul class="w-max flex flex-row" itemscope itemtype="https://schema.org/BreadcrumbList">
           <li v-for="route in routes" :key="route.key" class="bg-gray-50 flex items-center justify-center"
-              itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"
+              :itemprop="route.name ? 'itemListElement' : false" :itemscope="route.name ? 'itemscope' : false"
+              :itemtype="route.name ? 'https://schema.org/ListItem' : false"
               :class="{'h-10 px-2' : $device.isDesktopOrTablet, 'h-8 px-1' :$device.isMobile}">
-            <meta itemprop="position" :content="route.key">
+            <meta itemprop="position" v-if="route.name" :content="route.key">
             <meta itemprop="name" v-if="route.name" :content="route.name">
-            <nuxt-link class="hover:text-yellow-500 hover:underline" itemprop="item" :to="route.route" v-if="route.route">
+            <nuxt-link class="hover:text-yellow-500 hover:underline" itemprop="item" :to="route.route"
+                       v-if="route.route"
+                       :class="{'text-yellow-500 underline pointer-events-none' : route.current}">
               {{ route.name }}
             </nuxt-link>
-            <span v-else-if="!route.name" class="text-gray-500">|</span>
-            <span v-else class="text-yellow-500 underline" itemprop="item">{{ route.name }}</span>
+            <span v-else class="text-gray-500">|</span>
           </li>
         </ul>
       </li>

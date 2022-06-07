@@ -76,7 +76,9 @@ export default {
       },
       {
         key: 2,
-        name: 'Политика конфиденциальности'
+        name: 'Политика конфиденциальности',
+        route: '/privacy-policy/',
+        current: true
       }
     ];
     return {logoData, policyText, meta, routes}
