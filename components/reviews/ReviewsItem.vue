@@ -50,7 +50,7 @@ export default {
               "telephone": "+79184339061",
               "image": "https://yugadar.ru/yugadar.jpg"
             },
-            "datePublished": this.item.date,
+            "datePublished": this.item.dateFormatted,
             "reviewBody": this.item.text,
           }
         }

@@ -2,7 +2,7 @@
   <div itemscope itemtype="https://schema.org/NewsArticle">
     <nuxt-link itemprop="mainEntityOfPage" :to="item.code + '/'"
                class="flex flex-col justify-center items-center h-auto cursor-pointer hover:shadow-2xl">
-      <meta itemprop="datePublished" :datetime="item.date" :content="item.date">
+      <meta itemprop="datePublished" :datetime="item.dateFormatted" :content="item.dateFormatted">
       <meta itemprop="description" :content="item.text">
       <meta itemprop="author" content="ЮгаДар">
       <div class="flex flex-col items-center justify-end text-justify glassmorphism relative"
