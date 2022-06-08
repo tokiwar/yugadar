@@ -6,6 +6,7 @@
       <meta itemprop="description" :content="item.text">
       <div itemprop="author" itemscope="" itemtype="http://schema.org/Person">
         <meta itemprop="name" content="ЮгаДар">
+        <meta itemprop="url" content="https://yugadar.ru/">
       </div>
       <div class="flex flex-col items-center justify-end text-justify glassmorphism relative"
            :class="{'w-152 space-y-8 h-88 py-6' : $device.isDesktopOrTablet, 'w-full space-y-2 h-48' :$device.isMobile}">
