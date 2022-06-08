@@ -3,6 +3,7 @@
     <nuxt-link itemprop="mainEntityOfPage" :to="item.code + '/'"
                class="flex flex-col justify-center items-center h-auto cursor-pointer hover:shadow-2xl">
       <meta itemprop="datePublished" :datetime="item.dateFormatted" :content="item.dateFormatted">
+      <meta itemprop="dateModified" :datetime="item.dateFormatted" :content="item.dateFormatted">
       <meta itemprop="description" :content="item.text">
       <div itemprop="author" itemscope="" itemtype="http://schema.org/Person">
         <meta itemprop="name" content="ЮгаДар">
