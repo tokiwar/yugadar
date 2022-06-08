@@ -8,8 +8,7 @@
               class="px-8 py-4 hover:text-yellow-500 hover:underline text-2xl" v-for="menuItem in menu"
               itemprop="itemListElement"
               :key="menuItem.key"
-              :to="menuItem.link"
-              v-html="menuItem.name">
+              :to="menuItem.link">{{ menuItem.name }}
       <meta itemprop="name" :content="menuItem.name">
       <meta itemprop="url" :content="menuItem.link">
     </NuxtLink>
@@ -35,8 +34,7 @@
                     itemprop="itemListElement"
                     v-for="menuItem in menu"
                     :key="menuItem.key"
-                    :to="menuItem.link"
-                    v-html="menuItem.name">
+                    :to="menuItem.link">{{ menuItem.name }}
             <meta itemprop="name" :content="menuItem.name">
             <meta itemprop="url" :content="menuItem.link">
           </NuxtLink>
@@ -62,8 +60,7 @@
                     itemprop="itemListElement"
                     v-for="menuItem in menu"
                     :key="menuItem.key"
-                    :to="menuItem.link"
-                    v-html="menuItem.name">
+                    :to="menuItem.link">{{ menuItem.name }}
             <meta itemprop="name" :content="menuItem.name">
             <meta itemprop="url" :content="menuItem.link">
           </NuxtLink>
