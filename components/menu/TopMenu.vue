@@ -7,6 +7,8 @@
     <NuxtLink :class="{'text-yellow-500 underline pointer-events-none' : menuItem.link === $route.path}"
               class="px-8 py-4 hover:text-yellow-500 hover:underline text-2xl" v-for="menuItem in menu"
               itemprop="itemListElement"
+              itemscope
+              itemtype="https://schema.org/ListItem"
               :key="menuItem.key"
               :to="menuItem.link">{{ menuItem.name }}
       <meta itemprop="name" :content="menuItem.name">
@@ -32,6 +34,8 @@
           <NuxtLink class="px-6" @click.native="close"
                     :class="{'text-yellow-500 underline pointer-events-none' : menuItem.link === $route.path}"
                     itemprop="itemListElement"
+                    itemscope
+                    itemtype="https://schema.org/ListItem"
                     v-for="menuItem in menu"
                     :key="menuItem.key"
                     :to="menuItem.link">{{ menuItem.name }}
@@ -58,6 +62,8 @@
           <NuxtLink class="px-4 py-1" @click.native="close"
                     :class="{'text-yellow-500 text-3xl underline pointer-events-none' : menuItem.link === $route.path}"
                     itemprop="itemListElement"
+                    itemscope
+                    itemtype="https://schema.org/ListItem"
                     v-for="menuItem in menu"
                     :key="menuItem.key"
                     :to="menuItem.link">{{ menuItem.name }}
