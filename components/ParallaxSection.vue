@@ -1,6 +1,6 @@
 <template>
   <section v-if="SectionData"
-           class="flex items-center justify-center h-136 bg-fixed bg-center select-none"
+           class="flex items-center justify-center h-136 bg-fixed bg-center bg-cover select-none"
            :class="SectionData.bg"
            :style="`background-image: url('${SectionData.bgImage}')`"
   >
