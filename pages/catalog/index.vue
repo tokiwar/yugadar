@@ -7,12 +7,16 @@
     </TopTextSection>
     <catalog :items="catalog.iceCream.items"/>
     <catalog-price-table :catalog="catalog"/>
+    <request-form/>
   </div>
 </template>
 
 <script>
+import RequestForm from "@/components/catalog/RequestForm";
+
 export default {
   name: 'CatalogPage',
+  components: {RequestForm},
   head() {
     return {
       title: '«ЮгаДар» - Мороженое - Мороженое от кубанского производителя',

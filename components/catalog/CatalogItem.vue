@@ -1,6 +1,6 @@
 <template>
   <div itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope class="flex flex-col items-center">
-    <img itemprop="image" :src="item.image" width="232" height="232" :alt="item.name" :title="item.name"/>
+    <img itemprop="image" :src="item.image" width="356" height="356" :alt="item.name" :title="item.name"/>
     <meta itemprop="brand" itemtype="https://schema.org/Brand" itemscope content="ЮгаДар"/>
     <meta itemprop="url" content="https://yugadar.ru/catalog/">
     <meta itemprop="position" :content="item.key">
