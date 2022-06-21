@@ -60,16 +60,18 @@
         </span>
       </button>
       <transition name="fade">
-        <div class="flex w-full flex-col text-2xl fixed bg-white items-center justify-items py-2 mt-2 right-0"
+        <div class="flex w-full flex-col text-2xl fixed bg-white items-start justify-items py-2 mt-2 right-0"
              v-if="opened">
-          <NuxtLink class="px-4 py-1" @click.native="close"
+          <NuxtLink class="px-4 py-1 flex flex-row justify-center items-center space-x-2" @click.native="close"
                     :class="{'text-yellow-500 text-3xl underline pointer-events-none' : menuItem.link === $route.path}"
                     itemprop="itemListElement"
                     itemscope
                     itemtype="https://schema.org/ListItem"
                     v-for="menuItem in menu"
                     :key="menuItem.key"
-                    :to="menuItem.link">{{ menuItem.name }}
+                    :to="menuItem.link">
+            <svg-icon class="h-8 w-8" :name="menuItem.icon"/>
+            <span>{{ menuItem.name }}</span>
             <meta itemprop="name" :content="menuItem.name">
             <meta itemprop="url" :content="menuItem.link">
           </NuxtLink>
