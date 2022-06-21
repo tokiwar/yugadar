@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="flex flex-col items-center justify-center font-black text-center bg-pattern-lines"
-         :class="{'pt-10' : $device.isDesktopOrTablet, 'py-2' : $device.isMobile}"
+         :class="{'pt-10' : $device.isDesktopOrTablet, 'py-8' : $device.isMobile}"
          v-for="section in catalog">
       <span :class="{'text-6xl' : $device.isDesktop, 'text-4xl' : !$device.isDesktop}" v-html="section.title"/>
       <span v-if="section.subtitle" class="font-marck"

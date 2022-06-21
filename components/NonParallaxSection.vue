@@ -1,12 +1,13 @@
 <template>
   <section v-else class="flex justify-center items-center select-none bg-pattern-ice-cream"
            :class="className">
-    <div class="">
+    <div :class="{'w-full' : $device.isMobile}">
       <img
         class=""
-        :class="{'bg-red-200 bg-blue-green-100': $device.isDesktop, 'h-auto w-full object-fill object-center':$device.isTablet, 'h-104 object-cover object-center' : $device.isMobile}"
+        :class="{'bg-red-200 bg-blue-green-100' : $device.isDesktop, 'h-auto w-full object-fill object-center' : $device.isTablet, 'h-104 object-center w-full' : $device.isMobile, 'object-contain' : $device.isMobile && SectionData.transparent, 'object-cover' : $device.isMobile && !SectionData.transparent}"
         width="844" height="416"
-        :src="$device.isDesktopOrTablet ? SectionData.bgImage : SectionData.bgImageMobile" alt="image" title="image"/>
+        :src="$device.isDesktopOrTablet ? SectionData.bgImage : SectionData.bgImageMobileSquare" alt="image"
+        title="image"/>
     </div>
     <div v-if="SectionData.title || SectionData.subtitle"
          class="text-white flex flex-col justify-center items-center font-black relative"

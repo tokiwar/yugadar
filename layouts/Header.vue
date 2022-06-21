@@ -17,32 +17,38 @@ export default {
       {
         key: 0,
         name: 'Главная',
-        link: '/'
+        link: '/',
+        icon: 'main-page'
       },
       {
         key: 1,
         name: 'Новости',
-        link: '/news/'
+        link: '/news/',
+        icon: 'news'
       },
       {
         key: 2,
         name: 'Мороженое',
-        link: '/catalog/'
+        link: '/catalog/',
+        icon: 'ice-cream-main'
       },
       {
         key: 3,
         name: 'О нас',
-        link: '/about/'
+        link: '/about/',
+        icon: 'about'
       },
       {
         key: 4,
         name: 'Контакты',
-        link: '/contacts/'
+        link: '/contacts/',
+        icon: 'contacts'
       },
       {
         key: 5,
         name: 'Точки продажи',
-        link: '/outlets/'
+        link: '/outlets/',
+        icon: 'outlet'
       },
     ]
   }),

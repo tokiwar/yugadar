@@ -1,16 +1,19 @@
 <template>
-  <div v-if="$device.isDesktop" class="flex flex-row items-center bg-white font-black w-max m-auto"
+  <div v-if="$device.isDesktop" class="flex flex-row items-center bg-white font-black w-max m-auto space-x-8"
        itemscope itemtype="http://www.schema.org/SiteNavigationElement">
-    <NuxtLink class="px-8 py-4" :class="{'pointer-events-none' : $route.path === '/'}" to="/">
+    <NuxtLink class="py-4" :class="{'pointer-events-none' : $route.path === '/'}" to="/">
       <logo :color="'#F59E0B'"/>
     </NuxtLink>
     <NuxtLink :class="{'text-yellow-500 underline pointer-events-none' : menuItem.link === $route.path}"
-              class="px-8 py-4 hover:text-yellow-500 hover:underline text-2xl" v-for="menuItem in menu"
+              class="py-4 hover:text-yellow-500 hover:underline text-2xl flex flex-row items-center justify-center space-x-2"
+              v-for="menuItem in menu"
               itemprop="itemListElement"
               itemscope
               itemtype="https://schema.org/ListItem"
               :key="menuItem.key"
-              :to="menuItem.link">{{ menuItem.name }}
+              :to="menuItem.link">
+      <svg-icon class="h-10 w-10" v-if="menuItem.icon" :name="menuItem.icon"/>
+      <span>{{ menuItem.name }}</span>
       <meta itemprop="name" :content="menuItem.name">
       <meta itemprop="url" :content="menuItem.link">
     </NuxtLink>

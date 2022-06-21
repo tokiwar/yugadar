@@ -233,6 +233,7 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxtjs/axios',
+    '@nuxtjs/svg-sprite',
     '@nuxtjs/pwa',
     '@nuxtjs/device',
     '@nuxtjs/proxy',
