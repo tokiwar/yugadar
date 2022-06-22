@@ -51,13 +51,13 @@
               }}</span>
           </div>
           <div :class="{'mb-6 text-base' : $device.isDesktopOrTablet, 'mb-2 text-sm': $device.isMobile}">
-            <label for="message" class="block mb-2 text-gray-900 dark:text-gray-400">Ваш сообщение*</label>
+            <label for="message" class="block mb-2 text-gray-900 dark:text-gray-400">Заказ*</label>
             <textarea
               :class="{'border-red-500' : validation.hasError('message'), 'h-48' : $device.isDesktopOrTablet, 'h-24': $device.isMobile}"
               id="message" rows="4"
               v-model="message"
               class="resize-none block p-2.5 w-full text-gray-900 focus:outline-none bg-gray-50 border border-gray-300 focus:border-black"
-              placeholder="Введите текст ..."></textarea>
+              placeholder="Ваша заявка"></textarea>
             <span class="text-xs text-red-500" v-if="validation.hasError('message')">{{
                 validation.firstError('message')
               }}</span>
@@ -73,8 +73,11 @@
     <button @click.prevent="close"
             v-show="closed"
             title="Оставить заявку"
-            class="fixed right-20 bottom-20 bg-yellow-500 hover:bg-yellow-300 p-6 rounded-full shadow-lg hover:shadow-2xl">
-      <svg-icon class="h-20 w-20" name="order"/>
+            :class="{
+              'right-20 bottom-20 bg-yellow-500 hover:bg-yellow-300 p-6 rounded-full shadow-lg hover:shadow-2xl' : $device.isDesktopOrTablet,
+              'right-8 bottom-8 bg-yellow-500 rounded-full shadow-lg p-4' : $device.isMobile}"
+            class="fixed">
+      <svg-icon :class="{'h-20 w-20' : $device.isDesktopOrTablet, 'h-10 w-10' : $device.isMobile}" name="order"/>
     </button>
   </div>
 </template>
@@ -144,8 +147,8 @@ export default {
     'message': (value) => {
       return Validator.custom(() => {
         if (!Validator.isEmpty(value)) {
-          if (value.length < 10) {
-            return 'Не менее 10 символов';
+          if (value.length < 3) {
+            return 'Не менее 3 символов';
           } else if (value.length > 600) {
             return 'Не более 600 символов';
           }
@@ -179,18 +182,17 @@ export default {
           };
           const token = await this.$recaptcha.execute('login');
           if (token) {
-            console.log(token);
-            // body['token'] = token;
-            // const res = await this.$axios.$post(
-            //   '/api/feedback/',
-            //   body
-            // );
-            // if (res.result && res.message) {
-            //   this.result = res.message;
-            // } else {
-            //   this.$refs.form.reset();
-            //   this.reset();
-            // }
+            body['token'] = token;
+            const res = await this.$axios.$post(
+              '/api/request/',
+              body
+            );
+            if (res.result && res.message) {
+              this.result = res.message;
+            } else {
+              this.$refs.form.reset();
+              this.reset();
+            }
           }
         }
       });
