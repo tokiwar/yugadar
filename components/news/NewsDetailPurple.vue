@@ -7,7 +7,7 @@
            :class="{'w-4/6' : $device.isDesktopOrTablet, 'w-11/12' : $device.isMobile}">
         <div class="absolute bg-purple-900 top-0 left-0 w-full"
              :class="{'h-4/6' : $device.isDesktopOrTablet, 'h-3/6' : $device.isMobile}"/>
-        <div class="absolute bg-purple-400 right-0 w-9/12"
+        <div class="absolute rounded-l-3xl bg-purple-400 right-0 w-9/12"
              :class="{'h-3/5' : $device.isDesktopOrTablet, 'top-20' : $device.isMobile, 'h-3/6' : $device.isMobile && $mq === 'sm', 'h-4/6' : $device.isMobile && $mq === 'md'}"/>
         <img class="pb-10 ml-auto z-10 text-purple-700 w-3/6"
              :class="{'pt-80 mr-32' : $device.isDesktopOrTablet, 'pt-32 mr-10' : $device.isMobile}" :src="item.image"

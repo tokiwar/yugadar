@@ -1,5 +1,6 @@
 <template>
   <news-detail-red v-if="item.style === 'red'" :item="item"/>
+  <news-detail-yellow v-else-if="item.style === 'yellow'" :item="item"/>
   <news-detail-purple v-else :item="item"/>
 </template>
 <script>
@@ -13,7 +14,7 @@ export default {
   },
   data: () => ({}),
   async asyncData({params, error, $axios, route}) {
-    const detailPageUrl = params.slug;
+    const detailPageUrl = params.detail;
     const result = await $axios.$post(
       '/api/news/detail/',
       {

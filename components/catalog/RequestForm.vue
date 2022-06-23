@@ -83,6 +83,7 @@
 </template>
 <script>
 import {Validator} from 'simple-vue-validator'
+import {mapActions} from "vuex";
 
 export default {
   name: 'RequestForm',
@@ -159,6 +160,9 @@ export default {
     }
   },
   methods: {
+    ...mapActions([
+      "toggleOverflow"
+    ]),
     reset() {
       this.name = '';
       this.email = '';
@@ -170,6 +174,7 @@ export default {
     close() {
       this.reset();
       this.closed = !this.closed;
+      this.toggleOverflow();
     },
     formSubmit() {
       this.$validate().then(async (success) => {

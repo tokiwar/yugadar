@@ -244,7 +244,8 @@ export default {
         hostname: 'https://yugadar.ru',
         routes: [
           '/news/otkrytie-sayta/',
-          '/news/novyy-vkus/'
+          '/news/novyy-vkus/',
+          '/news/zakaz-morozhenogo/'
         ]
       }],
     '@nuxtjs/recaptcha',
