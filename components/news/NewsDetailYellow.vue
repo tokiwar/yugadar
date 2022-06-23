@@ -3,7 +3,7 @@
            :class="{'pt-2' : $device.isDesktopOrTablet}">
     <div class="bg-pattern-ice-cream bg-yellow-400 flex justify-center rounded-lg h-auto"
          :class="{'pt-10 w-11/12 ' : $device.isDesktopOrTablet, 'pt-8 w-11/12' : $device.isMobile}">
-      <div class="h-auto flex bg-black flex-col justify-center items-center relative"
+      <div class="h-auto flex bg-black rounded-t-3xl flex-col justify-center items-center relative"
            :class="{'w-4/6' : $device.isDesktopOrTablet, 'w-11/12' : $device.isMobile}">
         <div class="bg-yellow-500 rounded-full absolute z-20 border-8 border-black"
              :class="{'w-96 h-96 p-10 right-48 top-12' : $device.isDesktopOrTablet, 'w-60 h-60 p-8 top-5' : $device.isMobile}">

@@ -3,9 +3,9 @@
            :class="{'pt-2' : $device.isDesktopOrTablet}">
     <div class="bg-pattern-ice-cream bg-purple-500 flex justify-center rounded-lg h-auto"
          :class="{'pt-10 w-11/12 ' : $device.isDesktopOrTablet, 'pt-8 w-11/12' : $device.isMobile}">
-      <div class="h-auto flex bg-white flex-col justify-center items-center relative"
+      <div class="h-auto flex bg-white rounded-t-3xl flex-col justify-center items-center relative"
            :class="{'w-4/6' : $device.isDesktopOrTablet, 'w-11/12' : $device.isMobile}">
-        <div class="absolute bg-purple-900 top-0 left-0 w-full"
+        <div class="absolute rounded-t-3xl bg-purple-900 top-0 left-0 w-full"
              :class="{'h-4/6' : $device.isDesktopOrTablet, 'h-3/6' : $device.isMobile}"/>
         <div class="absolute rounded-l-3xl bg-purple-400 right-0 w-9/12"
              :class="{'h-3/5' : $device.isDesktopOrTablet, 'top-20' : $device.isMobile, 'h-3/6' : $device.isMobile && $mq === 'sm', 'h-4/6' : $device.isMobile && $mq === 'md'}"/>
