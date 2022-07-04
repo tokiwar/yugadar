@@ -141,9 +141,9 @@ export default {
   },
   //loading: '@/components/LoadingBar.vue',
   css: [
-    '@/assets/css/fonts.css',
-    '@/assets/css/style.css',
-    '@/assets/css/hamburgers.css'
+    '@/assets/css/fonts.min.css',
+    '@/assets/css/style.min.css',
+    '@/assets/css/hamburgers.min.css'
   ],
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
