@@ -33,7 +33,7 @@ export default {
         },
         autoplay: {
           delay: 3000,
-          disableOnInteraction: false
+          disableOnInteraction: true
         }
       };
       if (this.outlets.length) {

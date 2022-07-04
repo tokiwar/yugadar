@@ -34,7 +34,7 @@ export default {
       initialSlide: 0,
       autoplay: {
         delay: 3000,
-        disableOnInteraction: false
+        disableOnInteraction: true
       },
       preloadImages: false,
       lazy: {
