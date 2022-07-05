@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="select-none h-auto font-black text-center bg-blue-green-100 bg-pattern-ice-cream"
+    <div class="select-none h-auto text-center bg-blue-green-100 bg-pattern-ice-cream"
          :class="{'space-y-20 py-20' : $device.isDesktopOrTablet, 'space-y-8 py-10' : $device.isMobile}">
       <div class="leading-5"
            :class="{'text-6xl':$device.isDesktop, 'text-4xl' : !$device.isDesktop}"
@@ -11,7 +11,7 @@
         </swiper-slide>
       </swiper>
       <button @click.prevent="toggleReviewsForm"
-              class="text-black border-2 bg-white border-black hover:bg-black hover:text-white focus:outline-none font-bold text-xl px-4 py-2 text-center ease-in-out duration-300">
+              class="text-black border-2 bg-white border-black hover:bg-black hover:text-white focus:outline-none text-xl px-4 py-2 text-center ease-in-out duration-300">
         Оставить отзыв
       </button>
     </div>

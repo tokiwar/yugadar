@@ -13,7 +13,7 @@
       class="flex flex-col items- justify-center py-4 h-28 text-center glassmorphism"
       :class="{'h-36' : $device.isTablet && $mq !== 'lg', 'w-136':$device.isDesktop, 'w-104' :$device.isTablet && $mq === 'lg', 'w-80' : $device.isTablet && $mq !== 'lg',
              'w-11/12' : $device.isMobile}">
-            <span class="font-black leading-6"
+            <span class="font leading-6"
                   :class="{'text-xl' : $device.isDesktop, 'text-lg' : $device.isMobile, 'text-base' :$device.isTablet && $mq !== 'lg'}"
                   v-html="item.description"></span>
       <span class="underline"

@@ -11,9 +11,9 @@
              viewBox="0 0 24 24"><path
           d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"></path></svg>
       </span>
-      <div v-if="result" class="w-full text-center font-bold text-black"
+      <div v-if="result" class="w-full text-center text-black"
            :class="{'text-xl' : $device.isDesktopOrTablet, 'text-lg' : $device.isMobile}" v-html="result"/>
-      <form v-else class="w-full flex flex-col mt-2 font-bold" @submit.prevent="formSubmit" ref="form">
+      <form v-else class="w-full flex flex-col mt-2 " @submit.prevent="formSubmit" ref="form">
         <div :class="{'mb-6 text-base' : $device.isDesktopOrTablet, 'mb-2 text-sm': $device.isMobile}">
           <label for="name" class="block mb-2 text-gray-900 dark:text-gray-300">Ваше имя*</label>
           <input :class="{'border-red-500' : validation.hasError('name')}"
@@ -70,7 +70,7 @@
             <label for="terms" class="ml-2 font-medium text-gray-900"
                    :class="{'text-sm': $device.isDesktopOrTablet, 'text-xs': $device.isMobile}">Я ознакомлен и согласен
               с <a
-                target="_blank" href="/privacy-policy/" class="font-bold hover:underline">«Политикой
+                target="_blank" href="/privacy-policy/" class="hover:underline">«Политикой
                 конфиденциальности»</a></label>
           </div>
           <span class="text-xs text-red-500" v-if="validation.hasError('terms')">{{
@@ -78,7 +78,7 @@
             }}</span>
         </div>
         <button type="submit"
-                class="text-black border-2 bg-white border-black hover:bg-black hover:text-white focus:outline-none font-bold px-4 py-2 text-center ease-in-out duration-300"
+                class="text-black border-2 bg-white border-black hover:bg-black hover:text-white focus:outline-none px-4 py-2 text-center ease-in-out duration-300"
                 :class="{'text-xl' : $device.isDesktopOrTablet, 'text-sm': $device.isMobile}">
           Отправить
         </button>

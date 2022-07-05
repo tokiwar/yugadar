@@ -8,7 +8,7 @@
     <div class="flex flex-col w-full items-center justify-center bg-pattern-lines">
       <div class="my-10 glassmorphism"
            :class="{'w-3/6 p-10' : $device.isDesktop, 'w-11/12 p-6' : !$device.isDesktop}">
-        <ul class="font-black space-y-4"
+        <ul class="space-y-4"
             :class="{'text-2xl' : $device.isDesktopOrTablet, 'text-xl' : $device.isMobile}">
           <li v-for="item in siteMap" :key="item.key">{{ item.key }} -
             <nuxt-link class="hover:text-yellow-500 hover:underline " :to="item.link">{{ item.name }}</nuxt-link>

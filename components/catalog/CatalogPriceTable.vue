@@ -1,10 +1,10 @@
 <template>
   <section>
-    <div class="flex flex-col items-center justify-center font-black text-center bg-pattern-lines"
+    <div class="flex flex-col items-center justify-center text-center bg-pattern-lines"
          :class="{'pt-10' : $device.isDesktopOrTablet, 'py-8' : $device.isMobile}"
          v-for="section in catalog">
-      <span :class="{'text-6xl' : $device.isDesktop, 'text-4xl' : !$device.isDesktop}" v-html="section.title"/>
-      <span v-if="section.subtitle" class="font-marck"
+      <h3 class="font-black" :class="{'text-6xl' : $device.isDesktop, 'text-4xl' : !$device.isDesktop}" v-html="section.title"/>
+      <h4 v-if="section.subtitle" class="font-marck font-black"
             :class="{'text-3xl w-3/6 pt-2':$device.isDesktop, 'text-3xl' : !$device.isDesktop}"
             v-html="section.subtitle"/>
       <section

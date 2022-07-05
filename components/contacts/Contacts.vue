@@ -2,16 +2,17 @@
   <section v-if="contacts.title || contacts.subtitle || contacts.text"
            class="flex flex-row justify-center items-center select-none h-auto bg-pattern-lines"
            :class="{'py-16' :$device.isDesktop}">
-    <div class="flex flex-col justify-center items-center font-black text-center"
-         :class="{'w-3/6' : $device.isDesktop, 'w-11/12 my-14': $device.isTablet, 'w-4/5 my-14': $device.isMobile}">
-      <div v-if="contacts.title"
+    <div class="flex flex-col justify-center items-center text-center"
+         :class="{'w-4/6' : $device.isDesktop, 'w-11/12 my-14': $device.isTablet, 'w-4/5 my-14': $device.isMobile}">
+      <h3 v-if="contacts.title"
+           class="font-black"
            :class="{'text-6xl w-4/6':$device.isDesktop, 'text-5xl' : $device.isTablet, 'text-4xl' : $device.isMobile}">
         {{ contacts.title }}
-      </div>
-      <div v-if="contacts.subtitle" class="font-marck"
+      </h3>
+      <h4 v-if="contacts.subtitle" class="font-marck font-black"
            :class="{'text-3xl w-3/6 pt-2':$device.isDesktop, 'text-2xl' : $device.isTablet, 'text-xl' : $device.isMobile}">
         {{ contacts.subtitle }}
-      </div>
+      </h4>
       <div class="flex flex-col"
            :class="{'pt-8 text-2xl text-justify space-y-4' : $device.isDesktop, 'w-full pt-12 text-lg text-left space-y-2' : $device.isMobile, 'text-justify text-2xl pt-8 w-4/5 space-y-4' : $device.isTablet}"
            v-if="contacts.address || contacts.name || contacts.phone || contacts.email || contacts.time || contacts.itn || contacts.psrn">

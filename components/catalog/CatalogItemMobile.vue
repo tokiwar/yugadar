@@ -7,7 +7,7 @@
     <meta itemprop="position" :content="item.key">
     <span itemprop="name" class="text-xl font-black" v-html="item.name"/>
     <span class="h-0.5 w-2/6 bg-gray-500 my-2 mx-auto"></span>
-    <span itemprop="description" class="ml-4 pb-2 text-lg italic" v-html="item.description"/>
+    <span itemprop="description" class="text-lg italic w-5/6 text-center" v-html="item.description"/>
     <div itemprop="offers" itemtype="https://schema.org/Offer" itemscope>
       <meta itemprop="availability" content="https://schema.org/InStock"/>
       <meta itemprop="priceCurrency" content="RUB"/>

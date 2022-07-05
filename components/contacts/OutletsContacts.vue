@@ -2,16 +2,16 @@
   <section v-if="outlets.title || outlets.subtitle || outlets.text"
            class="flex flex-row justify-center items-center select-none h-auto bg-pattern-lines"
            :class="{'py-16' :$device.isDesktop}">
-    <div class="flex flex-col justify-center items-center font-black text-center"
-         :class="{'w-3/6' : $device.isDesktop, 'w-11/12 my-14': $device.isTablet, 'w-4/5 my-14': $device.isMobile}">
-      <div v-if="outlets.title" :class="{'text-5xl w-4/6':$device.isDesktop, 'text-2xl' : !$device.isDesktop}">
+    <div class="flex flex-col justify-center items-center text-center"
+         :class="{'w-4/6' : $device.isDesktop, 'w-11/12 my-14': $device.isTablet, 'w-4/5 my-14': $device.isMobile}">
+      <h3 v-if="outlets.title" class="font-black" :class="{'text-5xl w-4/6':$device.isDesktop, 'text-2xl' : !$device.isDesktop}">
         {{ outlets.title }}
-      </div>
-      <div v-if="outlets.subtitle" class="font-marck"
+      </h3>
+      <h4 v-if="outlets.subtitle" class="font-marck font-black"
            :class="{'text-2xl w-3/6 pt-2':$device.isDesktop, 'text-xl' : !$device.isDesktop}">
         {{ outlets.subtitle }}
-      </div>
-      <div v-if="outlets.items" class="flex flex-col text-justify font-bold"
+      </h4>
+      <div v-if="outlets.items" class="flex flex-col text-justify"
            :class="{'pt-8 text-xl space-y-4 w-4/5':$device.isDesktopOrTablet, 'pt-12 text-lg space-y-2' : $device.isMobile}">
         <div v-for="item in outlets.items" :key="item.key" v-html="item.value"/>
       </div>

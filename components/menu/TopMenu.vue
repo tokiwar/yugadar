@@ -1,5 +1,5 @@
 <template>
-  <div v-if="$device.isDesktop" class="flex flex-row items-center bg-white font-black w-max m-auto space-x-8"
+  <div v-if="$device.isDesktop" class="flex flex-row items-center bg-white w-max m-auto space-x-8"
        itemscope itemtype="http://www.schema.org/SiteNavigationElement">
     <NuxtLink class="py-4" :class="{'pointer-events-none' : $route.path === '/'}" to="/">
       <logo :color="'#F59E0B'"/>
@@ -19,7 +19,7 @@
     </NuxtLink>
     <hr>
   </div>
-  <div class="flex flex-row h-20 font-bold items-center place-content-between z-40" v-else-if="$device.isTablet"
+  <div class="flex flex-row h-20 items-center place-content-between z-40" v-else-if="$device.isTablet"
        itemscope itemtype="http://www.schema.org/SiteNavigationElement">
     <NuxtLink class="m-auto" :class="{'pointer-events-none' : $route.path === '/'}" to="/">
       <img class="w-32" :src="logo" alt="logo" title="logo"/>
@@ -49,7 +49,7 @@
       </transition>
     </div>
   </div>
-  <div class="flex flex-row h-20 font-bold items-center place-content-between" v-else>
+  <div class="flex flex-row h-20 items-center place-content-between" v-else>
     <NuxtLink class="m-auto" :class="{'pointer-events-none' : $route.path === '/'}" to="/">
       <logo :color="'#F59E0B'"/>
     </NuxtLink>

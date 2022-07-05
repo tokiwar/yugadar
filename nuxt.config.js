@@ -188,7 +188,8 @@ export default {
           fontFamily: {
             'nunito': ['Nunito'],
             'nunito-sans': ['NunitoSans'],
-            'marck': ['Marck Script']
+            'marck': ['Marck Script'],
+            'days': ['Days']
           },
           width: {
             '84': '21rem',
