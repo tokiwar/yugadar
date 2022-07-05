@@ -1,6 +1,6 @@
 <template>
   <section class="pt-10" :class="{'pb-10' : $device.isDesktopOrTablet}">
-    <swiper :options="swiperOptions" v-show="outlets">
+    <swiper :options="swiperOptions" v-show="outlets && display" @ready="show">
       <swiper-slide v-for="item in outlets" :key="item.name">
         <outlets-item :item="item"/>
       </swiper-slide>
@@ -18,6 +18,11 @@ export default {
     Swiper,
     SwiperSlide,
     outletsItem
+  },
+  methods: {
+    show(){
+      this.display = true;
+    }
   },
   computed: {
     swiperOptions() {
@@ -45,6 +50,7 @@ export default {
   },
   data: () => ({
     items: null,
+    display: false
   })
 }
 </script>
