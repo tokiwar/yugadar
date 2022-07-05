@@ -5,7 +5,7 @@
     <meta itemprop="brand" itemtype="https://schema.org/Brand" itemscope content="ЮгаДар"/>
     <meta itemprop="url" content="https://yugadar.ru/catalog/">
     <meta itemprop="position" :content="item.key">
-    <span itemprop="name" class="text-xl font-black" v-html="item.name"/>
+    <span itemprop="name" class="text-xl font-black text-center w-11/12" v-html="item.name"/>
     <span class="h-0.5 w-2/6 bg-gray-500 my-2 mx-auto"></span>
     <span itemprop="description" class="text-lg italic w-5/6 text-center" v-html="item.description"/>
     <div itemprop="offers" itemtype="https://schema.org/Offer" itemscope>
