@@ -7,7 +7,7 @@
          class="absolute text-white flex flex-col justify-center items-center mt-36 font-black">
       <h2 v-if="SectionData.subtitle" :class="{'text-6xl': $device.isDesktop, 'text-2xl': !$device.isDesktop}"
             v-html="SectionData.subtitle"/>
-      <h1 v-if="SectionData.title" :class="{'text-9xl': $device.isDesktop, 'text-5xl': !$device.isDesktop}"
+      <h1 v-if="SectionData.title" :class="{'text-9xl': $device.isDesktop, 'text-4xl': !$device.isDesktop}"
             v-html="SectionData.title"/>
       <NuxtLink v-if="SectionData.link && this.SectionData.name" :to="SectionData.link"
                 class="mt-10 text-xl border-2 px-4 py-2 text-white border-white hover:bg-black hover:border-black ease-in-out duration-300"

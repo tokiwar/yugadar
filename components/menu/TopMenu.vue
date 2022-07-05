@@ -63,7 +63,7 @@
         <div class="flex w-full flex-col text-2xl fixed bg-white items-start justify-items py-2 mt-2 right-0"
              v-if="opened">
           <NuxtLink class="px-4 py-1 flex flex-row justify-center items-center space-x-2" @click.native="close"
-                    :class="{'text-yellow-500 text-3xl underline pointer-events-none' : menuItem.link === $route.path}"
+                    :class="{'text-yellow-500 underline pointer-events-none' : menuItem.link === $route.path}"
                     itemprop="itemListElement"
                     itemscope
                     itemtype="https://schema.org/ListItem"
