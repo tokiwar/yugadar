@@ -12,7 +12,7 @@
         <h1 class="z-10 uppercase font-black pt-64"
             :class="{'text-9xl p-8 leading-none': $device.isDesktopOrTablet, 'top-16 left-2': $device.isMobile, 'text-3xl' : $device.isMobile && $mq === 'sm', 'text-6xl' : $device.isMobile && $mq === 'md'}"
             v-html="item.nameHtml"/>
-        <span class="z-10 font-black ml-auto"
+        <span class="z-10 ml-auto"
               :class="{'text-2xl pb-20 w-10/12 px-32' : $device.isDesktopOrTablet, 'pb-10 w-10/12 px-4' : $device.isMobile, 'text-base' : $device.isMobile && $mq === 'sm', 'text-lg': $device.isMobile && $mq === 'md'}"
               v-html="item.text"/>
       </div>
