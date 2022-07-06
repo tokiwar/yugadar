@@ -7,7 +7,7 @@
            :class="{'w-4/6' : $device.isDesktopOrTablet, 'w-11/12' : $device.isMobile}">
         <img class="pt-40 z-10 text-red-400" :src="item.image" :title="item.name" :alt="item.name"/>
         <h1 class="z-10 uppercase absolute font-black"
-              :class="{'text-10xl top-12 left-12 leading-none': $device.isDesktopOrTablet, 'top-16 left-2': $device.isMobile, 'text-5xl' : $device.isMobile && $mq === 'sm', 'text-7xl' : $device.isMobile && $mq === 'md'}"
+              :class="{'text-10xl top-12 left-12 leading-none': $device.isDesktopOrTablet, 'top-16 left-2': $device.isMobile, 'text-4xl' : $device.isMobile && $mq === 'sm', 'text-7xl' : $device.isMobile && $mq === 'md'}"
               v-html="item.nameHtml"/>
         <span class="z-10 font-black ml-auto"
               :class="{'text-2xl pb-20 w-10/12 px-32' : $device.isDesktopOrTablet, 'pb-10 w-10/12 px-4' : $device.isMobile, 'text-base' : $device.isMobile && $mq === 'sm', 'text-lg': $device.isMobile && $mq === 'md'}"
