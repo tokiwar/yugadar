@@ -11,7 +11,7 @@
                   to="/privacy-policy/">Политика конфиденциальности</NuxtLink>
           <NuxtLink class="text-sm text-gray-400 opacity-70"
                     to="/site-map/">Карта сайта</NuxtLink>
-        <span class="text-sm text-gray-400 opacity-70">Разработка - Yugadar.IT</span>
+        <a href="http://yugadar-it.ru" class="text-sm text-gray-400 opacity-70">Разработка - Yugadar.IT</a>
       </span>
     </div>
   </footer>
