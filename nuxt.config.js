@@ -243,6 +243,7 @@ export default {
     ['@nuxtjs/sitemap',
       {
         hostname: 'https://yugadar.ru',
+        trailingSlash: true,
         routes: [
           '/news/otkrytie-sayta/',
           '/news/novyy-vkus/',
