@@ -1,6 +1,10 @@
 <template>
   <div itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope
-       class="flex flex-col justify-start items-center space-y-2">
+       class="flex flex-col justify-start items-center space-y-2 relative">
+    <span class="absolute top-2 left-2 text-base text-white flex flex-col space-y-1" v-if="item.new || item.popular">
+      <span v-if="item.new" class="py-1 px-2 rounded-md text-center animate-pulse bg-red-500  uppercase font-sans font-bold">Новинка!</span>
+      <span v-if="item.popular" class="py-1 px-2 rounded-md text-center animate-pulse bg-yellow-500  uppercase font-sans font-bold">Хит!</span>
+    </span>
     <img itemprop="image" :src="item.image" :alt="item.name" :title="item.name" width="356" height="356"/>
     <meta itemprop="brand" itemtype="https://schema.org/Brand" itemscope content="ЮгаДар"/>
     <meta itemprop="url" content="https://yugadar.ru/catalog/">

@@ -16,7 +16,7 @@
             :class="{'text-10xl top-12 left-12 leading-none': $device.isDesktopOrTablet, 'top-16 left-2': $device.isMobile, 'text-5xl' : $device.isMobile && $mq === 'sm', 'text-7xl' : $device.isMobile && $mq === 'md'}"
             v-html="item.nameHtml"/>
         <span class="z-10 mr-auto text-gray-900"
-              :class="{'text-2xl pb-16 pt-4 w-6/12 px-32' : $device.isDesktopOrTablet, 'pb-10 w-10/12 px-4' : $device.isMobile, 'text-base' : $device.isMobile && $mq === 'sm', 'text-lg': $device.isMobile && $mq === 'md'}"
+              :class="{'text-3xl pb-16 pt-4 w-7/12 px-32' : $device.isDesktopOrTablet, 'pb-10 w-10/12 px-4' : $device.isMobile, 'text-base' : $device.isMobile && $mq === 'sm', 'text-lg': $device.isMobile && $mq === 'md'}"
               v-html="item.text"/>
       </div>
     </div>

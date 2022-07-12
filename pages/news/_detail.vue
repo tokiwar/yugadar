@@ -25,7 +25,7 @@ export default {
     if (!item) {
       return error({statusCode: 404});
     }
-    const title = `«ЮгаДар» - ${item.name} - Новости - События и акции`;
+    const title = `«ЮгаДар» - ${item.name} - Новости, События и Акции`;
     const meta = [
       {
         hid: 'og:title',
@@ -40,12 +40,12 @@ export default {
       {
         hid: 'og:description',
         name: 'og:description',
-        content: `Мороженое от кубанского производителя «ЮгаДар». ${item.name}. Важные новости и события «ЮгаДар».`
+        content: `Мороженое от кубанского производителя «ЮгаДар». ${item.name}. Важные новости, события и акции «ЮгаДар»`
       },
       {
         hid: 'description',
         name: 'description',
-        content: `Мороженое от кубанского производителя «ЮгаДар». ${item.name}. Важные новости и события «ЮгаДар».`
+        content: `Мороженое от кубанского производителя «ЮгаДар». ${item.name}. Важные новости, события и акции «ЮгаДар»`
       },
       {
         hid: 'keywords',
