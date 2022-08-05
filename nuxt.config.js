@@ -264,7 +264,8 @@ export default {
   redirect: [
     {
       from: '^.*(?<!\/)$',
-      to: (from, req) => req.url + '/'
+      to: (from, req) => req.url + '/',
+      statusCode: 301
     }
   ],
   robots: {
