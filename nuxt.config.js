@@ -151,7 +151,8 @@ export default {
     {src: '@/plugins/simple-validator.js', ssr: true},
     {src: '@/plugins/v-mask.js', ssr: true},
     '@/plugins/axios',
-    '@/plugins/gtag'
+    '@/plugins/gtag',
+    {src: '@/plugins/scroll.js', ssr: false}
   ],
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -183,6 +184,7 @@ export default {
             'light-plum-100': '#c3a9d4',
             'light-yellow-100': '#f9db79',
             'light-pink-100': '#ffbfb3',
+            'ivory' : '#F2EFDE',
             'black-rgba': 'rgba(0, 0, 0, 0.7)'
           },
           fontFamily: {

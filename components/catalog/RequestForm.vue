@@ -76,7 +76,7 @@
             :class="{
               'right-20 bottom-20 bg-yellow-500 hover:bg-yellow-300 p-6 rounded-full shadow-lg hover:shadow-2xl' : $device.isDesktopOrTablet,
               'right-8 bottom-8 bg-yellow-500 rounded-full shadow-lg p-4' : $device.isMobile}"
-            class="fixed">
+            class="fixed animate-bounce">
       <svg-icon :class="{'h-20 w-20' : $device.isDesktopOrTablet, 'h-10 w-10' : $device.isMobile}" name="order"/>
     </button>
   </div>
