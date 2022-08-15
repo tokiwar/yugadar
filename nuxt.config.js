@@ -184,7 +184,7 @@ export default {
             'light-plum-100': '#c3a9d4',
             'light-yellow-100': '#f9db79',
             'light-pink-100': '#ffbfb3',
-            'ivory' : '#F2EFDE',
+            'ivory': '#F2EFDE',
             'black-rgba': 'rgba(0, 0, 0, 0.7)'
           },
           fontFamily: {
@@ -256,7 +256,10 @@ export default {
     ['@nuxtjs/yandex-metrika',
       {
         id: process.env.YANDEX,
-        webvisor: true
+        webvisor: true,
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true
       }
     ],
     '@nuxtjs/component-cache',
