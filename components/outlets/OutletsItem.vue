@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col justify-start items-center">
     <img
-      class="bg-outlets-grey bg-outlets-green bg-outlets-green-dark bg-outlets-grey-light swiper-lazy glassmorphism"
+      class="bg-outlets-grey bg-outlets-green bg-outlets-green-dark bg-outlets-grey-light bg-skyblue swiper-lazy glassmorphism"
       :class="{'h-136': $device.isDesktop, 'h-104' :$device.isTablet && $mq === 'lg', 'h-80' : $device.isTablet && $mq !== 'lg', 'w-11/12': $device.isMobile}"
       :src="item['img']"
       :data-srcset="`${item['img-2x']} 2x, ${item['img-3x']} 3x`"

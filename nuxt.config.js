@@ -189,7 +189,8 @@ export default {
             'outlets-grey': '#c7d0e0',
             'outlets-green' : '#2e3d1b',
             'outlets-green-dark' : '#3f4f0f',
-            'outlets-grey-light' : '#c3c4ca'
+            'outlets-grey-light' : '#c3c4ca',
+            'skyblue' : '#87CEEB'
           },
           fontFamily: {
             'nunito': ['Nunito'],
