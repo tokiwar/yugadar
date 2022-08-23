@@ -185,7 +185,11 @@ export default {
             'light-yellow-100': '#f9db79',
             'light-pink-100': '#ffbfb3',
             'ivory': '#F2EFDE',
-            'black-rgba': 'rgba(0, 0, 0, 0.7)'
+            'black-rgba': 'rgba(0, 0, 0, 0.7)',
+            'outlets-grey': '#c7d0e0',
+            'outlets-green' : '#2e3d1b',
+            'outlets-green-dark' : '#3f4f0f',
+            'outlets-grey-light' : '#c3c4ca'
           },
           fontFamily: {
             'nunito': ['Nunito'],

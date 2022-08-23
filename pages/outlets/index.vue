@@ -5,7 +5,7 @@
         <breadcrumbs :routes="routes"/>
       </template>
       <template v-slot:content>
-        <outlets :outlets="items"/>
+        <outlets @changeColor="changeColor" :outlets="items"/>
       </template>
     </TopTextSection>
     <client-only>
@@ -27,7 +27,12 @@ export default {
       ]
     }
   },
-  async asyncData({$axios, route}) {
+  methods: {
+    changeColor(color) {
+      this.logoData.bgColor = color + ' ease-in-out duration-1000';
+    }
+  },
+  async asyncData({$axios, route, $device}) {
     const meta = [
       {
         hid: 'og:title',
@@ -68,7 +73,10 @@ export default {
       '/api/outlets/'
     );
     const items = result.items;
+    const iterator = 0;
+    const color = items[iterator].bgColor;
     const logoData = result['top-text-section'].logoData;
+    logoData.bgColor = color;
     const sectionData = result['text-section'].sectionData;
     const routes = [
       {

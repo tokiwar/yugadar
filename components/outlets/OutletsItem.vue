@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col justify-start items-center">
     <img
-      class="glassmorphism bg-light-yellow-100 swiper-lazy"
+      class="bg-outlets-grey bg-outlets-green bg-outlets-green-dark bg-outlets-grey-light swiper-lazy glassmorphism"
       :class="{'h-136': $device.isDesktop, 'h-104' :$device.isTablet && $mq === 'lg', 'h-80' : $device.isTablet && $mq !== 'lg', 'w-11/12': $device.isMobile}"
       :src="item['img']"
       :data-srcset="`${item['img-2x']} 2x, ${item['img-3x']} 3x`"
@@ -10,7 +10,7 @@
       :title="item.name"
       :alt="item.name"/>
     <div
-      class="flex flex-col items- justify-center py-4 h-28 text-center glassmorphism"
+      class="flex flex-col justify-center py-4 h-28 text-center glassmorphism"
       :class="{'h-36' : $device.isTablet && $mq !== 'lg', 'w-136':$device.isDesktop, 'w-104' :$device.isTablet && $mq === 'lg', 'w-80' : $device.isTablet && $mq !== 'lg',
              'w-11/12' : $device.isMobile}">
             <span class="font leading-6"
