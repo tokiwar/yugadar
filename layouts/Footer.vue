@@ -1,7 +1,7 @@
 <template>
   <footer itemscope itemtype="https://schema.org/WPFooter"
           class="bg-black flex flex-col justify-center items-center text-white"
-          :class="{'h-72 space-y-10': $device.isDesktop, 'h-auto py-8 space-y-8' :!$device.isDesktop}">
+          :class="{'h-80 space-y-10': $device.isDesktop, 'h-auto py-8 space-y-8' :!$device.isDesktop}">
     <bottom-menu :class="{'w-auto' : $device.isDesktopOrTablet}"/>
     <div
       :class="{'flex flex-row w-auto items-start space-x-4' : $device.isDesktopOrTablet, 'flex flex-col justify-center items-center' : $device.isMobile}">

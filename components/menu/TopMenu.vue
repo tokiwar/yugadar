@@ -17,7 +17,6 @@
       <meta itemprop="name" :content="menuItem.name">
       <meta itemprop="url" :content="menuItem.link">
     </NuxtLink>
-    <hr>
   </div>
   <div class="flex flex-row h-20 items-center place-content-between z-40" v-else-if="$device.isTablet"
        itemscope itemtype="http://www.schema.org/SiteNavigationElement">

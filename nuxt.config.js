@@ -145,7 +145,6 @@ export default {
     '@/assets/css/style.css',
     '@/assets/css/hamburgers.css'
   ],
-  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     {src: '@/plugins/ymapPlugin.js', ssr: false},
     {src: '@/plugins/simple-validator.js', ssr: true},
@@ -154,10 +153,7 @@ export default {
     '@/plugins/gtag',
     {src: '@/plugins/scroll.js', ssr: false}
   ],
-  // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
-
-  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     '@nuxtjs/tailwindcss',
     '@nuxtjs/dotenv'

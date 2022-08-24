@@ -13,7 +13,7 @@
       </span>
       <div v-if="outlets.items" class="flex flex-col text-justify"
            :class="{'pt-8 text-xl space-y-4 w-4/5':$device.isDesktopOrTablet, 'pt-12 text-lg space-y-2' : $device.isMobile}">
-        <div v-for="item in outlets.items" :key="item.key" v-html="item.value"/>
+        <a target="_blank" rel="nofollow" class="hover:underline hover:text-yellow-500" v-for="item in outlets.items" :key="item.key" v-html="item.value" :href="item.yaMapLink"/>
       </div>
       <div v-if="outlets.text" v-html="outlets.text" class="text-justify space-y-4"
            :class="{'w-5/6 pt-8':$device.isDesktop, 'pt-12' : !$device.isDesktop}"></div>
