@@ -32,14 +32,10 @@ img {
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-html {
+html, input, textarea {
   cursor: url('@/assets/img/cursors/arrow.png'), default;
 }
 
-html a:hover {
-  cursor: url('@/assets/img/cursors/pointer.png'), pointer;
-}
-
-html button:hover {
+a, button, .cursor-pointer {
   cursor: url('@/assets/img/cursors/pointer.png'), pointer;
 }
