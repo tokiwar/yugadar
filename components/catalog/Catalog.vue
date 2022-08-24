@@ -1,7 +1,7 @@
 <template>
   <div class="pt-10 bg-pattern-lines flex flex-col justify-items items-center"
        :class="{'flex flex-col justify-center items-center text-center' : $device.isDesktop}">
-    <div :class="{'text-7xl w-4/6':$device.isDesktop, 'text-5xl text-center' : !$device.isDesktop}">Ассортимент</div>
+    <h2 :class="{'text-7xl w-4/6':$device.isDesktop, 'text-5xl text-center' : !$device.isDesktop}">Ассортимент</h2>
     <section v-if="$device.isDesktop"
              itemtype="https://schema.org/ItemList" itemscope
              :class="{'p-10' : $device.isDesktopOrTablet, 'p-2' : $device.isMobile}"
