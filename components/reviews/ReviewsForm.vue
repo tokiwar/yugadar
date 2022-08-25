@@ -2,7 +2,7 @@
   <div class="fixed w-full h-full bg-black-rgba top-0 z-40 left-0 flex items-center justify-center"
        @click.self="close">
     <div
-      class="h-auto opacity-100 relative top-0 left-0 z-50 glassmorphism pt-4 px-10 flex flex-col"
+      class="h-auto opacity-100 relative top-0 left-0 z-50 bg-white shadow-2xl border-4 border-gray-50 pt-4 px-10 flex flex-col"
       :class="{'w-136 pb-12' : $device.isDesktopOrTablet, 'w-88 pb-8' : $device.isMobile}">
       <span class="flex justify-end">
         <svg fill="#4b5563" stroke="#f3f4f6" xmlns="http://www.w3.org/2000/svg" class="cursor-pointer"

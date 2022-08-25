@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col w-full items-center justify-center bg-pattern-lines" v-if="policyText">
-    <div class="my-10 glassmorphism"
+    <div class="my-10 bg-white shadow-2xl border-4 border-gray-50"
          :class="{'w-3/6 p-10' : $device.isDesktop, 'w-9/12 p-10' : $device.isTablet && $mq === 'lg', 'w-11/12 p-10' : $device.isTablet && $mq === 'md', 'w-11/12 p-6' : $device.isMobile}">
       <ol class="space-y-4">
         <li v-for="item in policyText" :key="item.key">

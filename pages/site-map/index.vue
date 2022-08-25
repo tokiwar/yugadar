@@ -6,8 +6,8 @@
       </template>
     </TopTextSection>
     <div class="flex flex-col w-full items-center justify-center bg-pattern-lines">
-      <div class="my-10 glassmorphism"
-           :class="{'w-3/6 p-10' : $device.isDesktop, 'w-11/12 p-6' : !$device.isDesktop}">
+      <div class="my-10 bg-white shadow-2xl border-4 border-gray-50"
+           :class="{'w-4/6 p-10' : $device.isDesktop, 'w-11/12 p-6' : !$device.isDesktop}">
         <ul class="space-y-4"
             :class="{'text-2xl' : $device.isDesktopOrTablet, 'text-xl' : $device.isMobile}">
           <li v-for="item in siteMap" :key="item.key">{{ item.key }} -
