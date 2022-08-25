@@ -1,5 +1,5 @@
 <template>
-  <header class="h-21 select-none" itemscope itemtype="https://schema.org/WPHeader">
+  <header class="h-21 select-none shadow-lg" itemscope itemtype="https://schema.org/WPHeader">
     <top-menu :menu="menu"/>
     <client-only>
       <vue-scroll-indicator color="#F59E0B" background="none"/>
