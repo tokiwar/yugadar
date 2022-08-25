@@ -36,7 +36,7 @@
            v-if="menu.socials">
         <span :class="{'text-2xl' : $device.isDesktop, 'text-xl underline' : !$device.isDesktop}">Социальные сети</span>
         <div class="flex flex-row text-base space-x-4">
-          <a rel="nofollow" target="_blank" :href="social.link" v-for="social in menu.socials" :key="social.key">
+          <a rel="nofollow" target="_blank" :title="social.title" :href="social.link" v-for="social in menu.socials" :key="social.key">
             <svg-icon class="h-12 w-12" :name="social.code"/>
           </a>
         </div>

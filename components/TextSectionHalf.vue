@@ -1,6 +1,6 @@
 <template>
   <section v-if="SectionData.title || SectionData.subtitle || SectionData.text"
-           :class="{'h-160 ' : $device.isDesktop, 'flex-row' : $device.isDesktop && !SectionData.imageRight, 'flex-row-reverse' : $device.isDesktop && SectionData.imageRight, 'h-auto flex-col-reverse' : !$device.isDesktop}"
+           :class="{'h-160' : $device.isDesktop, 'flex-row' : $device.isDesktop && !SectionData.imageRight, 'flex-row-reverse' : $device.isDesktop && SectionData.imageRight, 'h-auto flex-col-reverse' : !$device.isDesktop}"
            class="flex justify-center items-center select-none bg-pattern-lines">
     <img v-if="SectionData.img"
          :class="{'w-3/6 h-full' : $device.isDesktop, 'h-112 w-full' : $device.isTablet, 'h-96' : $device.isMobile, 'bg-light-plum-100' : SectionData.imageRight, 'bg-light-pink-100' : !SectionData.imageRight }"

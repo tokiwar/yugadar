@@ -32,17 +32,20 @@ export default {
         {
           key: 0,
           code: 'tg',
-          link: 'https://t.me/kotoribako'
+          link: 'https://t.me/kotoribako',
+          title: 'Telegram'
         },
         {
           key: 1,
           code: 'wa',
-          link: 'https://wa.me/79180170429'
+          link: 'https://wa.me/79180170429',
+          title: 'WhatsApp'
         },
         {
           key: 2,
           code: 'vk',
-          link: 'https://vk.com/yugadar'
+          link: 'https://vk.com/yugadar',
+          title: 'VK'
         }
       ]
     }
