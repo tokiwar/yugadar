@@ -14,6 +14,7 @@
       <div v-if="result" class="w-full text-center text-black"
            :class="{'text-xl' : $device.isDesktopOrTablet, 'text-lg' : $device.isMobile}" v-html="result"/>
       <form v-else class="w-full flex flex-col mt-2 " @submit.prevent="formSubmit" ref="form">
+        <div class="mb-6 text-black text-center" :class="{'text-4xl' : $device.isDesktopOrTablet, 'text-2xl' : $device.isMobile}">Обратная связь</div>
         <div :class="{'mb-6 text-base' : $device.isDesktopOrTablet, 'mb-2 text-sm': $device.isMobile}">
           <label for="name" class="block mb-2 text-gray-900 dark:text-gray-300">Ваше имя*</label>
           <input :class="{'border-red-500' : validation.hasError('name')}"
