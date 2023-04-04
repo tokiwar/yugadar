@@ -1,7 +1,7 @@
 <template>
-  <div itemscope itemtype="https://schema.org/NewsArticle">
+  <div itemscope itemtype="https://schema.org/NewsArticle" class="flex items-center justify-center">
     <nuxt-link itemprop="mainEntityOfPage" :to="item.code + '/'"
-               :class="{'w-152' :$device.isDesktopOrTablet}"
+               :class="{'w-152' :$device.isDesktopOrTablet, 'w-full' : !$device.isDesktopOrTablet}"
                class="flex flex-col justify-center items-center h-auto cursor-pointer hover:shadow-2xl">
       <meta itemprop="datePublished" :datetime="item.dateFormatted" :content="item.dateFormatted">
       <meta itemprop="dateModified" :datetime="item.dateFormatted" :content="item.dateFormatted">
