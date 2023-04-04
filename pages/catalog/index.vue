@@ -7,6 +7,7 @@
     </TopTextSection>
     <catalog :items="catalog.iceCream.items"/>
     <catalog-price-table :catalog="catalog"/>
+    <SeoTextSection :html="seoTextHtml"/>
     <request-form/>
   </div>
 </template>
@@ -76,6 +77,7 @@ export default {
     );
     catalog.iceCream.items = result.catalog;
     const logoData = result['top-text-section'].logoData;
+    const seoTextHtml = result['seo-text-section'].html;
     const routes = [
       {
         key: 0,
@@ -94,7 +96,7 @@ export default {
         position: 2
       }
     ];
-    return {catalog, logoData, meta, routes}
+    return {catalog, seoTextHtml, logoData, meta, routes}
   }
 }
 </script>

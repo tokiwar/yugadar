@@ -3,7 +3,7 @@
            :class="className">
     <div :class="{'w-full' : $device.isMobile}">
       <img
-        :class="{'bg-red-200 bg-blue-green-100' : $device.isDesktop, 'h-auto w-full object-fill object-center' : $device.isTablet, 'h-104 object-center w-full' : $device.isMobile, 'object-contain' : $device.isMobile && SectionData.transparent, 'object-cover' : $device.isMobile && !SectionData.transparent}"
+        :class="{'bg-red-200 bg-blue-green-100 bg-yellow-400' : $device.isDesktop, 'h-auto w-full object-fill object-center' : $device.isTablet, 'h-104 object-center w-full' : $device.isMobile, 'object-contain' : $device.isMobile && SectionData.transparent, 'object-cover' : $device.isMobile && !SectionData.transparent}"
         width="844" height="416"
         :src="$device.isDesktopOrTablet ? SectionData.bgImage : SectionData.bgImageMobileSquare" alt="image"
         title="image"/>

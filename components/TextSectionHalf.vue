@@ -7,14 +7,15 @@
          class="object-cover object-center"
          width="1037"
          height="640"
-         :src="SectionData.img" alt="Мороженое ЮгаДар" title="Мороженое ЮгаДар"/>
-    <div :class="{'w-3/6' : $device.isDesktop, 'h-112 w-4/5' : !$device.isDesktop}"
+         :src="(SectionData.imgDetail && $device.isMobile) ? SectionData.imgDetail : SectionData.img"
+         alt="Мороженое ЮгаДар" title="Мороженое ЮгаДар"/>
+    <div :class="{'w-3/6' : $device.isDesktop, 'w-5/6 py-6' : !$device.isDesktop}"
          class="flex flex-col justify-center items-center font-black text-center">
       <div v-if="SectionData.title" :class="{'text-6xl w-3/6' : $device.isDesktop, 'text-4xl' : !$device.isDesktop}">
         {{ SectionData.title }}
       </div>
       <div v-if="SectionData.subtitle" class="font-marck"
-           :class="{'text-3xl w-3/6' : $device.isDesktop, 'text-3xl' : !$device.isDesktop}">
+           :class="{'text-3xl w-4/6' : $device.isDesktop, 'text-2xl' : !$device.isDesktop}">
         {{ SectionData.subtitle }}
       </div>
       <div v-if="SectionData.text" :class="{'w-3/6 pt-8':$device.isDesktop, 'pt-12' : !$device.isDesktop}">

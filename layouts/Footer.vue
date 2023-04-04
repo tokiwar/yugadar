@@ -5,7 +5,7 @@
     <bottom-menu :menu="menu" :class="{'w-auto' : $device.isDesktopOrTablet}"/>
     <div
       :class="{'flex flex-row w-auto items-start space-x-4' : $device.isDesktopOrTablet, 'flex flex-col justify-center items-center' : $device.isMobile}">
-      <span class="text-lg">©<span itemprop="copyrightYear">2022</span> «ЮгаДар»</span>
+      <span class="text-lg">©<span itemprop="copyrightYear">2023</span> «ЮгаДар»</span>
       <span class="flex"
             :class="{'flex-col items-center' : $device.isMobile, 'flex-row space-x-4 self-center' : $device.isDesktopOrTablet}">
         <NuxtLink class="text-sm text-gray-400 opacity-70"

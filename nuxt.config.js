@@ -183,10 +183,10 @@ export default {
             'ivory': '#F2EFDE',
             'black-rgba': 'rgba(0, 0, 0, 0.7)',
             'outlets-grey': '#c7d0e0',
-            'outlets-green' : '#2e3d1b',
-            'outlets-green-dark' : '#3f4f0f',
-            'outlets-grey-light' : '#c3c4ca',
-            'skyblue' : '#87CEEB'
+            'outlets-green': '#2e3d1b',
+            'outlets-green-dark': '#3f4f0f',
+            'outlets-grey-light': '#c3c4ca',
+            'skyblue': '#87CEEB'
           },
           fontFamily: {
             'nunito': ['Nunito'],
@@ -224,7 +224,8 @@ export default {
             '168': '42rem',
             '176': '44rem',
             '184': '46rem',
-            '192': '48rem'
+            '192': '48rem',
+            '200': '50rem'
           },
           maxHeight: {
             '160': '40rem'
@@ -307,7 +308,6 @@ export default {
       lang: 'ru'
     }
   },
-
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     extend(config, {isClient}) {

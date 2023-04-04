@@ -11,7 +11,7 @@
     <client-only>
       <outlets-map :items="items"/>
     </client-only>
-    <TextSection v-if="false" :section-data="sectionData"/>
+    <SeoTextSection :html="seoTextHtml"/>
   </div>
 </template>
 
@@ -76,6 +76,7 @@ export default {
     const iterator = 0;
     const color = items[iterator].bgColor;
     const logoData = result['top-text-section'].logoData;
+    const seoTextHtml = result['seo-text-section'].html;
     logoData.bgColor = color;
     const sectionData = result['text-section'].sectionData;
     const routes = [
@@ -96,7 +97,7 @@ export default {
         position: 2
       }
     ];
-    return {items, logoData, sectionData, meta, routes}
+    return {items, seoTextHtml, logoData, sectionData, meta, routes}
   },
 }
 </script>
