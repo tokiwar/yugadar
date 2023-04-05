@@ -9,6 +9,7 @@
     <ParallaxSection v-if="$device.isDesktop" :section-data="sectionDataParallax"/>
     <NonParallaxSection :section-data="sectionDataNonParallax" v-else/>
     <ReviewsSection :items="items"/>
+    <SeoTextSection :html="seoTextHtml"/>
   </div>
 </template>
 
@@ -70,6 +71,7 @@ export default {
     const sectionDataNonParallax = result['parallax-section'].sectionDataNonParallax;
     const sectionData = result['text-section'].sectionData;
     const items = result['items'];
+    const seoTextHtml = result['seo-text-section'].html;
     const routes = [
       {
         key: 0,
@@ -88,7 +90,7 @@ export default {
         position: 2
       }
     ];
-    return {logoData, sectionDataParallax, sectionDataNonParallax, sectionData, items, meta, routes}
+    return {logoData, sectionDataParallax, sectionDataNonParallax, sectionData, items, meta, routes, seoTextHtml}
   },
 }
 </script>
