@@ -8,7 +8,7 @@
     <meta itemprop="brand" itemtype="https://schema.org/Brand" itemscope content="ЮгаДар"/>
     <meta itemprop="url" content="https://yugadar.ru/catalog/">
     <meta itemprop="position" :content="item.key">
-    <div class="flex flex-col pt-4 h-104">
+    <div class="flex flex-col pt-4 h-120">
       <span itemprop="name" class="text-2xl h-16 flex items-center justify-center" v-html="item.nameHtml"></span>
       <span class="h-0.5 w-64 bg-gray-500 my-2 mx-auto"/>
       <span itemprop="description" class="italic h-20 text-lg" v-html="item.description "/>
