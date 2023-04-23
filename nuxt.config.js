@@ -264,8 +264,6 @@ export default {
         accurateTrackBounce: true
       }
     ],
-    '@nuxtjs/component-cache',
-    'nuxt-speedkit',
     '@nuxtjs/redirect-module'
   ],
   redirect: [
