@@ -5,12 +5,13 @@
       <span v-if="item.new" class="py-1 px-2 rounded-md text-center animate-pulse bg-red-500  uppercase font-sans font-bold">Новинка!</span>
       <span v-if="item.popular" class="py-1 px-2 rounded-md text-center animate-pulse bg-yellow-500  uppercase font-sans font-bold">Хит!</span>
     </span>
-    <img itemprop="image" :src="item.image" :alt="item.name" :title="item.name" width="356" height="356"/>
+    <img itemprop="image" :src="item.image" :alt="item.name" :title="item.name" width="336" height="336"/>
     <meta itemprop="brand" itemtype="https://schema.org/Brand" itemscope content="ЮгаДар"/>
     <meta itemprop="url" content="https://yugadar.ru/catalog/">
     <meta itemprop="position" :content="item.key">
     <span itemprop="name" class="text-xl font-black text-center w-11/12" v-html="item.name"/>
     <span class="h-0.5 w-2/6 bg-gray-500 my-2 mx-auto"></span>
+    <span class="text-xl font-black text-center w-11/12" v-html="item['price-real'] + ' / кг'"/>
     <span itemprop="description" class="text-base italic w-11/12" v-html="item.description"/>
     <div itemprop="offers" itemtype="https://schema.org/Offer" itemscope>
       <meta itemprop="availability" content="https://schema.org/InStock"/>

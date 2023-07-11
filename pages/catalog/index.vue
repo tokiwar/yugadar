@@ -6,7 +6,13 @@
       </template>
     </TopTextSection>
     <catalog :items="catalog.iceCream.items"/>
-    <catalog-price-table :catalog="catalog"/>
+    <catalog-price-table v-if="false" :catalog="catalog"/>
+    <section class="pt-8 bg-pattern-lines flex items-center justify-center w-full">
+      <span  :class="{'w-3/5' : $device.isDesktopOrTablet, 'w-5/6 text-base' : !$device.isDesktopOrTablet}">
+      *Указаны розничные цены. Для рассчета оптовой цены нужно связаться по телефону: <a
+        class="underline text-yellow-500" href="tel:+79180170429">+79180170429</a>
+      </span>
+    </section>
     <SeoTextSection :html="seoTextHtml"/>
     <request-form/>
   </div>
