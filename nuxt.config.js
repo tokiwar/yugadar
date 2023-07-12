@@ -186,7 +186,8 @@ export default {
             'outlets-green': '#2e3d1b',
             'outlets-green-dark': '#3f4f0f',
             'outlets-grey-light': '#c3c4ca',
-            'skyblue': '#87CEEB'
+            'skyblue': '#87CEEB',
+            'light-green-100': 'rgb(108,195,204)'
           },
           fontFamily: {
             'nunito': ['Nunito'],
@@ -251,7 +252,8 @@ export default {
         routes: [
           '/news/otkrytie-sayta/',
           '/news/novyy-vkus/',
-          '/news/zakaz-morozhenogo/'
+          '/news/zakaz-morozhenogo/',
+          '/news/shokolad-s-vishney/'
         ]
       }],
     '@nuxtjs/recaptcha',
