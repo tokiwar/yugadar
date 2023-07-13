@@ -161,6 +161,9 @@ export default {
 
   tailwindcss: {
     config: {
+      safelist: [
+        'text-snickers-red'
+      ],
       theme: {
         extend: {
           fontSize: {
