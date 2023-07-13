@@ -188,10 +188,10 @@ export default {
             'outlets-grey-light': '#c3c4ca',
             'skyblue': '#87CEEB',
             'light-green-100': 'rgb(108,195,204)',
-            'snickers-yellow':'#FDAF17',
-            'snickers-brown':'#44180D',
-            'snickers-blue':'#2E328D',
-            'snickers-red':'#EB1E25'
+            'snickers-yellow': '#FDAF17',
+            'snickers-brown': '#44180D',
+            'snickers-blue': '#2E328D',
+            'snickers-red': '#EB1E25'
           },
           fontFamily: {
             'nunito': ['Nunito'],
@@ -257,7 +257,8 @@ export default {
           '/news/otkrytie-sayta/',
           '/news/novyy-vkus/',
           '/news/zakaz-morozhenogo/',
-          '/news/shokolad-s-vishney/'
+          '/news/shokolad-s-vishney/',
+          '/news/snickers/'
         ]
       }],
     '@nuxtjs/recaptcha',
