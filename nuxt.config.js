@@ -187,7 +187,11 @@ export default {
             'outlets-green-dark': '#3f4f0f',
             'outlets-grey-light': '#c3c4ca',
             'skyblue': '#87CEEB',
-            'light-green-100': 'rgb(108,195,204)'
+            'light-green-100': 'rgb(108,195,204)',
+            'snickers-yellow':'#FDAF17',
+            'snickers-brown':'#44180D',
+            'snickers-blue':'#2E328D',
+            'snickers-red':'#EB1E25'
           },
           fontFamily: {
             'nunito': ['Nunito'],

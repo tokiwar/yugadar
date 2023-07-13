@@ -2,6 +2,7 @@
   <news-detail-red v-if="item.style === 'red'" :item="item"/>
   <news-detail-yellow v-else-if="item.style === 'yellow'" :item="item"/>
   <news-detail-green v-else-if="item.style === 'green'" :item="item"/>
+  <news-detail-snickers v-else-if="item.style === 'snickers'" :item="item"/>
   <news-detail-purple v-else :item="item"/>
 </template>
 <script>
