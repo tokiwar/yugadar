@@ -5,7 +5,7 @@
       <logo :color="'#F59E0B'"/>
     </NuxtLink>
     <NuxtLink :class="{'text-yellow-500 underline pointer-events-none' : menuItem.link === $route.path}"
-              class="py-4 hover:text-yellow-500 hover:underline text-2xl flex flex-row items-center justify-center space-x-2"
+              class="py-4 hover:text-yellow-500 hover:underline sm:text-base xl:text-lg 2xl:text-xl 3xl:text-2xl flex flex-row items-center justify-center space-x-2"
               v-for="menuItem in menu"
               itemprop="itemListElement"
               itemscope
@@ -107,14 +107,6 @@ export default {
         this.closeMenu();
       }
     }
-  },
-  // async fetch() {
-  //   const result = await this.$axios.$get(
-  //     '/api/service/'
-  //   );
-  //   if (result.service && result.service.logo) {
-  //     this.logo = result.service.logo;
-  //   }
-  // },
+  }
 }
 </script>

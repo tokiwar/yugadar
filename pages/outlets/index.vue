@@ -78,7 +78,6 @@ export default {
     const logoData = result['top-text-section'].logoData;
     const seoTextHtml = result['seo-text-section'].html;
     logoData.bgColor = color;
-    const sectionData = result['text-section'].sectionData;
     const routes = [
       {
         key: 0,
@@ -97,7 +96,7 @@ export default {
         position: 2
       }
     ];
-    return {items, seoTextHtml, logoData, sectionData, meta, routes}
+    return {items, seoTextHtml, logoData, meta, routes}
   },
 }
 </script>

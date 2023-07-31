@@ -38,7 +38,8 @@ export default {
       {key: 4, link: '/about/', name: 'О нас'},
       {key: 5, link: '/contacts/', name: 'Контакты'},
       {key: 6, link: '/outlets/', name: 'Точки продажи'},
-      {key: 7, link: '/privacy-policy/', name: 'Политика конфиденциальности'},
+      {key: 7, link: '/cooperation/', name: 'Сотрудничество'},
+      {key: 8, link: '/privacy-policy/', name: 'Политика конфиденциальности'},
     ]
   }),
   async asyncData({route, $axios}) {

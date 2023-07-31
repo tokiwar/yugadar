@@ -53,6 +53,12 @@ export default {
         link: '/outlets/',
         icon: 'outlet'
       },
+      {
+        key: 6,
+        name: 'Сотрудничество',
+        link: '/cooperation/',
+        icon: 'cooperation',
+      }
     ]
   }),
 }

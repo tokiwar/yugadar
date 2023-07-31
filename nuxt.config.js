@@ -166,6 +166,9 @@ export default {
       ],
       theme: {
         extend: {
+          screens: {
+            '3xl': '1800px'
+          },
           fontSize: {
             '10xl': '10rem',
             '11xl': '12rem',
