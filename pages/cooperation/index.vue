@@ -5,6 +5,7 @@
         <breadcrumbs :routes="routes"/>
       </template>
     </TopTextSection>
+    <TextSection :section-data="sectionData"/>
   </div>
 </template>
 <script>
@@ -60,7 +61,6 @@ export default {
     const result = await $axios.$get(
       '/api/cooperation/'
     );
-    console.log(result);
     const sectionData = result['text-section'].sectionData;
     const logoData = result['top-text-section'].logoData;
     const routes = [
